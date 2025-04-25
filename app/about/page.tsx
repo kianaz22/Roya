@@ -29,19 +29,21 @@ export default function About() {
 
   return (
     <Layout>
-      <div className="container mx-auto px-8 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-            {language === 'en' ? content.en.title : content.fa.title}
-          </h1>
-          
-          <div className="space-y-8 text-lg text-zinc-300">
-            {(language === 'en' ? content.en.paragraphs : content.fa.paragraphs).map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+      <section className="py-32 bg-white relative">
+        <div className="container mx-auto px-8 md:px-16">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
+              {language === 'en' ? content.en.title : content.fa.title}
+            </h1>
+            
+            <div className="space-y-8 text-lg text-zinc-700">
+              {(language === 'en' ? content.en.paragraphs : content.fa.paragraphs).map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </Layout>
   );
 } 

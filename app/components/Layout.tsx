@@ -14,14 +14,14 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className={`min-h-screen bg-zinc-900 text-white ${language === 'fa' ? 'font-[var(--font-vazirmatn)]' : ''}`} dir={language === 'fa' ? 'rtl' : 'ltr'}>
       {/* Navigation Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-900/80 backdrop-blur-sm border-b border-zinc-800 ">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900 backdrop-blur-sm border-b border-zinc-700/30">
         <div className="relative">
-          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-zinc-700/30 to-transparent"></div>
-          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-zinc-500/10 to-transparent blur-[0.5px]"></div>
-          <div className="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-zinc-400/5 to-transparent blur-[1px]"></div>
+          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
+          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent blur-[0.5px]"></div>
+          <div className="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-pink-500/10 to-transparent blur-[1px]"></div>
         </div>
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-24">
             <div className="flex items-center">
               <Link href="/" className="relative w-32 h-8">
                 <Image
@@ -32,30 +32,30 @@ export default function Layout({ children }: LayoutProps) {
                   priority
                 />
               </Link>
-              <Link href="/" className="text-2xl font-bold font-space-grotesk tracking-tight bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent hover:from-white hover:to-zinc-300 transition-all duration-300">
+              <Link href="/" className="text-2xl font-bold font-space-grotesk tracking-tight text-white hover:text-zinc-300 transition-all duration-300">
                 {t('company.name')}
               </Link>
             </div>
             <nav className="hidden md:flex items-center gap-8">
-              <Link href="/#products" className="text-zinc-300 hover:text-white transition-colors relative group">
+              <Link href="/#products" className="text-zinc-300 hover:text-blue-400 transition-colors relative group">
                 {t('nav.products')}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
               </Link>
-              <Link href="/about" className="text-zinc-300 hover:text-white transition-colors relative group">
+              <Link href="/about" className="text-zinc-300 hover:text-purple-400 transition-colors relative group">
                 {t('nav.about')}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 transition-all group-hover:w-full"></span>
               </Link>
-              <Link href="/news" className="text-zinc-300 hover:text-white transition-colors relative group">
+              <Link href="/news" className="text-zinc-300 hover:text-pink-400 transition-colors relative group">
                 {t('nav.news')}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-400 to-blue-400 transition-all group-hover:w-full"></span>
               </Link>
-              <Link href="/careers" className="text-zinc-300 hover:text-white transition-colors relative group">
+              <Link href="/careers" className="text-zinc-300 hover:text-blue-400 transition-colors relative group">
                 {t('nav.careers')}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
               </Link>
-              <Link href="/contact" className="text-zinc-300 hover:text-white transition-colors relative group">
+              <Link href="/contact" className="text-zinc-300 hover:text-purple-400 transition-colors relative group">
                 {t('nav.contact')}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 transition-all group-hover:w-full"></span>
               </Link>
               <button
                 onClick={() => setLanguage(language === 'en' ? 'fa' : 'en')}
@@ -74,42 +74,50 @@ export default function Layout({ children }: LayoutProps) {
       </header>
 
       {/* Main Content */}
-      <main className="py-48">
+      <main>
         {children}
       </main>
 
       {/* Footer */}
-      <footer className="bg-zinc-900 border-t border-zinc-800">
-        <div className="container mx-auto px-8 md:px-16 pt-8 pb-4">
+      <footer className="bg-gradient-to-b from-zinc-900 via-zinc-800 to-zinc-900 border-t border-zinc-700/30">
+        <div className="container mx-auto px-8 md:px-16 py-12 ">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Company Info */}
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-                  {t('company.name')}
-                </h3>
+                <div className="flex items-center space-x-3">
+                  <div className="relative w-8 h-8">
+                    <Image
+                      src="/logo.svg"
+                      alt={t('company.name')}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">
+                    {t('company.name')}
+                  </h3>
+                </div>
                 <p className="text-zinc-400 text-sm leading-relaxed">
                   {t('footer.company.description')}
                 </p>
               </div>
-
-             
 
               {/* Company */}
               <div className="space-y-4">
                 {/* <h4 className="text-lg font-semibold text-white">{t('footer.sections.company')}</h4> */}
                 <ul className="space-y-2">
                   <li>
-                    <Link href="/about" className="text-zinc-400 hover:text-white transition-colors text-sm">{t('nav.about')}</Link>
+                    <Link href="/about" className="text-zinc-400 hover:text-blue-400 transition-colors text-sm">{t('nav.about')}</Link>
                   </li>
                   <li>
-                    <Link href="/contact" className="text-zinc-400 hover:text-white transition-colors text-sm">{t('nav.contact')}</Link>
+                    <Link href="/contact" className="text-zinc-400 hover:text-purple-400 transition-colors text-sm">{t('nav.contact')}</Link>
                   </li>
                   <li>
-                    <Link href="/careers" className="text-zinc-400 hover:text-white transition-colors text-sm">{t('nav.careers')}</Link>
+                    <Link href="/careers" className="text-zinc-400 hover:text-pink-400 transition-colors text-sm">{t('nav.careers')}</Link>
                   </li>
                   <li>
-                    <Link href="/feedback" className="text-zinc-400 hover:text-white transition-colors text-sm">{t('nav.feedback')}</Link>
+                    <Link href="/feedback" className="text-zinc-400 hover:text-blue-400 transition-colors text-sm">{t('nav.feedback')}</Link>
                   </li>
                 </ul>
               </div>
@@ -150,17 +158,17 @@ export default function Layout({ children }: LayoutProps) {
         </div>
         
         {/* Copyright Section - Full Width Border */}
-        <div className="border-t border-zinc-800 mt-8">
+        {/* <div className="border-t border-zinc-800 mt-8">
           <div className="container mx-auto px-8 md:px-16 py-4">
             <div className="max-w-6xl mx-auto">
-              <div className="flex flex-col md:flex-row justify-between items-center">
+              <div className="flex flex-col md:flex-row justify-center items-center">
                 <p className="text-zinc-400 text-sm">
                   {t('footer.copyright')}
                 </p>
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </footer>
     </div>
   );

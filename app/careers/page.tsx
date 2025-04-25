@@ -171,121 +171,123 @@ export default function Careers() {
 
   return (
     <Layout>
-      <div className="container mx-auto px-8 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-            {currentContent.title}
-          </h1>
-          
-          <div className="space-y-16">
-            {/* Company Culture */}
-            <section className="space-y-8">
-              <h2 className="text-3xl font-semibold text-white">{currentContent.culture.title}</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-xl font-semibold text-zinc-900 mb-4">{currentContent.culture.innovation.title}</h3>
-                    <p className="text-zinc-700">{currentContent.culture.innovation.description}</p>
+      <section className="py-32 bg-white relative">
+        <div className="container mx-auto px-8 md:px-16">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
+              {currentContent.title}
+            </h1>
+            
+            <div className="space-y-16">
+              {/* Company Culture */}
+              <section className="space-y-8">
+                <h2 className="text-3xl font-semibold text-zinc-800">{currentContent.culture.title}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
+                    <div className="relative z-10">
+                      <h3 className="text-xl font-semibold text-zinc-900 mb-4">{currentContent.culture.innovation.title}</h3>
+                      <p className="text-zinc-700">{currentContent.culture.innovation.description}</p>
+                    </div>
+                  </div>
+
+                  <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
+                    <div className="relative z-10">
+                      <h3 className="text-xl font-semibold text-zinc-900 mb-4">{currentContent.culture.collaboration.title}</h3>
+                      <p className="text-zinc-700">{currentContent.culture.collaboration.description}</p>
+                    </div>
+                  </div>
+
+                  <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
+                    <div className="relative z-10">
+                      <h3 className="text-xl font-semibold text-zinc-900 mb-4">{currentContent.culture.growth.title}</h3>
+                      <p className="text-zinc-700">{currentContent.culture.growth.description}</p>
+                    </div>
                   </div>
                 </div>
+              </section>
 
-                <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-xl font-semibold text-zinc-900 mb-4">{currentContent.culture.collaboration.title}</h3>
-                    <p className="text-zinc-700">{currentContent.culture.collaboration.description}</p>
+              {/* Job Listings */}
+              <section className="space-y-8">
+                <h2 className="text-3xl font-semibold text-zinc-800">{currentContent.positions.title}</h2>
+                <div className="space-y-6">
+                  
+                </div>
+              </section>
+
+              {/* Benefits */}
+              <section className="space-y-8">
+                <h2 className="text-3xl font-semibold text-zinc-800">{currentContent.benefits.title}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
+                    <div className="relative z-10">
+                      <h3 className="text-xl font-semibold text-zinc-900 mb-4">{currentContent.benefits.health.title}</h3>
+                      <ul className="space-y-2 text-zinc-700">
+                        {currentContent.benefits.health.items.map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
+                    <div className="relative z-10">
+                      <h3 className="text-xl font-semibold text-zinc-900 mb-4">{currentContent.benefits.learning.title}</h3>
+                      <ul className="space-y-2 text-zinc-700">
+                        {currentContent.benefits.learning.items.map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
+                    <div className="relative z-10">
+                      <h3 className="text-xl font-semibold text-zinc-900 mb-4">{currentContent.benefits.workLife.title}</h3>
+                      <ul className="space-y-2 text-zinc-700">
+                        {currentContent.benefits.workLife.items.map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
+                    <div className="relative z-10">
+                      <h3 className="text-xl font-semibold text-zinc-900 mb-4">{currentContent.benefits.office.title}</h3>
+                      <ul className="space-y-2 text-zinc-700">
+                        {currentContent.benefits.office.items.map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
-
-                <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-xl font-semibold text-zinc-900 mb-4">{currentContent.culture.growth.title}</h3>
-                    <p className="text-zinc-700">{currentContent.culture.growth.description}</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Job Listings */}
-            <section className="space-y-8">
-              <h2 className="text-3xl font-semibold text-white">{currentContent.positions.title}</h2>
-              <div className="space-y-6">
-                
-              </div>
-            </section>
-
-            {/* Benefits */}
-            <section className="space-y-8">
-              <h2 className="text-3xl font-semibold text-white">{currentContent.benefits.title}</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-xl font-semibold text-zinc-900 mb-4">{currentContent.benefits.health.title}</h3>
-                    <ul className="space-y-2 text-zinc-700">
-                      {currentContent.benefits.health.items.map((item, index) => (
-                        <li key={index}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-xl font-semibold text-zinc-900 mb-4">{currentContent.benefits.learning.title}</h3>
-                    <ul className="space-y-2 text-zinc-700">
-                      {currentContent.benefits.learning.items.map((item, index) => (
-                        <li key={index}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-xl font-semibold text-zinc-900 mb-4">{currentContent.benefits.workLife.title}</h3>
-                    <ul className="space-y-2 text-zinc-700">
-                      {currentContent.benefits.workLife.items.map((item, index) => (
-                        <li key={index}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                  <div className="relative z-10">
-                    <h3 className="text-xl font-semibold text-zinc-900 mb-4">{currentContent.benefits.office.title}</h3>
-                    <ul className="space-y-2 text-zinc-700">
-                      {currentContent.benefits.office.items.map((item, index) => (
-                        <li key={index}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
+              </section>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </Layout>
   );
 } 

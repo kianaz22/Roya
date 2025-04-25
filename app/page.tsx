@@ -285,62 +285,62 @@ export default function Home() {
               {t('whyRoya.description')}
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Comprehensive Service Card */}
-              <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-lg font-bold mb-3 text-zinc-900">
+                  <h3 className="text-2xl font-bold mb-4 text-zinc-900">
                     {t('whyRoya.features.comprehensive.title')}
                   </h3>
-                  <p className="text-base text-zinc-700 leading-relaxed">
+                  <p className="text-lg text-zinc-700 leading-relaxed">
                     {t('whyRoya.features.comprehensive.description')}
                   </p>
                 </div>
               </div>
 
               {/* Online Store Card */}
-              <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-lg font-bold mb-3 text-zinc-900">
+                  <h3 className="text-2xl font-bold mb-4 text-zinc-900">
                     {t('whyRoya.features.onlineStore.title')}
                   </h3>
-                  <p className="text-base text-zinc-700 leading-relaxed">
+                  <p className="text-lg text-zinc-700 leading-relaxed">
                     {t('whyRoya.features.onlineStore.description')}
                   </p>
                 </div>
               </div>
 
               {/* Customer Interaction Card */}
-              <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-lg font-bold mb-3 text-zinc-900">
+                  <h3 className="text-2xl font-bold mb-4 text-zinc-900">
                     {t('whyRoya.features.customerInteraction.title')}
                   </h3>
-                  <p className="text-base text-zinc-700 leading-relaxed">
+                  <p className="text-lg text-zinc-700 leading-relaxed">
                     {t('whyRoya.features.customerInteraction.description')}
                   </p>
                 </div>
               </div>
 
               {/* Meeting Coordination Card */}
-              <div className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-lg font-bold mb-3 text-zinc-900">
+                  <h3 className="text-2xl font-bold mb-4 text-zinc-900">
                     {t('whyRoya.features.meetingCoordination.title')}
                   </h3>
-                  <p className="text-base text-zinc-700 leading-relaxed">
+                  <p className="text-lg text-zinc-700 leading-relaxed">
                     {t('whyRoya.features.meetingCoordination.description')}
                   </p>
                 </div>
