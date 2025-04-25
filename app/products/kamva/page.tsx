@@ -21,7 +21,7 @@ export default function KamvaPage() {
         {/* Content */}
         <div className="relative h-full flex items-center justify-center">
           <div className="text-center space-y-12 max-w-2xl mx-auto px-8">
-            <div className="relative w-64 h-40 mx-auto">
+            <div className="relative w-48 md:w-64 h-32 md:h-40 mx-auto">
               <Image
                 src="/kamva-black.9265c7b4.svg"
                 alt="Kamva Logo"

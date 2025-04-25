@@ -113,12 +113,12 @@ export default function Home() {
             {/* Left Column - Main Content */}
             <div className="space-y-8">
               {/* Tagline */}
-              <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+              <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
                 {t('hero.tagline')}
               </h1>
               
               {/* Description */}
-              <p className="text-lg md:text-xl text-zinc-400 leading-relaxed max-w-xl">
+              <p className="text-base md:text-lg text-zinc-400 leading-relaxed max-w-xl">
                 {t('hero.description')}
               </p>
               
@@ -127,7 +127,7 @@ export default function Home() {
                 onClick={() => {
                   document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="bg-zinc-100 text-zinc-900 px-8 py-3 rounded-full text-lg font-medium hover:bg-zinc-200 transition-colors"
+                className="bg-zinc-100 text-zinc-900 px-8 py-3 rounded-full text-base font-medium hover:bg-zinc-200 transition-colors"
               >
                 {t('hero.cta')}
               </button>
@@ -174,7 +174,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                   <div className="relative z-10">
-                    <div className="relative w-40 h-24 mb-4">
+                    <div className="relative w-32 h-24">
                       <Image
                         src="/kamva-black.9265c7b4.svg"
                         alt="Kamva Logo"
@@ -182,20 +182,16 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
+                    <p className="text-lg text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
                       {t('products.kamva.description')}
                     </p>
                     <button 
                       onClick={() => toggleCard(0)}
                       className="mt-12 bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
                     >
-                      <span>{expandedCards.includes(0) ? 'Read Less' : 'Read More'}</span>
+                      <span>Read More</span>
                     </button>
-                    {/* <div className={`my-8 pt-0 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(0) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 mt-0 pt-0 border-0'}`}>
-                      <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                        {t('products.kamva.expanded')}
-                      </p>
-                    </div> */}
+                  
                   </div>
                 </div>
               </Link>
@@ -209,7 +205,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                   <div className="relative z-10">
-                    <div className="relative w-40 h-24 mb-4">
+                    <div className="relative w-40 h-24 ">
                       <Image
                         src="/pakat-black.d6e0e0a5.svg"
                         alt="Pakat Logo"
@@ -217,20 +213,16 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
+                    <p className="text-lg text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
                       {t('products.pakat.description')}
                     </p>
                     <button 
                       onClick={() => toggleCard(1)}
                       className="mt-12 bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
                     >
-                      <span>{expandedCards.includes(1) ? 'Read Less' : 'Read More'}</span>
+                      <span>Read More</span>
                     </button>
-                    {/* <div className={`my-8 pt-0 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(1) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 mt-0 pt-0 border-0'}`}>
-                      <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                        {t('products.pakat.expanded')}
-                      </p>
-                    </div> */}
+                  
                   </div>
                 </div>
               </Link>
@@ -244,7 +236,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                   <div className="relative z-10">
-                    <div className="relative w-48 h-24 mb-4  right-4">
+                    <div className="relative w-48 h-24  right-4">
                       <Image
                         src="/hamahang-black.08de284b.svg"
                         alt="Hamahang Logo"
@@ -252,7 +244,7 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
+                    <p className="text-lg text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
                       {t('products.hamahang.description')}
                     </p>
                     <button 
@@ -261,11 +253,7 @@ export default function Home() {
                     >
                       <span>Read More</span>
                     </button>
-                    {/* <div className={`my-8 pt-0 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(2) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 mt-0 pt-0 border-0'}`}>
-                      <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                        {t('products.hamahang.expanded')}
-                      </p>
-                    </div> */}
+                 
                   </div>
                 </div>
               </Link>
@@ -278,10 +266,10 @@ export default function Home() {
       <section className="py-32 bg-zinc-100 relative border-t border-zinc-500">
         <div className="container mx-auto px-8 md:px-16">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
               {t('whyRoya.title')}
             </h2>
-            <p className="text-xl text-zinc-700 max-w-3xl leading-relaxed mb-16">
+            <p className="text-lg text-zinc-700 max-w-3xl leading-relaxed mb-16">
               {t('whyRoya.description')}
             </p>
 
@@ -292,10 +280,10 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-4 text-zinc-900">
+                  <h3 className="text-xl font-bold mb-4 text-zinc-900">
                     {t('whyRoya.features.comprehensive.title')}
                   </h3>
-                  <p className="text-lg text-zinc-700 leading-relaxed">
+                  <p className="text-base text-zinc-700 leading-relaxed">
                     {t('whyRoya.features.comprehensive.description')}
                   </p>
                 </div>
@@ -307,10 +295,10 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-4 text-zinc-900">
+                  <h3 className="text-xl font-bold mb-4 text-zinc-900">
                     {t('whyRoya.features.onlineStore.title')}
                   </h3>
-                  <p className="text-lg text-zinc-700 leading-relaxed">
+                  <p className="text-base text-zinc-700 leading-relaxed">
                     {t('whyRoya.features.onlineStore.description')}
                   </p>
                 </div>
@@ -322,10 +310,10 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-4 text-zinc-900">
+                  <h3 className="text-xl font-bold mb-4 text-zinc-900">
                     {t('whyRoya.features.customerInteraction.title')}
                   </h3>
-                  <p className="text-lg text-zinc-700 leading-relaxed">
+                  <p className="text-base text-zinc-700 leading-relaxed">
                     {t('whyRoya.features.customerInteraction.description')}
                   </p>
                 </div>
@@ -337,10 +325,10 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-4 text-zinc-900">
+                  <h3 className="text-xl font-bold mb-4 text-zinc-900">
                     {t('whyRoya.features.meetingCoordination.title')}
                   </h3>
-                  <p className="text-lg text-zinc-700 leading-relaxed">
+                  <p className="text-base text-zinc-700 leading-relaxed">
                     {t('whyRoya.features.meetingCoordination.description')}
                   </p>
                 </div>

@@ -90,7 +90,7 @@ export default function Contact() {
 
   return (
     <Layout>
-      <section className="py-32 pt-48 bg-white relative">
+      <section className="pt-32 pb-16 md:pt-48 md:pb-24 bg-white relative">
         <div className="container mx-auto px-8 md:px-16">
           <div className="max-w-6xl mx-auto">
             
@@ -99,7 +99,7 @@ export default function Contact() {
               {/* Contact Information */}
               <div className="space-y-8">
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-semibold text-zinc-800">{currentContent.getInTouch.title}</h2>
+                  <h2 className="text-xl font-semibold text-zinc-800">{currentContent.getInTouch.title}</h2>
                   <p className="text-zinc-600">
                     {currentContent.getInTouch.description}
                   </p>
@@ -108,12 +108,12 @@ export default function Contact() {
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="p-3 rounded-xl bg-zinc-100 border border-zinc-200">
-                      <svg className="w-6 h-6 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-zinc-800 mb-1">{currentContent.email.title}</h3>
+                      <h3 className="text-base font-semibold text-zinc-800 mb-1">{currentContent.email.title}</h3>
                       <p className="text-zinc-600">{currentContent.email.address}</p>
                     </div>
                   </div>
@@ -217,7 +217,7 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full bg-zinc-800 text-white hover:bg-zinc-700 px-8 py-3 rounded-full text-lg font-medium transition-colors"
+                    className="w-full bg-zinc-800 text-white hover:bg-zinc-700 px-8 py-3 rounded-full text-base font-medium transition-colors"
                   >
                     {currentContent.form.submit}
                   </button>

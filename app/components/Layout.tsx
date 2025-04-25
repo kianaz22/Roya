@@ -22,11 +22,11 @@ export default function Layout({ children }: LayoutProps) {
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent blur-[0.5px]"></div>
           <div className="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-pink-500/10 to-transparent blur-[1px]"></div>
         </div>
-        <div className="container mx-auto px-8 md:px-16">
+        <div className="container mx-auto px-4 md:px-16">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center justify-between h-20">
               <div className="flex items-center">
-                <Link href="/" className="relative w-24 h-8">
+                <Link href="/" className="relative  w-16 md:w-24 h-8 mr-2 md:mr-0">
                   <Image
                     src="/logo.svg"
                     alt={t('company.name')}
@@ -35,20 +35,20 @@ export default function Layout({ children }: LayoutProps) {
                     priority
                   />
                 </Link>
-                <Link href="/" className="text-2xl font-bold font-space-grotesk tracking-tight text-white hover:text-zinc-300 transition-all duration-300">
+                <Link href="/" className="text-xl font-bold font-space-grotesk tracking-tight text-white hover:text-zinc-300 transition-all duration-300 whitespace-nowrap">
                   {t('company.name')}
                 </Link>
               </div>
               <nav className="hidden md:flex items-center space-x-8">
-                <Link href="/" className="text-zinc-300 hover:text-blue-400 transition-colors relative group">
+                <Link href="/" className="text-sm text-zinc-300 hover:text-blue-400 transition-colors relative group">
                   {t('nav.home')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
                 </Link>
-                <Link href="/products" className="text-zinc-300 hover:text-blue-400 transition-colors relative group">
+                <Link href="/#products" className="text-sm text-zinc-300 hover:text-blue-400 transition-colors relative group">
                   {t('nav.products')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
                 </Link>
-                <Link href="/about" className="text-zinc-300 hover:text-blue-400 transition-colors relative group">
+                <Link href="/about" className="text-sm text-zinc-300 hover:text-blue-400 transition-colors relative group">
                   {t('nav.about')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
                 </Link>
@@ -84,24 +84,8 @@ export default function Layout({ children }: LayoutProps) {
       <div className={`fixed inset-0 bg-zinc-900/95 backdrop-blur-sm z-40 transition-transform duration-300 md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="container mx-auto px-8 h-full">
           <div className="flex flex-col items-center justify-center h-full space-y-8">
-            <div className="flex items-center space-x-3">
-              <div className="relative w-8 h-8">
-                <Image
-                  src="/logo.svg"
-                  alt={t('company.name')}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <Link 
-                href="/" 
-                className="text-2xl font-bold text-white hover:text-blue-400 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {t('company.name')}
-              </Link>
-            </div>
-            <nav className="flex flex-col items-center space-y-6">
+           
+            <nav className="flex flex-col items-center space-y-8">
               <Link 
                 href="/" 
                 className="text-xl text-zinc-300 hover:text-blue-400 transition-colors"
@@ -110,7 +94,7 @@ export default function Layout({ children }: LayoutProps) {
                 {t('nav.home')}
               </Link>
               <Link 
-                href="/products" 
+                href="/#products" 
                 className="text-xl text-zinc-300 hover:text-blue-400 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -172,11 +156,11 @@ export default function Layout({ children }: LayoutProps) {
                       className="object-contain"
                     />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">
+                  <h3 className="text-xl font-bold text-white">
                     {t('company.name')}
                   </h3>
                 </div>
-                <p className="text-zinc-400 text-sm leading-relaxed">
+                <p className="text-zinc-400 text-xs leading-relaxed">
                   {t('footer.company.description')}
                 </p>
               </div>
@@ -236,17 +220,17 @@ export default function Layout({ children }: LayoutProps) {
         </div>
         
         {/* Copyright Section - Full Width Border */}
-        {/* <div className="border-t border-zinc-800 mt-8">
+         <div className="border-t border-zinc-700 mt-8">
           <div className="container mx-auto px-8 md:px-16 py-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-col md:flex-row justify-center items-center">
-                <p className="text-zinc-400 text-sm">
+                <p className="text-zinc-600 text-xs">
                   {t('footer.copyright')}
                 </p>
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </footer>
     </div>
   );

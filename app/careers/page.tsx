@@ -176,7 +176,7 @@ export default function Careers() {
       <section className="pt-36  bg-white relative h-screen">
         <div className="container mx-auto px-8 md:px-16">
           <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl  font-bold mb-12 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
               {currentContent.title}
             </h1>
             
@@ -185,9 +185,9 @@ export default function Careers() {
 
               {/* Job Listings */}
               <section className="space-y-8">
-                <h2 className="text-3xl font-semibold text-zinc-800">{currentContent.positions.title}</h2>
+                <h2 className="text-2xl font-semibold text-zinc-800">{currentContent.positions.title}:</h2>
                 <div className="space-y-6">
-                  <p className="text-zinc-700 text-lg">{currentContent.positions.noPositions}</p>
+                  <p className="text-zinc-500 text-lg">{currentContent.positions.noPositions}</p>
                 </div>
               </section>
 

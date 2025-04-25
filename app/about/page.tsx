@@ -32,11 +32,11 @@ export default function About() {
       <section className="py-32 pt-36 bg-white relative">
         <div className="container mx-auto px-8 md:px-16">
           <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
+            <h1 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
               {language === 'en' ? content.en.title : content.fa.title}
             </h1>
             
-            <div className="space-y-8 text-lg text-zinc-700">
+            <div className="space-y-8 text-base text-zinc-700">
               {(language === 'en' ? content.en.paragraphs : content.fa.paragraphs).map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
