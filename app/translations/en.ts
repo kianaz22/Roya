@@ -4,6 +4,7 @@ export const en = {
   },
   nav: {
     home: "Home",
+    products: "Products",
     about: "About Us",
     careers: "Careers",
     contact: "Contact Us",

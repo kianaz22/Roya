@@ -4,6 +4,7 @@ import { useLanguage } from './context/LanguageContext';
 import { useState } from 'react';
 import Layout from './components/Layout';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -162,125 +163,107 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Kamva */}
             <div className="group relative">
-              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                <div className="relative z-10">
-                  <div className="relative w-32 h-32">
-                    <Image
-                      src="/kamva-black.9265c7b4.svg"
-                      alt="Kamva Logo"
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                    {t('products.kamva.description')}
-                  </p>
-                  <button 
-                    onClick={() => toggleCard(0)}
-                    className="mt-8 bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors flex items-center gap-3"
-                  >
-                    <span>{expandedCards.includes(0) ? 'Read Less' : 'Read More'}</span>
-                    <svg 
-                      className={`w-5 h-5 transition-transform duration-300 ${expandedCards.includes(0) ? 'rotate-180' : ''}`} 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  <div className={`mt-8 pt-8 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(0) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+              <Link href="/products/kamva" className="block">
+                <div className="px-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
+                  <div className="relative z-10">
+                    <div className="relative w-40 h-24 mb-4">
+                      <Image
+                        src="/kamva-black.9265c7b4.svg"
+                        alt="Kamva Logo"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
                     <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                      {t('products.kamva.expanded')}
+                      {t('products.kamva.description')}
                     </p>
+                    <button 
+                      onClick={() => toggleCard(0)}
+                      className="mt-12 bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
+                    >
+                      <span>{expandedCards.includes(0) ? 'Read Less' : 'Read More'}</span>
+                    </button>
+                    <div className={`my-8 pt-0 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(0) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 mt-0 pt-0 border-0'}`}>
+                      <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
+                        {t('products.kamva.expanded')}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
 
             {/* Pakat */}
             <div className="group relative">
-              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                <div className="relative z-10">
-                  <div className="relative w-32 h-32">
-                    <Image
-                      src="/pakat-black.d6e0e0a5.svg"
-                      alt="Pakat Logo"
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                    {t('products.pakat.description')}
-                  </p>
-                  <button 
-                    onClick={() => toggleCard(1)}
-                    className="mt-8 bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors flex items-center gap-3"
-                  >
-                    <span>{expandedCards.includes(1) ? 'Read Less' : 'Read More'}</span>
-                    <svg 
-                      className={`w-5 h-5 transition-transform duration-300 ${expandedCards.includes(1) ? 'rotate-180' : ''}`} 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  <div className={`mt-8 pt-8 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(1) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+              <Link href="/products/pakat" className="block">
+                <div className="px-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
+                  <div className="relative z-10">
+                    <div className="relative w-40 h-24 mb-4">
+                      <Image
+                        src="/pakat-black.d6e0e0a5.svg"
+                        alt="Pakat Logo"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
                     <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                      {t('products.pakat.expanded')}
+                      {t('products.pakat.description')}
                     </p>
+                    <button 
+                      onClick={() => toggleCard(1)}
+                      className="mt-12 bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
+                    >
+                      <span>{expandedCards.includes(1) ? 'Read Less' : 'Read More'}</span>
+                    </button>
+                    <div className={`my-8 pt-0 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(1) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 mt-0 pt-0 border-0'}`}>
+                      <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
+                        {t('products.pakat.expanded')}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
 
             {/* Hamahang */}
             <div className="group relative">
-              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                <div className="relative z-10">
-                  <div className="relative w-32 h-32">
-                    <Image
-                      src="/hamahang-black.08de284b.svg"
-                      alt="Hamahang Logo"
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                    {t('products.hamahang.description')}
-                  </p>
-                  <button 
-                    onClick={() => toggleCard(2)}
-                    className="mt-8 bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors flex items-center gap-3"
-                  >
-                    <span>{expandedCards.includes(2) ? 'Read Less' : 'Read More'}</span>
-                    <svg 
-                      className={`w-5 h-5 transition-transform duration-300 ${expandedCards.includes(2) ? 'rotate-180' : ''}`} 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  <div className={`mt-8 pt-8 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(2) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+              <Link href="/products/hamahang" className="block">
+                <div className="px-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
+                  <div className="relative z-10">
+                    <div className="relative w-40 h-24 mb-4">
+                      <Image
+                        src="/hamahang-black.08de284b.svg"
+                        alt="Hamahang Logo"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
                     <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                      {t('products.hamahang.expanded')}
+                      {t('products.hamahang.description')}
                     </p>
+                    <button 
+                      onClick={() => toggleCard(2)}
+                      className="mt-12 bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
+                    >
+                      <span>{expandedCards.includes(2) ? 'Read Less' : 'Read More'}</span>
+                    </button>
+                    <div className={`my-8 pt-0 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(2) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 mt-0 pt-0 border-0'}`}>
+                      <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
+                        {t('products.hamahang.expanded')}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

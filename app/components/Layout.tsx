@@ -3,6 +3,7 @@
 import { useLanguage } from '../context/LanguageContext';
 import Link from 'next/link';
 import Image from 'next/image';
+import Products from './Products';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -37,7 +38,10 @@ export default function Layout({ children }: LayoutProps) {
               </div>
             </div>
             <nav className="hidden md:flex items-center gap-8">
-             
+              <Link href="/#products" className="text-zinc-300 hover:text-white transition-colors relative group">
+                {t('nav.products')}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
+              </Link>
               <Link href="/about" className="text-zinc-300 hover:text-white transition-colors relative group">
                 {t('nav.about')}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
@@ -90,21 +94,7 @@ export default function Layout({ children }: LayoutProps) {
                 </p>
               </div>
 
-              {/* Products */}
-              <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white">{t('footer.sections.products')}</h4>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">{t('products.kamva.title')}</a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">{t('products.pakat.title')}</a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">{t('products.hamahang.title')}</a>
-                  </li>
-                </ul>
-              </div>
+             
 
               {/* Company */}
               <div className="space-y-4">
