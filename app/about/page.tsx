@@ -8,7 +8,7 @@ export default function About() {
 
   const content = {
     en: {
-      title: "About Roya E-commerce",
+      title: "About Us",
       paragraphs: [
         "Roya E-commerce is a leading technology company dedicated to transforming the future of online business through innovative solutions and creative approaches. Our mission is to make technology not only make lives easier but also creatively and innovatively transform the world into a better place.",
         "Founded with a vision to revolutionize the e-commerce landscape, we have developed a suite of powerful tools and services that empower businesses to thrive in the digital age. Our comprehensive platform includes Kamva for online store management, Pakat for email marketing, and Hamahang for seamless meeting coordination.",
@@ -17,7 +17,7 @@ export default function About() {
       ]
     },
     fa: {
-      title: "درباره تجارت الکترونیک رویا",
+      title: "درباره ما",
       paragraphs: [
         "تجارت الکترونیک رویا یک شرکت فناوری پیشرو است که با ارائه راه‌حل‌های نوآورانه و رویکردهای خلاقانه، به دنبال دگرگونی آینده کسب‌وکار آنلاین است. مأموریت ما این است که فناوری را نه تنها برای آسان‌تر کردن زندگی، بلکه برای دگرگونی خلاقانه و نوآورانه جهان به مکانی بهتر به کار گیریم.",
         "با چشم‌اندازی برای انقلابی در عرصه تجارت الکترونیک، ما مجموعه‌ای از ابزارها و خدمات قدرتمند را توسعه داده‌ایم که به کسب‌وکارها کمک می‌کند در عصر دیجیتال رشد کنند. پلتفرم جامع ما شامل کاموا برای مدیریت فروشگاه آنلاین، پاکت برای بازاریابی ایمیلی و هماهنگ برای هماهنگی بی‌نقص جلسات است.",
@@ -29,10 +29,10 @@ export default function About() {
 
   return (
     <Layout>
-      <section className="py-32 bg-white relative">
+      <section className="py-32 pt-36 bg-white relative">
         <div className="container mx-auto px-8 md:px-16">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
+          <div className="max-w-6xl mx-auto">
+            <h1 className="text-4xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
               {language === 'en' ? content.en.title : content.fa.title}
             </h1>
             

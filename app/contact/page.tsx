@@ -22,7 +22,7 @@ export default function Contact() {
       },
       email: {
         title: "Email Us",
-        address: "royaEcommerce.engineering@gmail.com"
+        address: "royaecommerce.engineering@gmail.com"
       },
       address: {
         title: "Address",
@@ -50,7 +50,7 @@ export default function Contact() {
       },
       email: {
         title: "ایمیل",
-        address: "royaEcommerce.engineering@gmail.com"
+        address: "royaecommerce.engineering@gmail.com"
       },
       address: {
         title: "آدرس",
@@ -90,9 +90,9 @@ export default function Contact() {
 
   return (
     <Layout>
-      <section className="py-32 bg-white relative">
+      <section className="py-32 pt-48 bg-white relative">
         <div className="container mx-auto px-8 md:px-16">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

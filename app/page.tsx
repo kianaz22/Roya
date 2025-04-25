@@ -169,7 +169,7 @@ export default function Home() {
             {/* Kamva */}
             <div className="group relative">
               <Link href="/products/kamva" className="block">
-                <div className="px-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                <div className="px-8 pb-8 rounded-3xl border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
@@ -191,11 +191,11 @@ export default function Home() {
                     >
                       <span>{expandedCards.includes(0) ? 'Read Less' : 'Read More'}</span>
                     </button>
-                    <div className={`my-8 pt-0 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(0) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 mt-0 pt-0 border-0'}`}>
+                    {/* <div className={`my-8 pt-0 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(0) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 mt-0 pt-0 border-0'}`}>
                       <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
                         {t('products.kamva.expanded')}
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </Link>
@@ -204,7 +204,7 @@ export default function Home() {
             {/* Pakat */}
             <div className="group relative">
               <Link href="/products/pakat" className="block">
-                <div className="px-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                <div className="px-8 pb-8 rounded-3xl border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
@@ -226,11 +226,11 @@ export default function Home() {
                     >
                       <span>{expandedCards.includes(1) ? 'Read Less' : 'Read More'}</span>
                     </button>
-                    <div className={`my-8 pt-0 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(1) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 mt-0 pt-0 border-0'}`}>
+                    {/* <div className={`my-8 pt-0 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(1) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 mt-0 pt-0 border-0'}`}>
                       <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
                         {t('products.pakat.expanded')}
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </Link>
@@ -239,12 +239,12 @@ export default function Home() {
             {/* Hamahang */}
             <div className="group relative">
               <Link href="/products/hamahang" className="block">
-                <div className="px-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                <div className="px-8 pb-8 rounded-3xl border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                   <div className="relative z-10">
-                    <div className="relative w-40 h-24 mb-4  right-4">
+                    <div className="relative w-48 h-24 mb-4  right-4">
                       <Image
                         src="/hamahang-black.08de284b.svg"
                         alt="Hamahang Logo"
@@ -259,13 +259,13 @@ export default function Home() {
                       onClick={() => toggleCard(2)}
                       className="mt-12 bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
                     >
-                      <span>{expandedCards.includes(2) ? 'Read Less' : 'Read More'}</span>
+                      <span>Read More</span>
                     </button>
-                    <div className={`my-8 pt-0 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(2) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 mt-0 pt-0 border-0'}`}>
+                    {/* <div className={`my-8 pt-0 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(2) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 mt-0 pt-0 border-0'}`}>
                       <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
                         {t('products.hamahang.expanded')}
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </Link>
@@ -275,7 +275,7 @@ export default function Home() {
       </section>
 
       {/* Why Roya E-commerce Section */}
-      <section className="py-32 bg-zinc-100 relative">
+      <section className="py-32 bg-zinc-100 relative border-t border-zinc-500">
         <div className="container mx-auto px-8 md:px-16">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
@@ -287,7 +287,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Comprehensive Service Card */}
-              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-800 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
@@ -302,7 +302,7 @@ export default function Home() {
               </div>
 
               {/* Online Store Card */}
-              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-800 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
@@ -317,7 +317,7 @@ export default function Home() {
               </div>
 
               {/* Customer Interaction Card */}
-              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-800 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
@@ -332,7 +332,7 @@ export default function Home() {
               </div>
 
               {/* Meeting Coordination Card */}
-              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-800 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>

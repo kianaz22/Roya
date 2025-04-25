@@ -10,7 +10,7 @@ export default function HamahangPage() {
 
   return (
     <Layout>
-      <div className="min-h-[calc(100vh-5rem)] relative overflow-hidden">
+      <div className="min-h-[calc(100vh-10rem)] relative overflow-hidden pt-32">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-100 to-white"></div>
         <div className="absolute inset-0">

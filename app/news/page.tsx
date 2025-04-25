@@ -45,10 +45,10 @@ export default function NewsPage() {
 
   return (
     <Layout>
-      <section className="py-32 bg-white relative">
+      <section className="py-32 pt-36 bg-white relative">
         <div className="container mx-auto px-8 md:px-16">
           <div className="mb-20 max-w-6xl mx-auto">
-            <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold mb-6 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
               {t('news.title')}
             </h1>
             <p className="text-xl text-zinc-600 max-w-3xl leading-relaxed">
