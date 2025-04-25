@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import Layout from '../components/Layout';
 
 export default function About() {
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
 
   const content = {
     en: {
