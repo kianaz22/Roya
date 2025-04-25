@@ -167,7 +167,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <div className="relative w-16 h-16 mb-6">
+                  <div className="relative w-32 h-32">
                     <Image
                       src="/kamva-black.9265c7b4.svg"
                       alt="Kamva Logo"
@@ -208,7 +208,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <div className="relative w-16 h-16 mb-6">
+                  <div className="relative w-32 h-32">
                     <Image
                       src="/pakat-black.d6e0e0a5.svg"
                       alt="Pakat Logo"
@@ -249,7 +249,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <div className="relative w-16 h-16 mb-6">
+                  <div className="relative w-32 h-32">
                     <Image
                       src="/hamahang-black.08de284b.svg"
                       alt="Hamahang Logo"

@@ -218,29 +218,7 @@ export default function Careers() {
             <section className="space-y-8">
               <h2 className="text-3xl font-semibold text-white">{currentContent.positions.title}</h2>
               <div className="space-y-6">
-                {currentContent.positions.jobs.map((job, index) => (
-                  <div key={index} className="p-6 rounded-3xl border-2 border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                    <div className="relative z-10">
-                      <div className="flex justify-between items-start mb-4">
-                        <div>
-                          <h3 className="text-xl font-semibold text-zinc-900">{job.title}</h3>
-                          <p className="text-zinc-600">{job.department}</p>
-                        </div>
-                        <div className="text-right">
-                          <p className="text-zinc-600">{job.location}</p>
-                          <p className="text-zinc-600">{job.type}</p>
-                        </div>
-                      </div>
-                      <p className="text-zinc-700 mb-4">{job.description}</p>
-                      <button className="bg-zinc-900 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-zinc-800 transition-colors">
-                        {language === 'en' ? 'Apply Now' : 'درخواست همکاری'}
-                      </button>
-                    </div>
-                  </div>
-                ))}
+                
               </div>
             </section>
 

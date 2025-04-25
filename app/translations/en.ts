@@ -11,8 +11,8 @@ export const en = {
     news: "News & Media"
   },
   hero: {
-    tagline: "Transform Your Online Business",
-    description: "Build a professional store in 5 minutes and experience online sales with an electronic payment gateway, even without a trust symbol.",
+    tagline: "Where creativity and technology go hand in hand.",
+    description: "At Roya E-commerce, we strive to create a future where technology not only makes lives easier but also creatively and innovatively transforms the world into a better place. We believe that technology should be accompanied by humanity.",
     cta: "Get Started"
   },
   products: {
@@ -83,5 +83,25 @@ export const en = {
       cookies: "Cookie Policy"
     },
     copyright: "© 2024 Roya E-commerce. All rights reserved."
+  },
+  aboutUs: {
+    supportMessage: "Roya E-commerce is always with you along this journey, and our support team is available to answer your questions at any time.",
+    futureSection: {
+      title: "Towards the Future",
+      description: "At Roya E-commerce, we aim to create a future where technology not only makes lives easier but also transforms the world into a better place in a creative and innovative way."
+    },
+    teamSection: {
+      title: "Our Team",
+      description: "At Roya E-commerce, we are committed to quality and innovation. Our team works closely together to design and develop products that not only meet today's needs.",
+      commitment: "We are committed to quality and innovation at Roya E-commerce."
+    },
+    cultureSection: {
+      title: "Our Culture: Collaboration and Creativity",
+      description: "In a world where technology leads, Roya E-commerce fosters a sense of trust, loyalty, and collaboration in every successful business."
+    },
+    innovationSection: {
+      title: "Commitment to Innovation",
+      description: "Roya E-commerce represents a commitment to innovation and collaboration, determined to build trust and familiarity, and reflect its values and goals."
+    }
   }
 }; 
