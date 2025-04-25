@@ -3,6 +3,7 @@
 import { useLanguage } from './context/LanguageContext';
 import { useState } from 'react';
 import Layout from './components/Layout';
+import Image from 'next/image';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -151,10 +152,10 @@ export default function Home() {
         <div className="container mx-auto px-8 md:px-16">
           <div className="mb-20 max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
-              Products
+              {t('products.title')}
             </h2>
             <p className="text-xl text-zinc-600 max-w-3xl leading-relaxed">
-              At Roya E-commerce, we strive to create a future where technology not only makes lives easier but also creatively and innovatively transforms the world into a better place.
+              {t('products.description')}
             </p>
           </div>
 
@@ -166,10 +167,16 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <div className="text-5xl mb-6">🛍️</div>
-                  <h3 className="text-3xl font-bold mb-6 text-zinc-900 group-hover:text-zinc-800 transition-colors">Kamva</h3>
+                  <div className="relative w-16 h-16 mb-6">
+                    <Image
+                      src="/kamva-black.9265c7b4.svg"
+                      alt="Kamva Logo"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                   <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                    Kamva helps you transform your online business, build a professional store in 5 minutes, and experience online sales with an electronic payment gateway, even without a trust symbol.
+                    {t('products.kamva.description')}
                   </p>
                   <button 
                     onClick={() => toggleCard(0)}
@@ -187,7 +194,7 @@ export default function Home() {
                   </button>
                   <div className={`mt-8 pt-8 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(0) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                     <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                      At Kamva, we have prepared all the necessary features for easy management of an online business. In Kamva&apos;s store builder, complete your products, categories, and store information and start selling your products immediately.
+                      {t('products.kamva.expanded')}
                     </p>
                   </div>
                 </div>
@@ -201,10 +208,16 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <div className="text-5xl mb-6">📧</div>
-                  <h3 className="text-3xl font-bold mb-6 text-zinc-900 group-hover:text-zinc-800 transition-colors">Pakat</h3>
+                  <div className="relative w-16 h-16 mb-6">
+                    <Image
+                      src="/pakat-black.d6e0e0a5.svg"
+                      alt="Pakat Logo"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                   <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                    With Pakat, you can send various types of emails such as campaigns, automation, and transactional emails to your users and continuously stay in touch with your customers using its diverse features.
+                    {t('products.pakat.description')}
                   </p>
                   <button 
                     onClick={() => toggleCard(1)}
@@ -222,7 +235,7 @@ export default function Home() {
                   </button>
                   <div className={`mt-8 pt-8 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(1) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                     <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                      Pakat&apos;s email marketing service, a subsidiary of Electronic Communication Roya Company, started its activities in 2019 to address the challenges in email marketing and improve user experience. It has been trusted by both large and small businesses in the online trade space ever since.
+                      {t('products.pakat.expanded')}
                     </p>
                   </div>
                 </div>
@@ -236,10 +249,16 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <div className="text-5xl mb-6">📅</div>
-                  <h3 className="text-3xl font-bold mb-6 text-zinc-900 group-hover:text-zinc-800 transition-colors">Hamahang</h3>
+                  <div className="relative w-16 h-16 mb-6">
+                    <Image
+                      src="/hamahang-black.08de284b.svg"
+                      alt="Hamahang Logo"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                   <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                    Hamahang simplifies scheduling your appointments to just sharing a link. Simply connect your calendar, define your availability, and attend all your meetings effortlessly.
+                    {t('products.hamahang.description')}
                   </p>
                   <button 
                     onClick={() => toggleCard(2)}
@@ -257,7 +276,7 @@ export default function Home() {
                   </button>
                   <div className={`mt-8 pt-8 border-t border-zinc-200 overflow-hidden transition-all duration-300 ${expandedCards.includes(2) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                     <p className="text-xl text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
-                      Using Hamahang, you can access all scheduled appointments in your calendar and manage your time effectively.
+                      {t('products.hamahang.expanded')}
                     </p>
                   </div>
                 </div>
@@ -272,10 +291,10 @@ export default function Home() {
         <div className="container mx-auto px-8 md:px-16">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
-              Why Roya E-commerce
+              {t('whyRoya.title')}
             </h2>
             <p className="text-xl text-zinc-700 max-w-3xl leading-relaxed mb-16">
-              As a provider of services and tools necessary for your business, Roya E-commerce enables your growth and progress in the competitive environment of today&apos;s technology world.
+              {t('whyRoya.description')}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -285,9 +304,11 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-lg font-bold mb-3 text-zinc-900">Comprehensive and Integrated Service</h3>
+                  <h3 className="text-lg font-bold mb-3 text-zinc-900">
+                    {t('whyRoya.features.comprehensive.title')}
+                  </h3>
                   <p className="text-base text-zinc-700 leading-relaxed">
-                    At Roya E-commerce, all the facilities and services you need to start and manage an online business in the best possible way are provided.
+                    {t('whyRoya.features.comprehensive.description')}
                   </p>
                 </div>
               </div>
@@ -298,9 +319,11 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-lg font-bold mb-3 text-zinc-900">Set Up an Online Store</h3>
+                  <h3 className="text-lg font-bold mb-3 text-zinc-900">
+                    {t('whyRoya.features.onlineStore.title')}
+                  </h3>
                   <p className="text-base text-zinc-700 leading-relaxed">
-                    You can build a professional store in 5 minutes and experience online sales with an electronic payment gateway, even without a trust symbol.
+                    {t('whyRoya.features.onlineStore.description')}
                   </p>
                 </div>
               </div>
@@ -311,9 +334,11 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-lg font-bold mb-3 text-zinc-900">Constructive Customer Interaction</h3>
+                  <h3 className="text-lg font-bold mb-3 text-zinc-900">
+                    {t('whyRoya.features.customerInteraction.title')}
+                  </h3>
                   <p className="text-base text-zinc-700 leading-relaxed">
-                    One of the best channels for interacting with users after social media is email marketing. Easily stay in touch with your users through email.
+                    {t('whyRoya.features.customerInteraction.description')}
                   </p>
                 </div>
               </div>
@@ -324,9 +349,11 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-lg font-bold mb-3 text-zinc-900">Hassle-Free Meeting Coordination</h3>
+                  <h3 className="text-lg font-bold mb-3 text-zinc-900">
+                    {t('whyRoya.features.meetingCoordination.title')}
+                  </h3>
                   <p className="text-base text-zinc-700 leading-relaxed">
-                    Schedule your meetings effortlessly by simply connecting to Google Calendar and defining a schedule, then share the link with your contacts.
+                    {t('whyRoya.features.meetingCoordination.description')}
                   </p>
                 </div>
               </div>

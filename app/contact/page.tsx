@@ -1,15 +1,78 @@
 'use client';
 
 import { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import Layout from '../components/Layout';
 
 export default function Contact() {
+  const { language } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: ''
   });
+
+  const content = {
+    en: {
+      title: "Contact Us",
+      getInTouch: {
+        title: "Get in Touch",
+        description: "We'd love to hear from you. Please feel free to contact us using any of the following methods."
+      },
+      email: {
+        title: "Email Us",
+        address: "support@pakat.net"
+      },
+      address: {
+        title: "Address",
+        text: "Enghelab Street, Balavar Alley, No. 7"
+      },
+      phone: {
+        title: "Phone",
+        number: "021-91015383"
+      },
+      form: {
+        title: "Send us a Message",
+        description: "Fill out the form below and we'll get back to you as soon as possible.",
+        name: "Name",
+        email: "Email",
+        subject: "Subject",
+        message: "Message",
+        submit: "Send Message"
+      }
+    },
+    fa: {
+      title: "تماس با ما",
+      getInTouch: {
+        title: "ارتباط با ما",
+        description: "ما مشتاق شنیدن نظرات شما هستیم. لطفاً از طریق هر یک از روش‌های زیر با ما در تماس باشید."
+      },
+      email: {
+        title: "ایمیل",
+        address: "support[at]pakat.net"
+      },
+      address: {
+        title: "آدرس",
+        text: "خیابان انقلاب، کوچه بالاور، پلاک ۷"
+      },
+      phone: {
+        title: "تلفن",
+        number: "۰۲۱۹۱۰۱۵۳۸۳"
+      },
+      form: {
+        title: "ارسال پیام",
+        description: "فرم زیر را پر کنید و ما در اسرع وقت با شما تماس خواهیم گرفت.",
+        name: "نام",
+        email: "ایمیل",
+        subject: "موضوع",
+        message: "پیام",
+        submit: "ارسال پیام"
+      }
+    }
+  };
+
+  const currentContent = language === 'en' ? content.en : content.fa;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,16 +93,16 @@ export default function Contact() {
       <div className="container mx-auto px-8 md:px-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-            Contact Us
+            {currentContent.title}
           </h1>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-2xl font-semibold text-white">Get in Touch</h2>
+                <h2 className="text-2xl font-semibold text-white">{currentContent.getInTouch.title}</h2>
                 <p className="text-zinc-400">
-                  We&apos;d love to hear from you. Please feel free to contact us using any of the following methods.
+                  {currentContent.getInTouch.description}
                 </p>
               </div>
 
@@ -51,8 +114,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Email Us</h3>
-                    <p className="text-zinc-400">roya.engineering@gmail.com</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">{currentContent.email.title}</h3>
+                    <p className="text-zinc-400">{currentContent.email.address}</p>
                   </div>
                 </div>
 
@@ -64,8 +127,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Address</h3>
-                    <p className="text-zinc-400">Enghelab Street, Balavar Alley, No. 7</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">{currentContent.address.title}</h3>
+                    <p className="text-zinc-400">{currentContent.address.text}</p>
                   </div>
                 </div>
 
@@ -76,8 +139,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-                    <p className="text-zinc-400">021-91015383</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">{currentContent.phone.title}</h3>
+                    <p className="text-zinc-400">{currentContent.phone.number}</p>
                   </div>
                 </div>
               </div>
@@ -86,16 +149,16 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-2xl font-semibold text-white">Send us a Message</h2>
+                <h2 className="text-2xl font-semibold text-white">{currentContent.form.title}</h2>
                 <p className="text-zinc-400">
-                  Fill out the form below and we&apos;ll get back to you as soon as possible.
+                  {currentContent.form.description}
                 </p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-2">
-                    Name
+                    {currentContent.form.name}
                   </label>
                   <input
                     type="text"
@@ -110,7 +173,7 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">
-                    Email
+                    {currentContent.form.email}
                   </label>
                   <input
                     type="email"
@@ -125,7 +188,7 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-zinc-300 mb-2">
-                    Subject
+                    {currentContent.form.subject}
                   </label>
                   <input
                     type="text"
@@ -140,7 +203,7 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-zinc-300 mb-2">
-                    Message
+                    {currentContent.form.message}
                   </label>
                   <textarea
                     id="message"
@@ -157,7 +220,7 @@ export default function Contact() {
                   type="submit"
                   className="w-full bg-zinc-100 text-zinc-900 px-8 py-3 rounded-full text-lg font-medium hover:bg-zinc-200 transition-colors"
                 >
-                  Send Message
+                  {currentContent.form.submit}
                 </button>
               </form>
             </div>

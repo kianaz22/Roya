@@ -2,6 +2,7 @@
 
 import { useLanguage } from '../context/LanguageContext';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -11,7 +12,7 @@ export default function Layout({ children }: LayoutProps) {
   const { t, language, setLanguage } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-zinc-900 text-white">
+    <div className={`min-h-screen bg-zinc-900 text-white ${language === 'fa' ? 'font-[var(--font-vazirmatn)]' : ''}`} dir={language === 'fa' ? 'rtl' : 'ltr'}>
       {/* Navigation Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-900/80 backdrop-blur-sm">
         <div className="relative">
@@ -21,28 +22,36 @@ export default function Layout({ children }: LayoutProps) {
         </div>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            <div className="text-2xl font-bold font-space-grotesk tracking-tight bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-              {t('company.name')}
+            <div className="flex items-center">
+              <Link href="/" className="relative w-32 h-8">
+                <Image
+                  src="/logo.svg"
+                  alt={t('company.name')}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </Link>
+              <div className="text-2xl font-bold font-space-grotesk tracking-tight bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
+                {t('company.name')}
+              </div>
             </div>
             <nav className="hidden md:flex items-center gap-8">
-              <Link href="/" className="text-zinc-300 hover:text-white transition-colors relative group">
-                Home
+             
+              <Link href="/about" className="text-zinc-300 hover:text-white transition-colors relative group">
+                {t('nav.about')}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
-              <Link href="/about" className="text-zinc-300 hover:text-white transition-colors relative group">
-                About Us
+              <Link href="/news" className="text-zinc-300 hover:text-white transition-colors relative group">
+                {t('nav.news')}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link href="/careers" className="text-zinc-300 hover:text-white transition-colors relative group">
-                Careers
+                {t('nav.careers')}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <Link href="/contact" className="text-zinc-300 hover:text-white transition-colors relative group">
-                Contact Us
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
-              </Link>
-              <Link href="/feedback" className="text-zinc-300 hover:text-white transition-colors relative group">
-                Suggestions & Complaints
+                {t('nav.contact')}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </Link>
               <button
@@ -74,55 +83,58 @@ export default function Layout({ children }: LayoutProps) {
               {/* Company Info */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-                  Roya E-commerce
+                  {t('company.name')}
                 </h3>
                 <p className="text-zinc-400 text-sm leading-relaxed">
-                  Transforming the future of technology with innovative solutions and creative approaches.
+                  {t('footer.company.description')}
                 </p>
               </div>
 
               {/* Products */}
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white">Products</h4>
+                <h4 className="text-lg font-semibold text-white">{t('footer.sections.products')}</h4>
                 <ul className="space-y-2">
                   <li>
-                    <a href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Kamva</a>
+                    <a href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">{t('products.kamva.title')}</a>
                   </li>
                   <li>
-                    <a href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Pakat</a>
+                    <a href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">{t('products.pakat.title')}</a>
                   </li>
                   <li>
-                    <a href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Hamahang</a>
+                    <a href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">{t('products.hamahang.title')}</a>
                   </li>
                 </ul>
               </div>
 
               {/* Company */}
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white">Company</h4>
+                <h4 className="text-lg font-semibold text-white">{t('footer.sections.company')}</h4>
                 <ul className="space-y-2">
                   <li>
-                    <Link href="/about" className="text-zinc-400 hover:text-white transition-colors text-sm">About Us</Link>
+                    <Link href="/about" className="text-zinc-400 hover:text-white transition-colors text-sm">{t('nav.about')}</Link>
                   </li>
                   <li>
-                    <Link href="/contact" className="text-zinc-400 hover:text-white transition-colors text-sm">Contact</Link>
+                    <Link href="/contact" className="text-zinc-400 hover:text-white transition-colors text-sm">{t('nav.contact')}</Link>
                   </li>
                   <li>
-                    <Link href="/careers" className="text-zinc-400 hover:text-white transition-colors text-sm">Careers</Link>
+                    <Link href="/careers" className="text-zinc-400 hover:text-white transition-colors text-sm">{t('nav.careers')}</Link>
+                  </li>
+                  <li>
+                    <Link href="/feedback" className="text-zinc-400 hover:text-white transition-colors text-sm">{t('nav.feedback')}</Link>
                   </li>
                 </ul>
               </div>
 
               {/* Contact Info */}
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white">Contact Us</h4>
+                <h4 className="text-lg font-semibold text-white">{t('footer.sections.contact')}</h4>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
                     <svg className="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:roya.engineering@gmail.com" className="text-zinc-400 hover:text-white transition-colors text-sm">
-                      roya.engineering@gmail.com
+                    <a href="mailto:support@pakat.net" className="text-zinc-400 hover:text-white transition-colors text-sm">
+                      {language === 'en' ? 'support@pakat.net' : 'ایمیل: support[at]pakat.net'}
                     </a>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -131,7 +143,7 @@ export default function Layout({ children }: LayoutProps) {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     <span className="text-zinc-400 text-sm">
-                      Enghelab Street, Balavar Alley, No. 7
+                      {language === 'en' ? 'Enghelab Street, Balavar Alley, No. 7' : 'خیابان انقلاب، کوچه بالاور، پلاک ۷'}
                     </span>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -139,7 +151,7 @@ export default function Layout({ children }: LayoutProps) {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                     <a href="tel:021-91015383" className="text-zinc-400 hover:text-white transition-colors text-sm">
-                      021-91015383
+                      {language === 'en' ? '021-91015383' : 'شماره تماس: ۰۲۱۹۱۰۱۵۳۸۳'}
                     </a>
                   </div>
                 </div>
@@ -150,13 +162,8 @@ export default function Layout({ children }: LayoutProps) {
             <div className="mt-16 pt-8 border-t border-zinc-800">
               <div className="flex flex-col md:flex-row justify-between items-center">
                 <p className="text-zinc-400 text-sm">
-                  © 2024 Roya E-commerce. All rights reserved.
+                  {t('footer.copyright')}
                 </p>
-                <div className="flex space-x-6 mt-4 md:mt-0">
-                  <a href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
-                  <a href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Terms of Service</a>
-                  <a href="#" className="text-zinc-400 hover:text-white transition-colors text-sm">Cookie Policy</a>
-                </div>
               </div>
             </div>
           </div>
