@@ -123,7 +123,12 @@ export default function Home() {
               </p>
               
               {/* CTA Button */}
-              <button className="bg-zinc-100 text-zinc-900 px-8 py-3 rounded-full text-lg font-medium hover:bg-zinc-200 transition-colors">
+              <button 
+                onClick={() => {
+                  document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="bg-zinc-100 text-zinc-900 px-8 py-3 rounded-full text-lg font-medium hover:bg-zinc-200 transition-colors"
+              >
                 {t('hero.cta')}
               </button>
             </div>
@@ -239,7 +244,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                   <div className="relative z-10">
-                    <div className="relative w-40 h-24 mb-4">
+                    <div className="relative w-40 h-24 mb-4  right-4">
                       <Image
                         src="/hamahang-black.08de284b.svg"
                         alt="Hamahang Logo"

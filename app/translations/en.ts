@@ -83,7 +83,7 @@ export const en = {
       terms: "Terms of Service",
       cookies: "Cookie Policy"
     },
-    copyright: "© 2024 Roya E-commerce. All rights reserved."
+    copyright: "© 2021 Roya E-commerce. All rights reserved."
   },
   aboutUs: {
     supportMessage: "Roya E-commerce is always with you along this journey, and our support team is available to answer your questions at any time.",

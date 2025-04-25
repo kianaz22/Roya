@@ -22,7 +22,7 @@ export default function Contact() {
       },
       email: {
         title: "Email Us",
-        address: "support@pakat.net"
+        address: "royaEcommerce.engineering@gmail.com"
       },
       address: {
         title: "Address",
@@ -50,7 +50,7 @@ export default function Contact() {
       },
       email: {
         title: "ایمیل",
-        address: "support[at]pakat.net"
+        address: "royaEcommerce.engineering@gmail.com"
       },
       address: {
         title: "آدرس",
