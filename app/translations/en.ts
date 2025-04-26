@@ -18,7 +18,7 @@ export const en = {
   },
   products: {
     title: "Products",
-    description: "At Roya E-commerce, we strive to create a future where technology not only makes lives easier but also creatively and innovatively transforms the world into a better place.",
+    description: "At Roya E-commerce, we are committed to quality and innovation. Our team works closely together to design and develop products that not only meet today's needs.",
     kamva: {
       title: "Kamva",
       description: "Kamva helps you transform your online business, build a professional store in 5 minutes, and experience online sales with an electronic payment gateway, even without a trust symbol.",

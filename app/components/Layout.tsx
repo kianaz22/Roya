@@ -52,6 +52,10 @@ export default function Layout({ children }: LayoutProps) {
                   {t('nav.about')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
                 </Link>
+                <Link href="/news" className="text-sm text-zinc-300 hover:text-blue-400 transition-colors relative group">
+                  {t('nav.news')}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
+                </Link>
                 <Link href="/careers" className="text-zinc-300 hover:text-blue-400 transition-colors relative group">
                   {t('nav.careers')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
@@ -106,6 +110,13 @@ export default function Layout({ children }: LayoutProps) {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.about')}
+              </Link>
+              <Link 
+                href="/news" 
+                className="text-xl text-zinc-300 hover:text-blue-400 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('nav.news')}
               </Link>
               <Link 
                 href="/careers" 
