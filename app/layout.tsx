@@ -20,6 +20,16 @@ const vazirmatn = Vazirmatn({
 export const metadata: Metadata = {
   title: "Roya E-commerce",
   description: "A modern company website with multilingual support",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    },
+  },
 };
 
 export default function RootLayout({
