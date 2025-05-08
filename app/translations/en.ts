@@ -14,7 +14,7 @@ export const en = {
   hero: {
     tagline: "Where creativity and technology go hand in hand.",
     description: "At Roya E-commerce, we strive to create a future where technology not only makes lives easier but also creatively and innovatively transforms the world into a better place. We believe that technology should be accompanied by humanity.",
-    cta: "Get Started"
+    cta: "Contact Us"
   },
   products: {
     title: "Products",
@@ -83,7 +83,7 @@ export const en = {
       terms: "Terms of Service",
       cookies: "Cookie Policy"
     },
-    copyright: "© 2021 Roya E-commerce. All rights reserved."
+    copyright: "All rights reserved for Rigel E-commerce"
   },
   aboutUs: {
     supportMessage: "Roya E-commerce is always with you along this journey, and our support team is available to answer your questions at any time.",

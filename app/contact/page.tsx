@@ -1,247 +1,252 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { useLanguage } from '../context/LanguageContext';
-import Layout from '../components/Layout';
+import Layout from "../components/Layout";
+import Image from "next/image";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Contact() {
-  const { language } = useLanguage();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const content = {
-    en: {
-      title: "Contact Us",
-      getInTouch: {
-        title: "Get in Touch",
-        description: "Roya E-commerce is always with you along this journey, and our support team is available to answer your questions at any time."
-      },
-      email: {
-        title: "Email Us",
-        address: "royaecommerce.engineering@gmail.com"
-      },
-      address: {
-        title: "Address",
-        text: "Enghelab Street, Balavar Alley, No. 7"
-      },
-      phone: {
-        title: "Phone",
-        number: "021-91015383"
-      },
-      form: {
-        title: "Send us a Message",
-        description: "Fill out the form below and we'll get back to you as soon as possible.",
-        name: "Name",
-        email: "Email",
-        subject: "Subject",
-        message: "Message",
-        submit: "Send Message"
-      }
-    },
-    fa: {
-      title: "تماس با ما",
-      getInTouch: {
-        title: "ارتباط با ما",
-        description: "ما مشتاق شنیدن نظرات شما هستیم. لطفاً از طریق هر یک از روش‌های زیر با ما در تماس باشید."
-      },
-      email: {
-        title: "ایمیل",
-        address: "royaecommerce.engineering@gmail.com"
-      },
-      address: {
-        title: "آدرس",
-        text: "خیابان انقلاب، کوچه بالاور، پلاک ۷"
-      },
-      phone: {
-        title: "تلفن",
-        number: "۰۲۱۹۱۰۱۵۳۸۳"
-      },
-      form: {
-        title: "ارسال پیام",
-        description: "فرم زیر را پر کنید و ما در اسرع وقت با شما تماس خواهیم گرفت.",
-        name: "نام",
-        email: "ایمیل",
-        subject: "موضوع",
-        message: "پیام",
-        submit: "ارسال پیام"
-      }
-    }
-  };
-
-  const currentContent = language === 'en' ? content.en : content.fa;
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
+  const { t, language } = useLanguage();
 
   return (
     <Layout>
-      <section className="min-h-screen pt-32 pb-16 md:pt-48 md:pb-24 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-100 to-white"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-blue-500/5 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-purple-500/5 to-transparent"></div>
-        </div>
-
-        <div className="container mx-auto px-8 md:px-16 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
-              {currentContent.title}
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center overflow-hidden py-32 pt-96 bg-black">
+        <div className="h-full w-full max-w-[1280px] mx-auto px-8 md:px-16 relative z-20 -mt-64">
+          <div className="h-full flex flex-col gap-16 justify-center items-center">
+            <div className="not-only:relative w-24 h-16">
+              <Image
+                src="/logo.svg"
+                alt="Roya E-commerce Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+            {/* Tagline */}
+            <h1 className="text-3xl md:text-5xl text-center text-white leading-tight max-w-2xl">
+              We are committed to quality and innovation at Roya E-commerce.
             </h1>
+            {/* Animated Down Arrow */}
+            <button
+              onClick={() => {
+                document
+                  .getElementById("products")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center animate-[bounce_1s_infinite] hover:bg-white/5 transition-colors"
+            >
+              <svg
+                className="w-6 h-6 text-white/70"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-              {/* Contact Information */}
-              <div className="space-y-12">
-                <div>
-                  <h2 className="text-2xl font-semibold text-zinc-800 mb-6">{currentContent.getInTouch.title}</h2>
-                  <p className="text-zinc-600 leading-relaxed text-lg">
-                    {currentContent.getInTouch.description}
-                  </p>
-                </div>
+      {/* our team Section */}
+      <section className="relative flex items-center overflow-hidden py-64 bg-white">
+        <div className="absolute inset-0 max-w-[1280px] mx-auto px-8">
+          <div className="w-full h-full bg-[url('/large-white-bg-desktop.png')] bg-no-repeat bg-cover bg-center"></div>
+        </div>
+        <div className="h-full w-full max-w-[1280px] mx-auto px-8 md:px-48 relative z-20 -mt-64 top-[32px] ">
+          <div className=" h-full grid grid-cols-1 md:grid-cols-2 gap-16 items-end  mx-auto">
+            {/* Left Column - Content */}
+            <div className="space-y-8">
+              <h2 className="text-4xl md:text-5xl font-semi-bold text-zinc-900">
+                Our Team
+              </h2>
+              <p className="text-2xl text-zinc-900  max-w-xl">
+                At Roya E-commerce, we are committed to quality and innovation.
+                Our team works closely together to design and develop products
+                that not only meet today&apos;s needs.
+              </p>
+            </div>
 
-                <div className="space-y-8">
-                  <div className="group">
-                    <div className="flex items-start space-x-4">
-                      <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500/10 to-purple-500/10">
-                        <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-zinc-800 mb-2 group-hover:text-blue-600 transition-colors">{currentContent.email.title}</h3>
-                        <a href={`mailto:${currentContent.email.address}`} className="text-zinc-600 hover:text-blue-600 transition-colors">{currentContent.email.address}</a>
-                      </div>
-                    </div>
-                  </div>
+            {/* Right Column - Phone Button */}
+            <div className="flex justify-center md:justify-end">
+              <a
+                href="tel:+982191015383"
+                className="inline-flex items-center px-8 py-4 rounded-full bg-black text-white font-medium hover:shadow-lg transition-all duration-300 group"
+              >
+                <svg
+                  className="w-5 h-5 mr-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <span className="group-hover:translate-x-1 transition-transform">
+                  +98 21 9101 5383
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                  <div className="group">
-                    <div className="flex items-start space-x-4">
-                      <div className="p-3 rounded-xl bg-gradient-to-br from-purple-500/10 to-pink-500/10">
-                        <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-zinc-800 mb-2 group-hover:text-purple-600 transition-colors">{currentContent.address.title}</h3>
-                        <p className="text-zinc-600">{currentContent.address.text}</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="group">
-                    <div className="flex items-start space-x-4">
-                      <div className="p-3 rounded-xl bg-gradient-to-br from-pink-500/10 to-red-500/10">
-                        <svg className="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-zinc-800 mb-2 group-hover:text-pink-600 transition-colors">{currentContent.phone.title}</h3>
-                        <a href={`tel:${currentContent.phone.number}`} className="text-zinc-600 hover:text-pink-600 transition-colors">{currentContent.phone.number}</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      {/* grid Section */}
+      <section className="overflow-hidden bg-white pb-32">
+        <div className="max-w-[1280px] mx-auto px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="aspect-square bg-[url('/feature-box-bg.png')] bg-no-repeat bg-cover bg-center"></div>
+            <div className="aspect-square p-16 flex flex-col justify-baseline gap-12 bg-[#F4F4F4] text-black">
+              <h1 className="text-5xl font-semi-bold leading-19">
+                Towards the Future
+              </h1>
+              <div className="text-2xl leading-9 max-w-xs">
+                At Roya E-commerce, we aim to create a future where technology
+                not only makes lives easier but also transforms the world into a
+                better place in a creative and innovative way.
               </div>
-
-              {/* Contact Form */}
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-2xl font-semibold text-zinc-800 mb-6">{currentContent.form.title}</h2>
-                  <p className="text-zinc-600 leading-relaxed text-lg mb-8">
-                    {currentContent.form.description}
-                  </p>
-                </div>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-zinc-700 mb-2">
-                      {currentContent.form.name}
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/50 border border-zinc-200/50 rounded-lg text-zinc-900 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all duration-300"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-zinc-700 mb-2">
-                      {currentContent.form.email}
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/50 border border-zinc-200/50 rounded-lg text-zinc-900 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all duration-300"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-zinc-700 mb-2">
-                      {currentContent.form.subject}
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/50 border border-zinc-200/50 rounded-lg text-zinc-900 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all duration-300"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-zinc-700 mb-2">
-                      {currentContent.form.message}
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={4}
-                      className="w-full px-4 py-3 bg-white/50 border border-zinc-200/50 rounded-lg text-zinc-900 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all duration-300"
-                      required
-                    ></textarea>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full text-base font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    {currentContent.form.submit}
-                  </button>
-                </form>
+            </div>
+            <div className="aspect-square p-16 flex flex-col justify-baseline gap-12 text-[#004AB3] bg-[#EBF8FF]">
+              <h1 className="text-5xl font-semi-bold leading-19">
+                Our Culture: Collaboration and Creativity
+              </h1>
+              <div className="text-2xl leading-9 max-w-xs">
+                In a world where technology leads, Roya fosters a sense of
+                trust, loyalty, and collaboration in every successful business.
               </div>
+            </div>
+            <div className="aspect-square p-16 flex flex-col justify-baseline gap-12 text-white bg-[#000]">
+              <h1 className="text-5xl font-semi-bold leading-19">Commitment to Innovation</h1>
+              <div className="text-2xl leading-9 max-w-xs">
+                Roya represents a commitment to innovation and collaboration,
+                determined to build trust and familiarity, and reflect its
+                values and goals.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* contact form Section */}
+      <section className="relative min-h-screen flex items-center overflow-hidden py-32 pt-64 bg-[#EBF8FF]">
+        <div className="h-full w-full max-w-[1280px] mx-auto px-8 md:px-16 relative z-20 -mt-64">
+          <div className="space-y-16">
+            {/* Row 1: Title and Description */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-[6rem]">
+              <h1 className="text-4xl font-semi-bold text-[#004AB3]">
+                Contact Us
+              </h1>
+              <p className="text-[1.4rem] leading-8 text-[#004AB3]">
+                Roya E-commerce is always with you along this journey, and our support team is available to answer your questions at any time.
+              </p>
+            </div>
+
+            {/* Row 2: Name and Email Inputs */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  className="w-full px-6 py-4 bg-white border-2 border-[#004AB3] rounded-4xl text-[#004AB3] placeholder-[#004AB3]/60 focus:outline-none focus:ring-2 focus:ring-[#004AB3]/20 transition-all duration-300"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="w-full px-6 py-4 bg-white border-2 border-[#004AB3] rounded-4xl text-[#004AB3] placeholder-[#004AB3]/60 focus:outline-none focus:ring-2 focus:ring-[#004AB3]/20 transition-all duration-300"
+                />
+              </div>
+            </div>
+
+            {/* Row 3: Message Textarea */}
+            <div>
+              <textarea
+                placeholder="Write your message"
+                rows={6}
+                className="w-full px-6 py-4 bg-white border-2 border-[#004AB3] rounded-lg text-[#004AB3] placeholder-[#004AB3]/60 focus:outline-none focus:ring-2 focus:ring-[#004AB3]/20 transition-all duration-300 resize-none"
+              ></textarea>
+            </div>
+
+            {/* Row 4: Send Button */}
+            <div>
+              <button className="px-8 py-4 bg-[#004AB3] text-white rounded-full text-lg font-medium hover:bg-[#004AB3]/90 transition-all duration-300">
+                Send Message
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="w-full relative">
+        <Image
+          src="/map-desktop.png"
+          alt="Location Map"
+          width={1920}
+          height={1080}
+          className="w-full h-auto object-cover"
+        />
+        <div className="absolute left-[10%] top-1/2 -translate-y-1/2 bg-white p-12 rounded-2xl shadow-lg max-w-lg">
+          <div className="space-y-8">
+            <h2 className="text-5xl font-semi-bold text-[#000]">Address</h2>
+            <div className="space-y-1 text-black">
+              <p className="text-[24px]">Enghelab Street, Balavar Alley, No. 7</p>
+              <p className="text-[24px]">Email: support[at]pakat.net</p>
+              <p className="text-[24px]">Phone Number: 021-91015383</p>
+            </div>
+            <button className="flex items-center mt-20 gap-2 px-6 py-4 border-2 border-[#000] text-[#000] rounded-full   transition-all duration-300">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+              </svg>
+              <span className="text-[20px]">Get Directions</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+     {/*  contact Section */}
+     <section className="relative  bg-black">
+        <div className="w-full max-w-[1280px] mx-auto px-8 pb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2  items-end gap-8">
+            {/* Left Column - Image */}
+            <div
+              className={`w-full h-[400px] bg-[url('/home-contact-bg.png')] bg-no-repeat bg-contain bg-center ${
+                language === "en" ? "scale-x-[-1]" : ""
+              }`}
+            ></div>
+
+            {/* Right Column - Content */}
+            <div className="space-y-8">
+        
+              <p className="text-xl text-white leading-relaxed max-w-[570px] text-justify">
+              At Roya E-commerce, we strive to create a future where
+                technology not only makes lives easier but also creatively and
+                innovatively transforms the world into a better place.
+              </p>
+              <button
+                onClick={() => {
+                  document
+                    .getElementById("products")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="border-2 border-white text-white px-8 py-3 rounded-full text-base font-medium hover:bg-white/10 transition-colors"
+              >
+                {t("hero.cta")}
+              </button>
             </div>
           </div>
         </div>
       </section>
     </Layout>
   );
-} 
+}

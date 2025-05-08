@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [, setExpandedCards] = useState<number[]>([]);
 
   const toggleCard = (index: number) => {
@@ -20,105 +20,24 @@ export default function Home() {
     <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden py-32">
-        {/* Artistic Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/50 to-zinc-900/80 z-10"></div>
-        <div className="absolute inset-0 bg-[url('/hero-bg.jpg')] bg-cover bg-center"></div>
-
-        {/* Grid Graphics */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Main Grid */}
-          <div className="absolute inset-0 grid grid-cols-24 gap-2 p-4">
-            {[...Array(96)].map((_, i) => (
-              <div key={i} className="border border-zinc-500/10"></div>
-            ))}
-          </div>
-
-          {/* Secondary Grid */}
-          <div className="absolute inset-0 grid grid-cols-12 gap-4 p-4">
-            {[...Array(48)].map((_, i) => (
-              <div key={i} className="border border-zinc-500/20"></div>
-            ))}
-          </div>
-
-          {/* Accent Grid Lines */}
-          <div className="absolute inset-0">
-            {/* Vertical Lines */}
-            <div className="absolute top-0 bottom-0 left-1/6 w-px bg-zinc-400/40"></div>
-            <div className="absolute top-0 bottom-0 left-1/3 w-px bg-zinc-400/40"></div>
-            <div className="absolute top-0 bottom-0 left-1/2 w-px bg-zinc-400/40"></div>
-            <div className="absolute top-0 bottom-0 right-1/3 w-px bg-zinc-400/40"></div>
-            <div className="absolute top-0 bottom-0 right-1/6 w-px bg-zinc-400/40"></div>
-
-            {/* Horizontal Lines */}
-            <div className="absolute left-0 right-0 top-1/4 h-px bg-zinc-400/40"></div>
-            <div className="absolute left-0 right-0 top-1/2 h-px bg-zinc-400/40"></div>
-            <div className="absolute left-0 right-0 top-3/4 h-px bg-zinc-400/40"></div>
-          </div>
-
-          {/* Accent Shapes */}
-          <div className="absolute inset-0">
-            {/* Top Right Shape */}
-            <div className="absolute top-0 right-0 w-96 h-96 border-t border-r border-zinc-400/30"></div>
-
-            {/* Bottom Left Shape */}
-            <div className="absolute bottom-0 left-0 w-96 h-96 border-b border-l border-zinc-400/30"></div>
-
-            {/* Center Accent */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-zinc-400/30 transform rotate-45"></div>
-          </div>
-
-          {/* Floating Elements */}
-          <div className="absolute inset-0">
-            {/* Top Left */}
-            <div className="absolute top-1/4 left-1/4 w-24 h-24 border border-zinc-400/30 transform rotate-45"></div>
-
-            {/* Bottom Right */}
-            <div className="absolute bottom-1/4 right-1/4 w-24 h-24 border border-zinc-400/30 transform -rotate-45"></div>
-
-            {/* Center Right */}
-            <div className="absolute top-1/2 right-1/4 w-12 h-12 border border-zinc-400/30 transform rotate-45"></div>
-
-            {/* Center Left */}
-            <div className="absolute top-1/2 left-1/4 w-12 h-12 border border-zinc-400/30 transform -rotate-45"></div>
-
-            {/* Top Center */}
-            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-16 h-16 border border-zinc-400/30 transform rotate-45"></div>
-
-            {/* Bottom Center */}
-            <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-16 h-16 border border-zinc-400/30 transform -rotate-45"></div>
-          </div>
-
-          {/* Diagonal Lines */}
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-0 w-full h-px bg-zinc-400/30 transform rotate-45 origin-top-left"></div>
-            <div className="absolute top-0 right-0 w-full h-px bg-zinc-400/30 transform -rotate-45 origin-top-right"></div>
-            <div className="absolute bottom-0 left-0 w-full h-px bg-zinc-400/30 transform -rotate-45 origin-bottom-left"></div>
-            <div className="absolute bottom-0 right-0 w-full h-px bg-zinc-400/30 transform rotate-45 origin-bottom-right"></div>
-          </div>
-
-          {/* Highlight Accents */}
-          <div className="absolute inset-0">
-            {/* Top Right Highlight */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-zinc-400/5 to-transparent"></div>
-
-            {/* Bottom Left Highlight */}
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-zinc-400/5 to-transparent"></div>
-          </div>
+        {/* Simple Background */}
+        <div className="absolute inset-0 bg-black"></div>
+        <div className="absolute inset-0 flex justify-center">
+          <div
+            className={`w-full max-w-[1280px] h-full bg-[url('/home-first-hero-desk.ada4d432.png')] bg-no-repeat bg-contain bg-[center_right_4rem] ${
+              language === "en" ? "scale-x-[-1]" : ""
+            }`}
+          ></div>
         </div>
 
-        <div className="container mx-auto px-8 md:px-16 relative z-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+        <div className="w-full max-w-[1280px] mx-auto px-8 md:px-16 relative z-20 -mt-64">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             {/* Left Column - Main Content */}
-            <div className="space-y-8">
+            <div className="space-y-12">
               {/* Tagline */}
               <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
                 {t("hero.tagline")}
               </h1>
-
-              {/* Description */}
-              <p className="text-base md:text-lg text-zinc-400 leading-relaxed max-w-xl">
-                {t("hero.description")}
-              </p>
 
               {/* CTA Button */}
               <button
@@ -127,27 +46,66 @@ export default function Home() {
                     .getElementById("products")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="bg-zinc-100 text-zinc-900 px-8 py-3 rounded-full text-base font-medium hover:bg-zinc-200 transition-colors"
+                className="border-3 border-white text-white px-5 py-3 rounded-full text-base font-medium hover:bg-white/10 transition-colors"
               >
                 {t("hero.cta")}
               </button>
             </div>
+          </div>
+        </div>
 
-            {/* Right Column - Logo */}
-            <div className="flex justify-center md:justify-end">
-              <div className="relative w-48 h-48">
-                {/* Abstract Logo */}
-                <div className="absolute inset-0">
-                  {/* Main Shape */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-lg transform rotate-45"></div>
+        {/* Animated Down Arrow */}
+        <button
+          onClick={() => {
+            document
+              .getElementById("products")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="absolute bottom-20 left-[calc(50%-640px+64px)] w-9 h-9 rounded-full border-2 border-white flex items-center justify-center animate-[bounce_1s_infinite] hover:bg-white/5 transition-colors"
+        >
+          <svg
+            className="w-6 h-6 text-white/70"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+      </section>
 
-                  {/* Overlay Shape */}
-                  <div className="absolute inset-4 bg-zinc-900 rounded-lg transform -rotate-45"></div>
+      {/* Second Hero Section */}
+      <section className="relative pt-24 bg-black">
+        <div className="w-full max-w-[1280px] mx-auto px-8 md:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            {/* Left Column - Image */}
+            <div
+              className={`w-full h-[450px] bg-[url('/home-second-hero.2.png')] bg-no-repeat bg-contain bg-center ${
+                language === "en" ? "scale-x-[-1]" : ""
+              }`}
+            ></div>
 
-                  {/* Accent Line */}
-                  <div className="absolute top-1/2 left-0 right-0 h-px bg-zinc-600/20 transform -rotate-45"></div>
-                </div>
+            {/* Right Column - Content */}
+            <div className="space-y-12">
+              <div className="relative w-32 h-16">
+                <Image
+                  src="/logo.svg"
+                  alt="Roya E-commerce Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
+              <p className="text-base text-white leading-relaxed max-w-sm text-justify">
+                At Roya E-commerce, we strive to create a future where
+                technology not only makes lives easier but also creatively and
+                innovatively transforms the world into a better place. We
+                believe that technology should be accompanied by humanity.
+              </p>
             </div>
           </div>
         </div>
@@ -157,10 +115,10 @@ export default function Home() {
       <section id="products" className="py-32 bg-white relative">
         <div className="container mx-auto px-8 md:px-16">
           <div className="mb-20 max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-semi-bold mb-6 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
               {t("products.title")}
             </h2>
-            <p className="text-xl text-zinc-600 max-w-3xl leading-relaxed">
+            <p className="text-xl text-zinc-600 w-[500px] leading-loose">
               {t("products.description")}
             </p>
           </div>
@@ -169,12 +127,12 @@ export default function Home() {
             {/* Kamva */}
             <div className="group relative">
               <Link href="/products/kamva" className="block">
-                <div className="px-6 pb-6 rounded-2xl border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                <div className="aspect-square px-8 pb-8 rounded-lg border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                  <div className="relative z-10">
-                    <div className="relative w-32 h-20">
+                  <div className="relative z-10 h-full flex flex-col">
+                    <div className="relative w-40 h-24 mt-6">
                       <Image
                         src="/kamva.svg"
                         alt="Kamva Logo"
@@ -182,13 +140,13 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-base text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
+                    <p className="text-xl text-zinc-800 group-hover:text-zinc-700 transition-colors leading-relaxed mt-4">
                       {t("products.kamva.description")}
                     </p>
-                    <div className="mt-8 flex justify-between items-center">
+                    <div className="mt-auto flex justify-between items-center">
                       <button
                         onClick={() => toggleCard(0)}
-                        className="bg-zinc-900 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-zinc-800 transition-colors"
+                        className="bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
                       >
                         <span>Read More</span>
                       </button>
@@ -200,7 +158,11 @@ export default function Home() {
                           rel="noopener noreferrer"
                           className="text-zinc-600 hover:text-blue-600 transition-colors"
                         >
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <svg
+                            className="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                           </svg>
                         </a>
@@ -210,7 +172,11 @@ export default function Home() {
                           rel="noopener noreferrer"
                           className="text-zinc-600 hover:text-pink-600 transition-colors"
                         >
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <svg
+                            className="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                           </svg>
                         </a>
@@ -224,12 +190,12 @@ export default function Home() {
             {/* Pakat */}
             <div className="group relative">
               <Link href="/products/pakat" className="block">
-                <div className="px-6 pb-6 rounded-2xl border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                <div className="aspect-square px-8 pb-8 rounded-lg border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                  <div className="relative z-10">
-                    <div className="relative w-32 h-20">
+                  <div className="relative z-10 h-full flex flex-col">
+                    <div className="relative w-40 h-24 mt-6">
                       <Image
                         src="/pakat-black.d6e0e0a5.svg"
                         alt="Pakat Logo"
@@ -237,13 +203,13 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-base text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
+                    <p className="text-xl text-zinc-800 group-hover:text-zinc-700 transition-colors leading-relaxed mt-4">
                       {t("products.pakat.description")}
                     </p>
-                    <div className="mt-8 flex justify-between items-center">
+                    <div className="mt-auto flex justify-between items-center">
                       <button
                         onClick={() => toggleCard(1)}
-                        className="bg-zinc-900 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-zinc-800 transition-colors"
+                        className="bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
                       >
                         <span>Read More</span>
                       </button>
@@ -255,7 +221,11 @@ export default function Home() {
                           rel="noopener noreferrer"
                           className="text-zinc-600 hover:text-blue-600 transition-colors"
                         >
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <svg
+                            className="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                           </svg>
                         </a>
@@ -265,7 +235,11 @@ export default function Home() {
                           rel="noopener noreferrer"
                           className="text-zinc-600 hover:text-pink-600 transition-colors"
                         >
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <svg
+                            className="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                           </svg>
                         </a>
@@ -279,12 +253,12 @@ export default function Home() {
             {/* Hamahang */}
             <div className="group relative">
               <Link href="/products/hamahang" className="block">
-                <div className="px-6 pb-6 rounded-2xl border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                <div className="aspect-square px-8 pb-8 rounded-lg border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                  <div className="relative z-10">
-                    <div className="relative w-32 h-20">
+                  <div className="relative z-10 h-full flex flex-col">
+                    <div className="relative w-40 h-24 mt-6">
                       <Image
                         src="/hamahang-black.08de284b.svg"
                         alt="Hamahang Logo"
@@ -292,13 +266,13 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-base text-zinc-700 group-hover:text-zinc-600 transition-colors leading-relaxed">
+                    <p className="text-xl text-zinc-800 group-hover:text-zinc-700 transition-colors leading-relaxed mt-4">
                       {t("products.hamahang.description")}
                     </p>
-                    <div className="mt-8 flex justify-between items-center">
+                    <div className="mt-auto flex justify-between items-center">
                       <button
                         onClick={() => toggleCard(2)}
-                        className="bg-zinc-900 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-zinc-800 transition-colors"
+                        className="bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
                       >
                         <span>Read More</span>
                       </button>
@@ -310,7 +284,11 @@ export default function Home() {
                           rel="noopener noreferrer"
                           className="text-zinc-600 hover:text-blue-600 transition-colors"
                         >
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <svg
+                            className="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                           </svg>
                         </a>
@@ -320,7 +298,11 @@ export default function Home() {
                           rel="noopener noreferrer"
                           className="text-zinc-600 hover:text-pink-600 transition-colors"
                         >
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <svg
+                            className="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                           </svg>
                         </a>
@@ -335,72 +317,74 @@ export default function Home() {
       </section>
 
       {/* Why Roya E-commerce Section */}
-      <section className="py-32 bg-zinc-100 relative border-t border-zinc-500">
+      <section className="py-24 bg-[rgb(235,248,255)] relative ">
         <div className="container mx-auto px-8 md:px-16">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
-              {t("whyRoya.title")}
-            </h2>
-            <p className="text-lg text-zinc-700 max-w-3xl leading-relaxed mb-16">
-              {t("whyRoya.description")}
-            </p>
+            <div className="mb-16 flex  justify-between">
+              <h2 className="text-3xl font-semi-bold mb-6  text-[rgb(0,74,179)]">
+                {t("whyRoya.title")}
+              </h2>
+              <p className="text-xl text-[rgb(0,74,179)] max-w-[570px] leading-loose mb-16 text-justify">
+                {t("whyRoya.description")}
+              </p>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Comprehensive Service Card */}
-              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-800 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
+              <div className="p-5 rounded-lg   transition-all duration-300 bg-white backdrop-blur-sm relative overflow-hidden">
+                <div className="absolute inset-0 "></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-xl font-bold mb-4 text-zinc-900">
+                  <h3 className="text-3xl font-semi-bold mb-6 leading-11 text-[rgb(0,74,179)]">
                     {t("whyRoya.features.comprehensive.title")}
                   </h3>
-                  <p className="text-base text-zinc-700 leading-relaxed">
+                  <p className="text-base text-[rgb(0,74,179)] leading-[20px]">
                     {t("whyRoya.features.comprehensive.description")}
                   </p>
                 </div>
               </div>
 
               {/* Online Store Card */}
-              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-800 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
+              <div className="p-5 rounded-lg transition-all duration-300 bg-white backdrop-blur-sm relative overflow-hidden">
+                <div className="absolute inset-0 "></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-xl font-bold mb-4 text-zinc-900">
+                  <h3 className="text-3xl font-semi-bold mb-6 leading-11 text-[rgb(0,74,179)]">
                     {t("whyRoya.features.onlineStore.title")}
                   </h3>
-                  <p className="text-base text-zinc-700 leading-relaxed">
+                  <p className="text-base text-[rgb(0,74,179)] leading-[20px]">
                     {t("whyRoya.features.onlineStore.description")}
                   </p>
                 </div>
               </div>
 
               {/* Customer Interaction Card */}
-              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-800 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
+              <div className="p-5 rounded-lg transition-all duration-300 bg-white backdrop-blur-sm relative overflow-hidden">
+                <div className="absolute inset-0 "></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-xl font-bold mb-4 text-zinc-900">
+                  <h3 className="text-3xl font-semi-bold mb-6 leading-11 text-[rgb(0,74,179)]">
                     {t("whyRoya.features.customerInteraction.title")}
                   </h3>
-                  <p className="text-base text-zinc-700 leading-relaxed">
+                  <p className="text-base text-[rgb(0,74,179)] leading-[20px]">
                     {t("whyRoya.features.customerInteraction.description")}
                   </p>
                 </div>
               </div>
 
               {/* Meeting Coordination Card */}
-              <div className="p-8 rounded-3xl border-2 border-zinc-200 hover:border-zinc-800 transition-all duration-300 bg-white/80 backdrop-blur-sm relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
+              <div className="p-5 rounded-lg transition-all duration-300 bg-white backdrop-blur-sm relative overflow-hidden">
+                <div className="absolute inset-0 "></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
                 <div className="relative z-10">
-                  <h3 className="text-xl font-bold mb-4 text-zinc-900">
+                  <h3 className="text-3xl font-semi-bold mb-6 leading-11 text-[rgb(0,74,179)]">
                     {t("whyRoya.features.meetingCoordination.title")}
                   </h3>
-                  <p className="text-base text-zinc-700 leading-relaxed">
+                  <p className="text-base text-[rgb(0,74,179)] leading-[20px]">
                     {t("whyRoya.features.meetingCoordination.description")}
                   </p>
                 </div>
@@ -409,6 +393,43 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+     
+
+     {/*  contact Section */}
+     <section className="relative  bg-black">
+        <div className="w-full max-w-[1280px] mx-auto px-8 pb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2  items-end gap-8">
+            {/* Left Column - Image */}
+            <div
+              className={`w-full h-[400px] bg-[url('/home-contact-bg.png')] bg-no-repeat bg-contain bg-center ${
+                language === "en" ? "scale-x-[-1]" : ""
+              }`}
+            ></div>
+
+            {/* Right Column - Content */}
+            <div className="space-y-8">
+        
+              <p className="text-xl text-white leading-relaxed max-w-[570px] text-justify">
+              At Roya E-commerce, we strive to create a future where
+                technology not only makes lives easier but also creatively and
+                innovatively transforms the world into a better place.
+              </p>
+              <button
+                onClick={() => {
+                  document
+                    .getElementById("products")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="border-2 border-white text-white px-8 py-3 rounded-full text-base font-medium hover:bg-white/10 transition-colors"
+              >
+                {t("hero.cta")}
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </Layout>
   );
 }
