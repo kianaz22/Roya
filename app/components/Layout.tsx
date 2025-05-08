@@ -16,17 +16,12 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className={`min-h-screen bg-zinc-900 text-white ${language === 'fa' ? 'font-[var(--font-vazirmatn)]' : ''}`} dir={language === 'fa' ? 'rtl' : 'ltr'}>
       {/* Navigation Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900 backdrop-blur-sm border-b border-zinc-600">
-        <div className="relative">
-          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
-          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent blur-[0.5px]"></div>
-          <div className="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-pink-500/10 to-transparent blur-[1px]"></div>
-        </div>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black">
         <div className="container mx-auto px-4 md:px-16">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-[1280px] mx-auto">
             <div className="flex items-center justify-between h-20">
-              <div className="flex items-center">
-                <Link href="/" className="relative  w-16 md:w-24 h-8 mr-2 md:mr-0">
+              <div className="flex items-center relative left-10">
+                <Link href="/" className="relative  w-16 md:w-24 h-8 mr-2 md:mr-0 ">
                   <Image
                     src="/logo.svg"
                     alt={t('company.name')}
@@ -40,10 +35,6 @@ export default function Layout({ children }: LayoutProps) {
                 </Link>
               </div>
               <nav className="hidden md:flex items-center space-x-8">
-                <Link href="/" className="text-sm text-zinc-300 hover:text-blue-400 transition-colors relative group">
-                  {t('nav.home')}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
-                </Link>
                 <Link href="/#products" className="text-sm text-zinc-300 hover:text-blue-400 transition-colors relative group">
                   {t('nav.products')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
@@ -52,23 +43,17 @@ export default function Layout({ children }: LayoutProps) {
                   {t('nav.about')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
                 </Link>
-                <Link href="/news" className="text-sm text-zinc-300 hover:text-blue-400 transition-colors relative group">
-                  {t('nav.news')}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
-                </Link>
-                <Link href="/careers" className="text-zinc-300 hover:text-blue-400 transition-colors relative group">
-                  {t('nav.careers')}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
-                </Link>
                 <Link href="/contact" className="text-zinc-300 hover:text-purple-400 transition-colors relative group">
                   {t('nav.contact')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 transition-all group-hover:w-full"></span>
                 </Link>
                 <button
                   onClick={() => setLanguage(language === 'en' ? 'fa' : 'en')}
-                  className="px-4 py-1.5 rounded-full border border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800/50 transition-all duration-300 text-sm font-medium"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full border-2 border-zinc-600 hover:border-zinc-400 transition-colors"
                 >
-                  {language === 'en' ? 'فارسی' : 'English'}
+                  <span className="text-sm font-medium text-zinc-300">
+                    {language === "en" ? "فارسی" : "English"}
+                  </span>
                 </button>
               </nav>
               <button 
@@ -91,13 +76,6 @@ export default function Layout({ children }: LayoutProps) {
            
             <nav className="flex flex-col items-center space-y-8">
               <Link 
-                href="/" 
-                className="text-xl text-zinc-300 hover:text-blue-400 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {t('nav.home')}
-              </Link>
-              <Link 
                 href="/#products" 
                 className="text-xl text-zinc-300 hover:text-blue-400 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -110,20 +88,6 @@ export default function Layout({ children }: LayoutProps) {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.about')}
-              </Link>
-              <Link 
-                href="/news" 
-                className="text-xl text-zinc-300 hover:text-blue-400 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {t('nav.news')}
-              </Link>
-              <Link 
-                href="/careers" 
-                className="text-xl text-zinc-300 hover:text-blue-400 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {t('nav.careers')}
               </Link>
               <Link 
                 href="/contact" 

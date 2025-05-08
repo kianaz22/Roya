@@ -14,7 +14,7 @@ export const en = {
   hero: {
     tagline: "Where creativity and technology go hand in hand.",
     description: "At Roya E-commerce, we strive to create a future where technology not only makes lives easier but also creatively and innovatively transforms the world into a better place. We believe that technology should be accompanied by humanity.",
-    cta: "Get Started"
+    cta: "Contact Us"
   },
   products: {
     title: "Products",
