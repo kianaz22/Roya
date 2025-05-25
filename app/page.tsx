@@ -24,18 +24,18 @@ export default function Home() {
         <div className="absolute inset-0 bg-black"></div>
         <div className="absolute inset-0 flex justify-center">
           <div
-            className={`w-full max-w-[1280px] h-full bg-[url('/home-first-hero-desk.ada4d432.png')] bg-no-repeat bg-contain bg-[center_right_4rem] ${
+            className={`w-full max-w-[1280px] h-full bg-[url('/home-first-hero-mobile.png')] md:bg-[url('/home-first-hero-desk.ada4d432.png')] bg-no-repeat bg-contain bg-center md:bg-[center_right_4rem] ${
               language === "en" ? "scale-x-[-1]" : ""
             }`}
           ></div>
         </div>
 
-        <div className="w-full max-w-[1280px] mx-auto px-8 md:px-16 relative z-20 -mt-64">
+        <div className="w-full max-w-[1280px] mx-auto px-8 md:px-16 relative z-20 -mt-130 md:-mt-64">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             {/* Left Column - Main Content */}
-            <div className="space-y-12">
+            <div className="space-y-6 md:space-y-12">
               {/* Tagline */}
-              <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+              <h1 className="text-3xl md:text-5xl md:font-bold text-white leading-tight">
                 {t("hero.tagline")}
               </h1>
 
@@ -46,7 +46,7 @@ export default function Home() {
                     .getElementById("products")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="border-3 border-white text-white px-5 py-3 rounded-full text-base font-medium hover:bg-white/10 transition-colors"
+                className="border-2 md:border-3 border-white text-white px-5 py-2 md:py-3 rounded-full text-base font-medium hover:bg-white/10 transition-colors"
               >
                 {t("hero.cta")}
               </button>
@@ -80,12 +80,12 @@ export default function Home() {
       </section>
 
       {/* Second Hero Section */}
-      <section className="relative pt-24 bg-black">
+      <section className="relative pb-64 md:pb-0 md:pt-24 bg-black">
         <div className="w-full max-w-[1280px] mx-auto px-8 md:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
             {/* Left Column - Image */}
             <div
-              className={`w-full h-[450px] bg-[url('/home-second-hero.2.png')] bg-no-repeat bg-contain bg-center ${
+              className={`hidden md:block w-full h-[450px] bg-[url('/home-second-hero.2.png')] bg-no-repeat bg-contain bg-center ${
                 language === "en" ? "scale-x-[-1]" : ""
               }`}
             ></div>
@@ -112,27 +112,27 @@ export default function Home() {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-32 bg-white relative">
+      <section id="products" className="py-20 md:py-32 bg-white relative">
         <div className="container mx-auto px-8 md:px-16">
           <div className="mb-20 max-w-6xl mx-auto">
             <h2 className="text-4xl font-semi-bold mb-6 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
               {t("products.title")}
             </h2>
-            <p className="text-xl text-zinc-600 leading-loose">
+            <p className="text-xl text-zinc-600 md:leading-loose">
               {t("products.description")}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-6xl mx-auto">
             {/* Kamva */}
             <div className="group relative">
               <Link href="/products/kamva" className="block">
-                <div className="aspect-square px-8 pb-8 rounded-lg border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                <div className="md:aspect-square px-6 md:px-8 py-4 pb-8 rounded-lg md:border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                  <div className="relative z-10 h-full flex flex-col">
-                    <div className="relative w-40 h-24 mt-6">
+                  <div className="relative z-10 h-full flex flex-col md:gap-0">
+                    <div className="relative w-24 md:w-40 h-16 md:h-24 md:mt-6">
                       <Image
                         src="/kamva.svg"
                         alt="Kamva Logo"
@@ -140,13 +140,13 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-xl text-zinc-800 group-hover:text-zinc-700 transition-colors leading-relaxed mt-4">
+                    <p className="text-base md:text-xl text-zinc-800 group-hover:text-zinc-700 transition-colors md:leading-relaxed mt-2 md:mt-4">
                       {t("products.kamva.description")}
                     </p>
-                    <div className="mt-auto flex justify-between items-center">
+                    <div className="mt-12 md:mt-auto flex justify-between items-center  ">
                       <button
                         onClick={() => toggleCard(0)}
-                        className="bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
+                        className="bg-zinc-900 text-white px-4 md:px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
                       >
                         <span>Read More</span>
                       </button>
@@ -190,12 +190,12 @@ export default function Home() {
             {/* Pakat */}
             <div className="group relative">
               <Link href="/products/pakat" className="block">
-                <div className="aspect-square px-8 pb-8 rounded-lg border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                <div className="md:aspect-square px-6 md:px-8 py-4 pb-8 rounded-lg md:border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                  <div className="relative z-10 h-full flex flex-col">
-                    <div className="relative w-40 h-24 mt-6">
+                  <div className="relative z-10 h-full flex flex-col md:gap-0">
+                    <div className="relative w-24 md:w-40 h-16 md:h-24 md:mt-6">
                       <Image
                         src="/pakat-black.d6e0e0a5.svg"
                         alt="Pakat Logo"
@@ -203,13 +203,13 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-xl text-zinc-800 group-hover:text-zinc-700 transition-colors leading-relaxed mt-4">
+                    <p className="text-base md:text-xl text-zinc-800 group-hover:text-zinc-700 transition-colors md:leading-relaxed mt-2 md:mt-4">
                       {t("products.pakat.description")}
                     </p>
-                    <div className="mt-auto flex justify-between items-center">
+                    <div className="mt-12 md:mt-auto flex justify-between items-center">
                       <button
                         onClick={() => toggleCard(1)}
-                        className="bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
+                        className="bg-zinc-900 text-white px-4 md:px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
                       >
                         <span>Read More</span>
                       </button>
@@ -253,12 +253,12 @@ export default function Home() {
             {/* Hamahang */}
             <div className="group relative">
               <Link href="/products/hamahang" className="block">
-                <div className="aspect-square px-8 pb-8 rounded-lg border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
+                <div className="md:aspect-square px-6 md:px-8 py-4 pb-8 rounded-lg md:border-2 border-zinc-300 hover:border-zinc-500 transition-all duration-300 bg-zinc-100/80 backdrop-blur-sm relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/40 to-zinc-100/40"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-300/30 via-zinc-200/20 to-transparent"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-300/20 via-transparent to-transparent"></div>
-                  <div className="relative z-10 h-full flex flex-col">
-                    <div className="relative w-40 h-24 mt-6">
+                  <div className="relative z-10 h-full flex flex-col md:gap-0">
+                    <div className="relative w-24 md:w-40 h-16 md:h-24 md:mt-6">
                       <Image
                         src="/hamahang-black.08de284b.svg"
                         alt="Hamahang Logo"
@@ -266,13 +266,13 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-xl text-zinc-800 group-hover:text-zinc-700 transition-colors leading-relaxed mt-4">
+                    <p className="text-base md:text-xl text-zinc-800 group-hover:text-zinc-700 transition-colors md:leading-relaxed mt-2 md:mt-4">
                       {t("products.hamahang.description")}
                     </p>
-                    <div className="mt-auto flex justify-between items-center">
+                    <div className="mt-12 md:mt-auto flex justify-between items-center">
                       <button
                         onClick={() => toggleCard(2)}
-                        className="bg-zinc-900 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
+                        className="bg-zinc-900 text-white px-4 md:px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
                       >
                         <span>Read More</span>
                       </button>
@@ -317,14 +317,14 @@ export default function Home() {
       </section>
 
       {/* Why Roya E-commerce Section */}
-      <section className="py-24 bg-[rgb(235,248,255)] relative ">
+      <section className="py-12 md:py-24 bg-[rgb(235,248,255)] relative ">
         <div className="container mx-auto px-8 md:px-16">
           <div className="max-w-6xl mx-auto">
-            <div className="mb-16 flex  justify-between">
-              <h2 className="text-3xl font-semi-bold mb-6  text-[rgb(0,74,179)]">
+            <div className="mb-16 flex flex-col md:flex-row justify-between">
+              <h2 className=" text-3xl font-semi-bold mb-6  text-[rgb(0,74,179)]">
                 {t("whyRoya.title")}
               </h2>
-              <p className="text-xl text-[rgb(0,74,179)] max-w-[570px] leading-loose mb-16 text-justify">
+              <p className="text-base md:text-xl text-[rgb(0,74,179)] max-w-[570px] md:leading-loose md:mb-16 text-justify">
                 {t("whyRoya.description")}
               </p>
             </div>
@@ -398,19 +398,19 @@ export default function Home() {
 
      {/*  contact Section */}
      <section className="relative  bg-black">
-        <div className="w-full max-w-[1280px] mx-auto px-8 pb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2  items-end gap-8">
+        <div className="w-full max-w-[1280px] mx-auto  md:px-8 pb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2  items-end gap-48 md:gap-8">
             {/* Left Column - Image */}
             <div
-              className={`w-full h-[400px] bg-[url('/home-contact-bg.png')] bg-no-repeat bg-contain bg-center ${
+              className={`w-full h-[300px] md:h-[400px] bg-[url('/home-contact-bg.png')] bg-no-repeat bg-contain bg-center ${
                 language === "en" ? "scale-x-[-1]" : ""
               }`}
             ></div>
 
             {/* Right Column - Content */}
-            <div className="space-y-8">
+            <div className="space-y-8 px-8 md:px-0">
         
-              <p className="text-xl text-white leading-relaxed max-w-[570px] text-justify">
+              <p className="text-base md:text-xl text-white leading-relaxed max-w-[570px] text-justify">
               At Roya E-commerce, we strive to create a future where
                 technology not only makes lives easier but also creatively and
                 innovatively transforms the world into a better place.
@@ -421,7 +421,7 @@ export default function Home() {
                     .getElementById("products")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="border-2 border-white text-white px-8 py-3 rounded-full text-base font-medium hover:bg-white/10 transition-colors"
+                className=" bg-white text-black px-6 py-4 rounded-full text-base font-medium hover:bg-white/10 transition-colors"
               >
                 {t("hero.cta")}
               </button>

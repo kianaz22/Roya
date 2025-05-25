@@ -17,12 +17,12 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
   return (
     <div className={`min-h-screen ${lightMode ? 'bg-white text-zinc-900' : 'bg-zinc-900 text-white'} ${language === 'fa' ? 'font-[var(--font-vazirmatn)]' : ''}`} dir={language === 'fa' ? 'rtl' : 'ltr'}>
       {/* Navigation Header */}
-      <header className={`${lightMode ? 'bg-white' : 'bg-black'} py-4`}>
-        <div className="container mx-auto px-4 md:px-16">
+      <header className={`${lightMode ? 'bg-white' : 'bg-black'} py-2 md:py-4`}>
+        <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-[1280px] mx-auto">
             <div className="flex items-center justify-between h-16">
-              <div className="flex items-center relative left-10">
-                <Link href="/" className="relative w-12 md:w-16 h-8 mr-0.5">
+              <div className="flex items-center">
+                <Link href="/" className="relative w-10 md:w-16 h-8 mr-2 md:mr-0.5">
                   <Image
                     src="/logo.svg"
                     alt={t('company.name')}
@@ -31,7 +31,7 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
                     priority
                   />
                 </Link>
-                <Link href="/" className={`text-xl font-semi-bold font-space-grotesk ${lightMode ? 'text-zinc-900 hover:text-zinc-600' : 'text-white hover:text-gray-300'} transition-all duration-300 whitespace-nowrap`}>
+                <Link href="/" className={`text-lg md:text-xl font-semi-bold font-space-grotesk ${lightMode ? 'text-zinc-900 hover:text-zinc-600' : 'text-white hover:text-gray-300'} transition-all duration-300 whitespace-nowrap`}>
                   {t('company.name')}
                 </Link>
               </div>
@@ -61,7 +61,7 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className={`md:hidden p-2 rounded-lg ${lightMode ? 'hover:bg-zinc-100 text-zinc-900' : 'hover:bg-zinc-800 text-white'} transition-colors`}
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               </button>
