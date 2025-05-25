@@ -118,7 +118,7 @@ export default function Home() {
             <h2 className="text-4xl font-semi-bold mb-6 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
               {t("products.title")}
             </h2>
-            <p className="text-xl text-zinc-600 w-[500px] leading-loose">
+            <p className="text-xl text-zinc-600 leading-loose">
               {t("products.description")}
             </p>
           </div>

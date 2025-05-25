@@ -107,89 +107,59 @@ export default function About() {
 
   return (
     <Layout>
-      <section className="min-h-screen pt-32 pb-16 md:pt-48 md:pb-24 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-100 to-white"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-blue-500/5 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-purple-500/5 to-transparent"></div>
-        </div>
-
+      <section className="min-h-screen pt-32 pb-16 md:pt-32 md:pb-24 relative overflow-hidden bg-white">
         <div className="container mx-auto px-8 md:px-16 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-16 text-zinc-900">
               {currentContent.title}
             </h1>
 
             {/* Main Content */}
-            <div className="mb-24 p-8 rounded-3xl border border-zinc-200 bg-white/50 backdrop-blur-sm relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-zinc-100/40 to-white/40"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-200/30 via-zinc-100/20 to-transparent"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-200/20 via-transparent to-transparent"></div>
-              <div className="relative z-10">
-                <h2 className="text-2xl font-semibold text-zinc-800 mb-8">{currentContent.mainContent.title}</h2>
-                <div className="space-y-8 text-zinc-600 leading-relaxed">
-                  {currentContent.mainContent.paragraphs.map((paragraph, index) => (
-                    <p key={index} className="text-lg">{paragraph}</p>
-                  ))}
-                </div>
+            <div className="mb-24">
+              <h2 className="text-2xl font-semibold text-zinc-900 mb-8">{currentContent.mainContent.title}</h2>
+              <div className="space-y-8 text-zinc-600 leading-relaxed">
+                {currentContent.mainContent.paragraphs.map((paragraph, index) => (
+                  <p key={index} className="text-lg">{paragraph}</p>
+                ))}
               </div>
             </div>
 
             {/* Stats Section */}
-            <div className="mb-24 p-8 rounded-3xl border border-zinc-200 bg-white/50 backdrop-blur-sm relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-zinc-100/40 to-white/40"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-200/30 via-zinc-100/20 to-transparent"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-200/20 via-transparent to-transparent"></div>
-              <div className="relative z-10">
-                <h2 className="text-2xl font-semibold text-zinc-800 mb-12">{currentContent.stats.title}</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-                  {currentContent.stats.items.map((stat, index) => (
-                    <div key={index} className="group text-center">
-                      <div className="text-4xl font-bold text-zinc-900 mb-3 group-hover:text-blue-600 transition-colors">{stat.number}</div>
-                      <div className="text-sm text-zinc-600 font-medium">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
+            <div className="mb-24">
+              <h2 className="text-2xl font-semibold text-zinc-900 mb-12">{currentContent.stats.title}</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+                {currentContent.stats.items.map((stat, index) => (
+                  <div key={index} className="group text-center">
+                    <div className="text-4xl font-bold text-zinc-900 mb-3 group-hover:text-blue-600 transition-colors">{stat.number}</div>
+                    <div className="text-sm text-zinc-600 font-medium">{stat.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* Team Section */}
-            <div className="mb-24 p-8 rounded-3xl border border-zinc-200 bg-white/50 backdrop-blur-sm relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-zinc-100/40 to-white/40"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-200/30 via-zinc-100/20 to-transparent"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-200/20 via-transparent to-transparent"></div>
-              <div className="relative z-10">
-                <h2 className="text-2xl font-semibold text-zinc-800 mb-8">{currentContent.team.title}</h2>
-                <p className="text-zinc-600 leading-relaxed text-lg max-w-2xl">{currentContent.team.description}</p>
-              </div>
+            <div className="mb-24">
+              <h2 className="text-2xl font-semibold text-zinc-900 mb-8">{currentContent.team.title}</h2>
+              <p className="text-zinc-600 leading-relaxed text-lg max-w-2xl">{currentContent.team.description}</p>
             </div>
 
             {/* Values Section */}
-            <div className="mb-24 p-8 rounded-3xl border border-zinc-200 bg-white/50 backdrop-blur-sm relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-zinc-100/40 to-white/40"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-200/30 via-zinc-100/20 to-transparent"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-200/20 via-transparent to-transparent"></div>
-              <div className="relative z-10">
-                <h2 className="text-2xl font-semibold text-zinc-800 mb-12">{currentContent.values.title}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                  {currentContent.values.items.map((value, index) => (
-                    <div key={index} className="group">
-                      <h3 className="text-xl font-semibold text-zinc-800 mb-4 group-hover:text-purple-600 transition-colors">{value.title}</h3>
-                      <p className="text-zinc-600 leading-relaxed">{value.description}</p>
-                    </div>
-                  ))}
-                </div>
+            <div className="mb-24">
+              <h2 className="text-2xl font-semibold text-zinc-900 mb-12">{currentContent.values.title}</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                {currentContent.values.items.map((value, index) => (
+                  <div key={index} className="group">
+                    <h3 className="text-xl font-semibold text-zinc-900 mb-4 group-hover:text-purple-600 transition-colors">{value.title}</h3>
+                    <p className="text-zinc-600 leading-relaxed">{value.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* CTA Section */}
-            <div className="p-8 rounded-3xl border border-zinc-200 bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 to-purple-100/20"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-200/30 via-purple-100/20 to-transparent"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-purple-200/20 via-transparent to-transparent"></div>
-              <div className="relative z-10 text-center">
-                <h2 className="text-2xl font-semibold text-zinc-800 mb-6">{currentContent.cta.title}</h2>
+            <div className="bg-zinc-50 rounded-3xl p-12">
+              <div className="text-center">
+                <h2 className="text-2xl font-semibold text-zinc-900 mb-6">{currentContent.cta.title}</h2>
                 <p className="text-zinc-600 leading-relaxed mb-8 max-w-2xl mx-auto">{currentContent.cta.description}</p>
                 <a
                   href="/contact"

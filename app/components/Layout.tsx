@@ -7,21 +7,22 @@ import { useState } from 'react';
 
 interface LayoutProps {
   children: React.ReactNode;
+  lightMode?: boolean;
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children, lightMode = false }: LayoutProps) {
   const { t, language, setLanguage } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className={`min-h-screen bg-zinc-900 text-white ${language === 'fa' ? 'font-[var(--font-vazirmatn)]' : ''}`} dir={language === 'fa' ? 'rtl' : 'ltr'}>
+    <div className={`min-h-screen ${lightMode ? 'bg-white text-zinc-900' : 'bg-zinc-900 text-white'} ${language === 'fa' ? 'font-[var(--font-vazirmatn)]' : ''}`} dir={language === 'fa' ? 'rtl' : 'ltr'}>
       {/* Navigation Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black">
+      <header className={`${lightMode ? 'bg-white' : 'bg-black'} py-4`}>
         <div className="container mx-auto px-4 md:px-16">
           <div className="max-w-[1280px] mx-auto">
-            <div className="flex items-center justify-between h-20">
+            <div className="flex items-center justify-between h-16">
               <div className="flex items-center relative left-10">
-                <Link href="/" className="relative  w-16 md:w-24 h-8 mr-2 md:mr-0 ">
+                <Link href="/" className="relative w-12 md:w-16 h-8 mr-0.5">
                   <Image
                     src="/logo.svg"
                     alt={t('company.name')}
@@ -30,35 +31,35 @@ export default function Layout({ children }: LayoutProps) {
                     priority
                   />
                 </Link>
-                <Link href="/" className="text-xl font-semi-bold font-space-grotesk  text-white hover:text-zinc-300 transition-all duration-300 whitespace-nowrap">
+                <Link href="/" className={`text-xl font-semi-bold font-space-grotesk ${lightMode ? 'text-zinc-900 hover:text-zinc-600' : 'text-white hover:text-gray-300'} transition-all duration-300 whitespace-nowrap`}>
                   {t('company.name')}
                 </Link>
               </div>
               <nav className="hidden md:flex items-center space-x-8">
-                <Link href="/#products" className="text-sm text-white hover:text-blue-400 transition-colors relative group">
+                <Link href="/#products" className={`text-sm ${lightMode ? 'text-zinc-900 hover:text-blue-600' : 'text-white hover:text-blue-400'} transition-colors relative group`}>
                   {t('nav.products')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
                 </Link>
-                <Link href="/about" className="text-sm text-white hover:text-blue-400 transition-colors relative group">
+                <Link href="/about" className={`text-sm ${lightMode ? 'text-zinc-900 hover:text-blue-600' : 'text-white hover:text-blue-400'} transition-colors relative group`}>
                   {t('nav.about')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
                 </Link>
-                <Link href="/contact" className="text-white hover:text-purple-400 transition-colors relative group">
+                <Link href="/contact" className={`${lightMode ? 'text-zinc-900 hover:text-purple-600' : 'text-white hover:text-purple-400'} transition-colors relative group`}>
                   {t('nav.contact')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 transition-all group-hover:w-full"></span>
                 </Link>
                 <button
                   onClick={() => setLanguage(language === 'en' ? 'fa' : 'en')}
-                  className="flex items-center gap-2 px-4 py-1 rounded-full border-2 border-white hover:border-zinc-400 transition-colors"
+                  className={`flex items-center gap-2 px-4 py-1 rounded-full border-2 ${lightMode ? 'border-zinc-900 text-zinc-900 hover:border-zinc-600' : 'border-white text-white hover:border-gray-300'} transition-colors`}
                 >
-                  <span className="text-sm font-medium text-white">
+                  <span className="text-sm font-medium">
                     {language === "en" ? "فارسی" : "English"}
                   </span>
                 </button>
               </nav>
               <button 
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden p-2 rounded-lg hover:bg-zinc-800/50 transition-colors"
+                className={`md:hidden p-2 rounded-lg ${lightMode ? 'hover:bg-zinc-100 text-zinc-900' : 'hover:bg-zinc-800 text-white'} transition-colors`}
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -70,28 +71,28 @@ export default function Layout({ children }: LayoutProps) {
       </header>
 
       {/* Mobile Menu */}
-      <div className={`fixed inset-0 bg-zinc-900/95 backdrop-blur-sm z-40 transition-transform duration-300 md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed inset-0 bg-white/95 backdrop-blur-sm z-40 transition-transform duration-300 md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="container mx-auto px-8 h-full">
           <div className="flex flex-col items-center justify-center h-full space-y-8">
            
             <nav className="flex flex-col items-center space-y-8">
               <Link 
                 href="/#products" 
-                className="text-xl text-zinc-300 hover:text-blue-400 transition-colors"
+                className="text-xl text-zinc-900 hover:text-blue-600 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.products')}
               </Link>
               <Link 
                 href="/about" 
-                className="text-xl text-zinc-300 hover:text-blue-400 transition-colors"
+                className="text-xl text-zinc-900 hover:text-blue-600 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.about')}
               </Link>
               <Link 
                 href="/contact" 
-                className="text-xl text-zinc-300 hover:text-purple-400 transition-colors"
+                className="text-xl text-zinc-900 hover:text-purple-600 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.contact')}
@@ -101,7 +102,7 @@ export default function Layout({ children }: LayoutProps) {
                   setLanguage(language === 'en' ? 'fa' : 'en');
                   setIsMobileMenuOpen(false);
                 }}
-                className="px-6 py-2 rounded-full border border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800/50 transition-all duration-300 text-lg font-medium"
+                className="px-6 py-2 rounded-full border border-zinc-900 hover:border-zinc-600 hover:bg-zinc-100 transition-all duration-300 text-lg font-medium"
               >
                 {language === 'en' ? 'فارسی' : 'English'}
               </button>
