@@ -51,12 +51,10 @@ export default function NewsPage() {
 
   return (
     <Layout>
-      <section className="min-h-screen pt-16 pb-16 md:pt-48 md:pb-24 relative overflow-hidden">
+      <section className="min-h-screen pt-16 pb-16 md:pt-32 md:pb-24 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-100 to-white"></div>
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-blue-500/5 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-purple-500/5 to-transparent"></div>
         </div>
 
         <div className="container mx-auto px-8 md:px-16 relative z-10">
@@ -66,7 +64,7 @@ export default function NewsPage() {
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
                   {t('news.title')}
                 </h1>
-                <p className="text-xl text-zinc-600 max-w-3xl leading-relaxed">
+                <p className="text-xl text-black max-w-3xl leading-relaxed">
                   {t('news.description')}
                 </p>
               </div>
@@ -80,7 +78,7 @@ export default function NewsPage() {
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === 'all'
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200'
+                    : 'bg-zinc-100 text-black hover:bg-zinc-200'
                 }`}
               >
                 {t('news.categories.all')}
@@ -90,7 +88,7 @@ export default function NewsPage() {
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === 'interviews'
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200'
+                    : 'bg-zinc-100 text-black hover:bg-zinc-200'
                 }`}
               >
                 {t('news.categories.interviews')}
@@ -100,7 +98,7 @@ export default function NewsPage() {
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === 'events'
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200'
+                    : 'bg-zinc-100 text-black hover:bg-zinc-200'
                 }`}
               >
                 {t('news.categories.events')}
@@ -110,7 +108,7 @@ export default function NewsPage() {
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === 'press'
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200'
+                    : 'bg-zinc-100 text-black hover:bg-zinc-200'
                 }`}
               >
                 {t('news.categories.press')}
@@ -141,17 +139,17 @@ export default function NewsPage() {
                         <div className="flex flex-col md:flex-row md:items-start gap-6">
                           {/* Date */}
                           <div className="flex-shrink-0">
-                            <div className="text-sm text-zinc-500 font-medium">
+                            <div className="text-sm text-black font-medium">
                               {language === 'en' ? item.date : item.dateFa}
                             </div>
                           </div>
 
                           {/* Content */}
                           <div className="flex-grow">
-                            <h3 className="text-2xl font-bold mb-4 text-zinc-900 group-hover:text-blue-600 transition-colors">
+                            <h3 className="text-2xl font-bold mb-4 text-black group-hover:text-blue-600 transition-colors">
                               {language === 'en' ? item.title : item.titleFa}
                             </h3>
-                            <p className="text-lg text-zinc-600 group-hover:text-zinc-700 transition-colors leading-relaxed mb-6">
+                            <p className="text-lg text-black group-hover:text-zinc-700 transition-colors leading-relaxed mb-6">
                               {language === 'en' ? item.description : item.descriptionFa}
                             </p>
                             <div className="flex items-center text-blue-600 font-medium">
@@ -178,7 +176,7 @@ export default function NewsPage() {
                 ))
               ) : (
                 <div className="text-center py-12">
-                  <p className="text-zinc-600 text-lg">{t('news.noNews')}</p>
+                  <p className="text-black text-lg">{t('news.noNews')}</p>
                 </div>
               )}
             </div>

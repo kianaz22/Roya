@@ -32,7 +32,7 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
   };
 
   return (
-    <div className={`min-h-screen ${lightMode ? 'bg-white text-zinc-900' : 'bg-zinc-900 text-white'} ${language === 'fa' ? 'font-[var(--font-vazirmatn)]' : ''}`} dir={language === 'fa' ? 'rtl' : 'ltr'}>
+    <div className={`min-h-screen ${lightMode ? 'bg-white text-black' : 'bg-zinc-900 text-white'} ${language === 'fa' ? 'font-[var(--font-vazirmatn)]' : ''}`} dir={language === 'fa' ? 'rtl' : 'ltr'}>
       {/* Navigation Header */}
       <header className={`${lightMode ? 'bg-white' : 'bg-black'} py-2 md:py-4`}>
         <div className="container mx-auto px-6 md:px-16">
@@ -48,26 +48,26 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
                     priority
                   />
                 </Link>
-                <Link href="/" className={`text-lg md:text-xl font-semi-bold font-space-grotesk ${lightMode ? 'text-zinc-900 hover:text-zinc-600' : 'text-white hover:text-gray-300'} transition-all duration-300 whitespace-nowrap`}>
+                <Link href="/" className={`text-lg md:text-xl font-semi-bold font-space-grotesk ${lightMode ? 'text-black hover:text-black' : 'text-white hover:text-gray-300'} transition-all duration-300 whitespace-nowrap`}>
                   {t('company.name')}
                 </Link>
               </div>
               <nav className="hidden md:flex items-center space-x-8">
-                <Link href="/#products" className={`text-sm ${lightMode ? 'text-zinc-900 hover:text-blue-600' : 'text-white hover:text-blue-400'} transition-colors relative group`}>
+                <Link href="/#products" className={`text-sm ${lightMode ? 'text-black hover:text-blue-600' : 'text-white hover:text-blue-400'} transition-colors relative group`}>
                   {t('nav.products')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
                 </Link>
-                <Link href="/about" className={`text-sm ${lightMode ? 'text-zinc-900 hover:text-blue-600' : 'text-white hover:text-blue-400'} transition-colors relative group`}>
+                <Link href="/about" className={`text-sm ${lightMode ? 'text-black hover:text-blue-600' : 'text-white hover:text-blue-400'} transition-colors relative group`}>
                   {t('nav.about')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
                 </Link>
-                <Link href="/contact" className={`${lightMode ? 'text-zinc-900 hover:text-purple-600' : 'text-white hover:text-purple-400'} transition-colors relative group`}>
+                <Link href="/contact" className={`${lightMode ? 'text-black hover:text-purple-600' : 'text-white hover:text-purple-400'} transition-colors relative group`}>
                   {t('nav.contact')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 transition-all group-hover:w-full"></span>
                 </Link>
                 <button
                   onClick={() => setLanguage(language === 'en' ? 'fa' : 'en')}
-                  className={`flex items-center gap-2 px-4 py-1 rounded-full border-2 ${lightMode ? 'border-zinc-900 text-zinc-900 hover:border-zinc-600' : 'border-white text-white hover:border-gray-300'} transition-colors`}
+                  className={`flex items-center gap-2 px-4 py-1 rounded-full border-2 ${lightMode ? 'border-zinc-900 text-black hover:border-zinc-600' : 'border-white text-white hover:border-gray-300'} transition-colors`}
                 >
                   <span className="text-sm font-medium">
                     {language === "en" ? "فارسی" : "English"}
@@ -76,7 +76,7 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
               </nav>
               <button 
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className={`md:hidden p-2 rounded-lg ${lightMode ? 'hover:bg-zinc-100 text-zinc-900' : 'hover:bg-zinc-800 text-white'} transition-colors`}
+                className={`md:hidden p-2 rounded-lg ${lightMode ? 'hover:bg-zinc-100 text-black' : 'hover:bg-zinc-800 text-white'} transition-colors`}
               >
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -93,7 +93,7 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
           {/* Close Button */}
           <button
             onClick={() => setIsMobileMenuOpen(false)}
-            className="absolute top-6 right-8 p-2 rounded-lg hover:bg-zinc-100 text-zinc-900 transition-colors"
+            className="absolute top-6 right-8 p-2 rounded-lg hover:bg-zinc-100 text-black transition-colors"
           >
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -105,21 +105,21 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
             <nav className="flex flex-col items-center space-y-8">
               <Link 
                 href="/#products" 
-                className="text-xl text-zinc-900 hover:text-blue-600 transition-colors"
+                className="text-xl text-black hover:text-blue-600 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.products')}
               </Link>
               <Link 
                 href="/about" 
-                className="text-xl text-zinc-900 hover:text-blue-600 transition-colors"
+                className="text-xl text-black hover:text-blue-600 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.about')}
               </Link>
               <Link 
                 href="/contact" 
-                className="text-xl text-zinc-900 hover:text-purple-600 transition-colors"
+                className="text-xl text-black hover:text-purple-600 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.contact')}
@@ -163,7 +163,7 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
                     {t('company.name')}
                   </h3>
                 </div>
-                <p className="text-zinc-400 text-xs leading-relaxed">
+                <p className="text-white text-xs leading-relaxed">
                   {t('footer.company.description')}
                 </p>
               </div>
@@ -173,17 +173,15 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
                 {/* <h4 className="text-lg font-semibold text-white">{t('footer.sections.company')}</h4> */}
                 <ul className="space-y-2">
                   <li>
-                    <Link href="/about" className="text-zinc-400 hover:text-blue-400 transition-colors text-sm">{t('nav.about')}</Link>
+                    <Link href="/about" className="text-white hover:text-blue-400 transition-colors text-sm">{t('nav.about')}</Link>
                   </li>
                   <li>
-                    <Link href="/contact" className="text-zinc-400 hover:text-purple-400 transition-colors text-sm">{t('nav.contact')}</Link>
+                    <Link href="/contact" className="text-white hover:text-purple-400 transition-colors text-sm">{t('nav.contact')}</Link>
                   </li>
                   <li>
-                    <Link href="/careers" className="text-zinc-400 hover:text-pink-400 transition-colors text-sm">{t('nav.careers')}</Link>
+                    <Link href="/careers" className="text-white hover:text-pink-400 transition-colors text-sm">{t('nav.careers')}</Link>
                   </li>
-                  <li>
-                    <Link href="/feedback" className="text-zinc-400 hover:text-blue-400 transition-colors text-sm">{t('nav.feedback')}</Link>
-                  </li>
+                 
                 </ul>
               </div>
 
@@ -192,27 +190,27 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
                 {/* <h4 className="text-lg font-semibold text-white">{t('footer.sections.contact')}</h4> */}
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
-                    <svg className="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:royaecommerce.engineering@gmail.com" className="text-zinc-400 hover:text-white transition-colors text-sm">
+                    <a href="mailto:royaecommerce.engineering@gmail.com" className="text-white hover:text-white transition-colors text-sm">
                       {language === 'en' ? 'royaecommerce.engineering@gmail.com' : 'royaecommerce.engineering@gmail.com'}
                     </a>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <svg className="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    <span className="text-zinc-400 text-sm">
+                    <span className="text-white text-sm">
                       {language === 'en' ? 'Enghelab Street, Balavar Alley, No. 7' : 'خیابان انقلاب، کوچه بالاور، پلاک ۷'}
                     </span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <svg className="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
-                    <a href="tel:021-91015383" className="text-zinc-400 hover:text-white transition-colors text-sm">
+                    <a href="tel:021-91015383" className="text-white hover:text-white transition-colors text-sm">
                       {language === 'en' ? '021-91015383' : '۰۲۱۹۱۰۱۵۳۸۳'}
                     </a>
                   </div>
@@ -227,7 +225,7 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
           <div className="container mx-auto px-8 md:px-16 py-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-col md:flex-row justify-center items-center">
-                <p className="text-zinc-600 text-xs">
+                <p className="text-black text-xs">
                   {t('footer.copyright')}
                 </p>
               </div>

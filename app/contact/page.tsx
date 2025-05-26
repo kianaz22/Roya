@@ -29,7 +29,7 @@ export default function Contact() {
             <button
               onClick={() => {
                 document
-                  .getElementById("our-team")
+                  .getElementById("contact-form")
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
               className="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center animate-[bounce_1s_infinite] hover:bg-white/5 transition-colors"
@@ -64,10 +64,10 @@ export default function Contact() {
           <div className=" h-full grid grid-cols-1 md:grid-cols-2 gap-16 items-end  mx-auto">
             {/* Left Column - Content */}
             <div className="space-y-4 md:space-y-8 px-8 md:px-0 py-16 md:py-0">
-              <h2 className="text-3xl md:text-5xl font-semi-bold text-zinc-900">
+              <h2 className="text-3xl md:text-5xl font-semi-bold text-black">
                 {t("contact.team.title")}
               </h2>
-              <p className=" text-base md:text-2xl text-zinc-900  max-w-xl">
+              <p className=" text-base md:text-2xl text-black  max-w-xl">
                 {t("contact.team.description")}
               </p>
             </div>
@@ -202,8 +202,8 @@ export default function Contact() {
         <Image
           src="/map-desktop.png"
           alt="Location Map"
-          width={100}
-          height={100}
+          width={1920}
+          height={1080}
           className="w-full h-auto object-cover hidden md:block"
         />
         {/* desktop map section */}
@@ -253,10 +253,10 @@ export default function Contact() {
               <p className="text-[20px] ">
                 {t("contact.mobileMap.street")}
               </p>
-              <p className="text-[20px] ">
+              <p className="text-[20px] break-words ">
                 {t("contact.mobileMap.email")}
               </p>
-              <p className="text-[20px] ">{t("contact.mobileMap.phone")}</p>
+              <p className="text-[20px] break-words ">{t("contact.mobileMap.phone")}</p>
             </div>
             <button className="flex items-center   gap-2 px-6 py-3 border-2 border-[#000] text-[#000] rounded-full   transition-all duration-300">
               <span className="text-[20px]">{t("contact.mobileMap.navigation")}</span>

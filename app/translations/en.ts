@@ -47,7 +47,7 @@ export const en = {
     address: {
       title: "Address",
       street: "Enghelab Street, Balavar Alley, No. 7",
-      email: "Email: support[at]pakat.net",
+      email: "Email: royaecommerce.engineering@gmail.com",
       phone: "Phone Number: 021-91015383",
       getDirections: "Get Directions"
     },

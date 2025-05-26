@@ -163,15 +163,14 @@ export default function Careers() {
     <Layout>
       <section className="min-h-screen pt-16 pb-16 md:pt-32 md:pb-24 relative overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-100 to-white"></div>
+        <div className="absolute inset-0 bg-white"></div>
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-blue-500/5 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-purple-500/5 to-transparent"></div>
+     
         </div>
 
         <div className="container mx-auto px-8 md:px-16 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-16  text-black">
               {currentContent.title}
             </h1>
 
@@ -181,13 +180,13 @@ export default function Careers() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-200/30 via-zinc-100/20 to-transparent"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-200/20 via-transparent to-transparent"></div>
               <div className="relative z-10">
-                <h2 className="text-2xl font-semibold text-zinc-800 mb-8">{currentContent.culture.title}</h2>
-                <p className="text-zinc-600 leading-relaxed text-lg mb-12 max-w-3xl">{currentContent.culture.description}</p>
+                <h2 className="text-2xl font-semibold text-black mb-8">{currentContent.culture.title}</h2>
+                <p className="text-black leading-relaxed text-lg mb-12 max-w-3xl">{currentContent.culture.description}</p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                   {currentContent.culture.items.map((item, index) => (
                     <div key={index} className="group">
-                      <h3 className="text-xl font-semibold text-zinc-800 mb-4 group-hover:text-blue-600 transition-colors">{item.title}</h3>
-                      <p className="text-zinc-600 leading-relaxed">{item.description}</p>
+                      <h3 className="text-xl font-semibold text-black mb-4 group-hover:text-blue-600 transition-colors">{item.title}</h3>
+                      <p className="text-black leading-relaxed">{item.description}</p>
                     </div>
                   ))}
                 </div>
@@ -200,12 +199,12 @@ export default function Careers() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-200/30 via-zinc-100/20 to-transparent"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-200/20 via-transparent to-transparent"></div>
               <div className="relative z-10">
-                <h2 className="text-2xl font-semibold text-zinc-800 mb-12">{currentContent.benefits.title}</h2>
+                <h2 className="text-2xl font-semibold text-black mb-12">{currentContent.benefits.title}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                   {currentContent.benefits.items.map((benefit, index) => (
                     <div key={index} className="group">
-                      <h3 className="text-xl font-semibold text-zinc-800 mb-4 group-hover:text-purple-600 transition-colors">{benefit.title}</h3>
-                      <p className="text-zinc-600 leading-relaxed">{benefit.description}</p>
+                      <h3 className="text-xl font-semibold text-black mb-4 group-hover:text-purple-600 transition-colors">{benefit.title}</h3>
+                      <p className="text-black leading-relaxed">{benefit.description}</p>
                     </div>
                   ))}
                 </div>
@@ -218,8 +217,8 @@ export default function Careers() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-200/30 via-zinc-100/20 to-transparent"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-200/20 via-transparent to-transparent"></div>
               <div className="relative z-10">
-                <h2 className="text-2xl font-semibold text-zinc-800 mb-12">{currentContent.positions.title}</h2>
-                   <p className="text-zinc-600 leading-relaxed mb-12">{currentContent.positions.noPositions}</p>
+                <h2 className="text-2xl font-semibold text-black mb-12">{currentContent.positions.title}</h2>
+                   <p className="text-black leading-relaxed mb-12">{currentContent.positions.noPositions}</p>
                </div>
             </div>
 
@@ -229,26 +228,13 @@ export default function Careers() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-200/30 via-purple-100/20 to-transparent"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-purple-200/20 via-transparent to-transparent"></div>
               <div className="relative z-10 text-center">
-                <h2 className="text-2xl font-semibold text-zinc-800 mb-6">{currentContent.cta.title}</h2>
-                <p className="text-zinc-600 leading-relaxed mb-8 max-w-2xl mx-auto">{currentContent.cta.description}</p>
+                <h2 className="text-2xl font-semibold text-black mb-6">{currentContent.cta.title}</h2>
+                <p className="text-black leading-relaxed mb-8 max-w-2xl mx-auto">{currentContent.cta.description}</p>
                 <a
-                  href="/contact"
+                  href="mailto:royaecommerce.engineering@gmail.com"
                   className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:shadow-lg transition-all duration-300"
                 >
                   {currentContent.cta.button}
-                  <svg
-                    className="w-5 h-5 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
                 </a>
               </div>
             </div>

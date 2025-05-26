@@ -101,10 +101,7 @@ export default function Home() {
                 />
               </div>
               <p className="text-base text-white leading-relaxed max-w-sm text-justify">
-                At Roya E-commerce, we strive to create a future where
-                technology not only makes lives easier but also creatively and
-                innovatively transforms the world into a better place. We
-                believe that technology should be accompanied by humanity.
+                {t("hero.description")}
               </p>
             </div>
           </div>
@@ -118,7 +115,7 @@ export default function Home() {
             <h2 className="text-4xl font-semi-bold mb-6 bg-gradient-to-r from-zinc-900 to-zinc-600 bg-clip-text text-transparent">
               {t("products.title")}
             </h2>
-            <p className="text-xl text-zinc-600 md:leading-loose">
+            <p className="text-xl text-black md:leading-loose">
               {t("products.description")}
             </p>
           </div>
@@ -140,7 +137,7 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-base md:text-xl text-zinc-800 group-hover:text-zinc-700 transition-colors md:leading-relaxed mt-2 md:mt-4">
+                    <p className="text-base md:text-xl text-black group-hover:text-zinc-700 transition-colors md:leading-relaxed mt-2 md:mt-4">
                       {t("products.kamva.description")}
                     </p>
                     <div className="mt-12 md:mt-auto flex justify-between items-center  ">
@@ -156,7 +153,7 @@ export default function Home() {
                           href="https://www.linkedin.com/company/kamva/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-zinc-600 hover:text-blue-600 transition-colors"
+                          className="text-black hover:text-blue-600 transition-colors"
                         >
                           <svg
                             className="w-4 h-4"
@@ -170,7 +167,7 @@ export default function Home() {
                           href="https://instagram.com/kamva_ir"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-zinc-600 hover:text-pink-600 transition-colors"
+                          className="text-black hover:text-pink-600 transition-colors"
                         >
                           <svg
                             className="w-4 h-4"
@@ -203,7 +200,7 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-base md:text-xl text-zinc-800 group-hover:text-zinc-700 transition-colors md:leading-relaxed mt-2 md:mt-4">
+                    <p className="text-base md:text-xl text-black group-hover:text-zinc-700 transition-colors md:leading-relaxed mt-2 md:mt-4">
                       {t("products.pakat.description")}
                     </p>
                     <div className="mt-12 md:mt-auto flex justify-between items-center">
@@ -219,7 +216,7 @@ export default function Home() {
                           href="https://www.linkedin.com/company/pakatnet"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-zinc-600 hover:text-blue-600 transition-colors"
+                          className="text-black hover:text-blue-600 transition-colors"
                         >
                           <svg
                             className="w-4 h-4"
@@ -233,7 +230,7 @@ export default function Home() {
                           href="https://www.instagram.com/mypakat"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-zinc-600 hover:text-pink-600 transition-colors"
+                          className="text-black hover:text-pink-600 transition-colors"
                         >
                           <svg
                             className="w-4 h-4"
@@ -266,7 +263,7 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-base md:text-xl text-zinc-800 group-hover:text-zinc-700 transition-colors md:leading-relaxed mt-2 md:mt-4">
+                    <p className="text-base md:text-xl text-black group-hover:text-zinc-700 transition-colors md:leading-relaxed mt-2 md:mt-4">
                       {t("products.hamahang.description")}
                     </p>
                     <div className="mt-12 md:mt-auto flex justify-between items-center">
@@ -282,7 +279,7 @@ export default function Home() {
                           href="https://www.linkedin.com/company/hamahang-app"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-zinc-600 hover:text-blue-600 transition-colors"
+                          className="text-black hover:text-blue-600 transition-colors"
                         >
                           <svg
                             className="w-4 h-4"
@@ -296,7 +293,7 @@ export default function Home() {
                           href="https://www.instagram.com/hamahang.app"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-zinc-600 hover:text-pink-600 transition-colors"
+                          className="text-black hover:text-pink-600 transition-colors"
                         >
                           <svg
                             className="w-4 h-4"
