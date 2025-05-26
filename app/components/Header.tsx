@@ -1,20 +1,20 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Header() {
-  const { t } = useTranslations();
+  const { t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -26,7 +26,7 @@ export default function Header() {
             <Link href="/" className="flex items-center">
               <Image
                 src="/logo.svg"
-                alt={t('company.name')}
+                alt={t("company.name")}
                 width={120}
                 height={40}
                 className="h-8 w-auto"
@@ -36,26 +36,47 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="text-white hover:text-gray-300 transition-colors">
-              {t('nav.home')}
+            <Link
+              href="/"
+              className="text-white hover:text-gray-300 transition-colors"
+            >
+              {t("nav.home")}
             </Link>
-            <Link href="/products" className="text-white hover:text-gray-300 transition-colors">
-              {t('nav.products')}
+            <Link
+              href="/products"
+              className="text-white hover:text-gray-300 transition-colors"
+            >
+              {t("nav.products")}
             </Link>
-            <Link href="/about" className="text-white hover:text-gray-300 transition-colors">
-              {t('nav.about')}
+            <Link
+              href="/about"
+              className="text-white hover:text-gray-300 transition-colors"
+            >
+              {t("nav.about")}
             </Link>
-            <Link href="/careers" className="text-white hover:text-gray-300 transition-colors">
-              {t('nav.careers')}
+            <Link
+              href="/careers"
+              className="text-white hover:text-gray-300 transition-colors"
+            >
+              {t("nav.careers")}
             </Link>
-            <Link href="/contact" className="text-white hover:text-gray-300 transition-colors">
-              {t('nav.contact')}
+            <Link
+              href="/contact"
+              className="text-white hover:text-gray-300 transition-colors"
+            >
+              {t("nav.contact")}
             </Link>
-            <Link href="/feedback" className="text-white hover:text-gray-300 transition-colors">
-              {t('nav.feedback')}
+            <Link
+              href="/feedback"
+              className="text-white hover:text-gray-300 transition-colors"
+            >
+              {t("nav.feedback")}
             </Link>
-            <Link href="/news" className="text-white hover:text-gray-300 transition-colors">
-              {t('nav.news')}
+            <Link
+              href="/news"
+              className="text-white hover:text-gray-300 transition-colors"
+            >
+              {t("nav.news")}
             </Link>
           </nav>
 
@@ -89,30 +110,51 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-[#000000] !bg-black">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link href="/" className="block px-3 py-2 text-white hover:text-gray-300">
-              {t('nav.home')}
+            <Link
+              href="/"
+              className="block px-3 py-2 text-white hover:text-gray-300"
+            >
+              {t("nav.home")}
             </Link>
-            <Link href="/products" className="block px-3 py-2 text-white hover:text-gray-300">
-              {t('nav.products')}
+            <Link
+              href="/products"
+              className="block px-3 py-2 text-white hover:text-gray-300"
+            >
+              {t("nav.products")}
             </Link>
-            <Link href="/about" className="block px-3 py-2 text-white hover:text-gray-300">
-              {t('nav.about')}
+            <Link
+              href="/about"
+              className="block px-3 py-2 text-white hover:text-gray-300"
+            >
+              {t("nav.about")}
             </Link>
-            <Link href="/careers" className="block px-3 py-2 text-white hover:text-gray-300">
-              {t('nav.careers')}
+            <Link
+              href="/careers"
+              className="block px-3 py-2 text-white hover:text-gray-300"
+            >
+              {t("nav.careers")}
             </Link>
-            <Link href="/contact" className="block px-3 py-2 text-white hover:text-gray-300">
-              {t('nav.contact')}
+            <Link
+              href="/contact"
+              className="block px-3 py-2 text-white hover:text-gray-300"
+            >
+              {t("nav.contact")}
             </Link>
-            <Link href="/feedback" className="block px-3 py-2 text-white hover:text-gray-300">
-              {t('nav.feedback')}
+            <Link
+              href="/feedback"
+              className="block px-3 py-2 text-white hover:text-gray-300"
+            >
+              {t("nav.feedback")}
             </Link>
-            <Link href="/news" className="block px-3 py-2 text-white hover:text-gray-300">
-              {t('nav.news')}
+            <Link
+              href="/news"
+              className="block px-3 py-2 text-white hover:text-gray-300"
+            >
+              {t("nav.news")}
             </Link>
           </div>
         </div>
       )}
     </header>
   );
-} 
+}
