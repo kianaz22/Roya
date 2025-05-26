@@ -51,7 +51,7 @@ export default function NewsPage() {
 
   return (
     <Layout>
-      <section className="min-h-screen pt-32 pb-16 md:pt-48 md:pb-24 relative overflow-hidden">
+      <section className="min-h-screen pt-16 pb-16 md:pt-48 md:pb-24 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-100 to-white"></div>
         <div className="absolute inset-0">

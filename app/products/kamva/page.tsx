@@ -34,7 +34,11 @@ export default function KamvaPage() {
               Enter the Kamva website
             </Link>
             {/* Bouncing Chevron */}
-            <div className="mt-12 md:mt-0 w-9 h-9 rounded-full border-2 border-zinc-400 flex items-center justify-center animate-[bounce_1s_infinite]">
+            <div onClick={() => {
+                document
+                .getElementById("kamva-features")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }} className="cursor-pointer mt-12 md:mt-0 w-9 h-9 rounded-full border-2 border-zinc-400 flex items-center justify-center animate-[bounce_1s_infinite]">
               <svg className="w-6 h-6 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
@@ -44,7 +48,7 @@ export default function KamvaPage() {
       </div>
 
       {/* New Section */}
-      <div className="bg-black text-white">
+      <div id="kamva-features" className="bg-black text-white">
         <div className="container mx-auto px-8 md:px-16 max-w-[1280px]">
           <div className="flex flex-col md:flex-row items-center">
             <div className="flex-1 md:space-y-6 max-w-xl py-16 md:py-24">

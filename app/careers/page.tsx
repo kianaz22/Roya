@@ -161,7 +161,7 @@ export default function Careers() {
 
   return (
     <Layout>
-      <section className="min-h-screen pt-32 pb-16 md:pt-48 md:pb-24 relative overflow-hidden">
+      <section className="min-h-screen pt-16 pb-16 md:pt-32 md:pb-24 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-100 to-white"></div>
         <div className="absolute inset-0">
@@ -219,26 +219,8 @@ export default function Careers() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-zinc-200/20 via-transparent to-transparent"></div>
               <div className="relative z-10">
                 <h2 className="text-2xl font-semibold text-zinc-800 mb-12">{currentContent.positions.title}</h2>
-                <div className="space-y-8">
-                  {currentContent.positions.jobs.map((position, index) => (
-                    <div key={index} className="p-6 rounded-2xl border border-zinc-200 hover:border-zinc-300 transition-all duration-300 bg-white/50">
-                      <h3 className="text-xl font-semibold text-zinc-800 mb-4">{position.title}</h3>
-                      <p className="text-zinc-600 leading-relaxed mb-6">{position.description}</p>
-                      <div className="flex flex-wrap gap-4">
-                        <span className="px-4 py-2 rounded-full bg-zinc-100 text-zinc-700 text-sm">
-                          {position.department}
-                        </span>
-                        <span className="px-4 py-2 rounded-full bg-zinc-100 text-zinc-700 text-sm">
-                          {position.location}
-                        </span>
-                        <span className="px-4 py-2 rounded-full bg-zinc-100 text-zinc-700 text-sm">
-                          {position.type}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+                   <p className="text-zinc-600 leading-relaxed mb-12">{currentContent.positions.noPositions}</p>
+               </div>
             </div>
 
             {/* CTA Section */}

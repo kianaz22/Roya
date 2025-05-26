@@ -43,7 +43,7 @@ export default function Home() {
               <button
                 onClick={() => {
                   document
-                    .getElementById("products")
+                    .getElementById("contact-us")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="border-2 md:border-3 border-white text-white px-5 py-2 md:py-3 rounded-full text-base font-medium hover:bg-white/10 transition-colors"
@@ -397,7 +397,7 @@ export default function Home() {
      
 
      {/*  contact Section */}
-     <section className="relative  bg-black">
+     <section className="relative  bg-black" id="contact-us">
         <div className="w-full max-w-[1280px] mx-auto  md:px-8 pb-16">
           <div className="grid grid-cols-1 md:grid-cols-2  items-end gap-48 md:gap-8">
             {/* Left Column - Image */}
@@ -417,11 +417,9 @@ export default function Home() {
               </p>
               <button
                 onClick={() => {
-                  document
-                    .getElementById("products")
-                    ?.scrollIntoView({ behavior: "smooth" });
+                  window.location.href = "/contact";
                 }}
-                className=" bg-white text-black px-6 py-4 rounded-full text-base font-medium hover:bg-white/10 transition-colors"
+                className=" bg-white text-black px-6 py-4 rounded-full text-base font-medium  transition-colors"
               >
                 {t("hero.cta")}
               </button>

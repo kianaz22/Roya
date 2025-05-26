@@ -29,7 +29,7 @@ export default function Contact() {
             <button
               onClick={() => {
                 document
-                  .getElementById("products")
+                  .getElementById("our-team")
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
               className="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center animate-[bounce_1s_infinite] hover:bg-white/5 transition-colors"
@@ -53,7 +53,10 @@ export default function Contact() {
       </section>
 
       {/* our team Section */}
-      <section className="relative flex items-center overflow-hidden pt-64 pb-40 md:py-64 bg-white">
+      <section
+        id="our-team"
+        className="relative flex items-center overflow-hidden pt-64 pb-40 md:py-64 bg-white"
+      >
         <div className="absolute inset-0 max-w-[1280px] mx-auto px-8">
           <div className="w-full h-[600px] md:h-full bg-[url('/our-team-bg-mobile.png')]  md:bg-[url('/large-white-bg-desktop.png')] bg-no-repeat bg-cover bg-center"></div>
         </div>
@@ -124,7 +127,9 @@ export default function Contact() {
               </div>
             </div>
             <div className="aspect-square p-8 pb-32 md:p-16 md:pb-16 flex flex-col justify-baseline gap-8 md:gap-12 text-white bg-[#000]">
-              <h1 className="text-3xl md:text-5xl font-semi-bold md:leading-19">Commitment to Innovation</h1>
+              <h1 className="text-3xl md:text-5xl font-semi-bold md:leading-19">
+                Commitment to Innovation
+              </h1>
               <div className="text-base md:text-2xl md:leading-9 max-w-xs">
                 Roya represents a commitment to innovation and collaboration,
                 determined to build trust and familiarity, and reflect its
@@ -136,7 +141,7 @@ export default function Contact() {
       </section>
 
       {/* contact form Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-32 md:py-32 md:pt-64 bg-[#EBF8FF]">
+      <section id="contact-form" className="relative min-h-screen flex items-center overflow-hidden pt-32 md:py-32 md:pt-64 bg-[#EBF8FF]">
         <div className="h-full w-full max-w-[1280px] mx-auto px-8 md:px-16 relative z-20 -mt-56 md:-mt-64">
           <div className="space-y-8 md:space-y-16">
             {/* Row 1: Title and Description */}
@@ -145,7 +150,8 @@ export default function Contact() {
                 Contact Us
               </h1>
               <p className="text-base md:text-[1.4rem] md:leading-8 text-[#004AB3]">
-                Roya E-commerce is always with you along this journey, and our support team is available to answer your questions at any time.
+                Roya E-commerce is always with you along this journey, and our
+                support team is available to answer your questions at any time.
               </p>
             </div>
 
@@ -178,7 +184,13 @@ export default function Contact() {
 
             {/* Row 4: Send Button */}
             <div>
-              <button className="px-8 py-4 bg-[#004AB3] text-white rounded-full text-lg font-medium hover:bg-[#004AB3]/90 transition-all duration-300">
+              <button
+                onClick={() => {
+                  window.location.href =
+                    "mailto:royaecommerce.engineering@gmail.com";
+                }}
+                className="px-8 py-4 bg-[#004AB3] text-white rounded-full text-lg font-medium hover:bg-[#004AB3]/90 transition-all duration-300"
+              >
                 Send Message
               </button>
             </div>
@@ -195,7 +207,7 @@ export default function Contact() {
           height={1080}
           className="w-full h-auto object-cover md:hidden"
         />
-          <Image
+        <Image
           src="/map-desktop.png"
           alt="Location Map"
           width={100}
@@ -207,13 +219,31 @@ export default function Contact() {
           <div className="space-y-8">
             <h2 className="text-5xl font-semi-bold text-[#000]">Address</h2>
             <div className="space-y-1 text-black">
-              <p className="text-[24px]">Enghelab Street, Balavar Alley, No. 7</p>
+              <p className="text-[24px]">
+                Enghelab Street, Balavar Alley, No. 7
+              </p>
               <p className="text-[24px]">Email: support[at]pakat.net</p>
               <p className="text-[24px]">Phone Number: 021-91015383</p>
             </div>
-            <button className="flex items-center mt-20 gap-2 px-6 py-4 border-2 border-[#000] text-[#000] rounded-full   transition-all duration-300">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+            <button
+              onClick={() => {
+                window.location.href =
+                  "https://www.google.com/maps/place/Roya+E-commerce/@35.753911,51.420711,17z/data=!3m1!4b1!4m6!3m5!1s0x3f8e04e61d9df21d:0x2f2e139bf6f8d60e!8m2!3d35.753911!4d51.423286!16s%2Fg%2F11c48tqxzn?entry=ttu&g_ep=EgoyMDI1MDIyMi4wIKXMDSoASAFQAw%3D%3D";
+              }}
+              className="flex items-center mt-20 gap-2 px-6 py-4 border-2 border-[#000] text-[#000] rounded-full   transition-all duration-300"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                />
               </svg>
               <span className="text-[20px]">Get Directions</span>
             </button>
@@ -224,21 +254,23 @@ export default function Contact() {
           <div className="space-y-8">
             <h2 className="text-3xl font-semi-bold text-[#000]">Address</h2>
             <div className="space-y-1 text-black">
-              <p className="text-[20px] ">Enghelab Street, Balavar Alley, No. 7</p>
-              <p className="text-[20px] ">Email: royaecommerce.engineering@{"\n"}gmail.com</p>
+              <p className="text-[20px] ">
+                Enghelab Street, Balavar Alley, No. 7
+              </p>
+              <p className="text-[20px] ">
+                Email: royaecommerce.engineering@{"\n"}gmail.com
+              </p>
               <p className="text-[20px] ">Phone Number: 021-91015383</p>
             </div>
             <button className="flex items-center   gap-2 px-6 py-3 border-2 border-[#000] text-[#000] rounded-full   transition-all duration-300">
-              
               <span className="text-[20px]">Navigation</span>
             </button>
           </div>
         </div>
       </section>
 
-
-     {/*  contact Section */}
-     <section className="relative  bg-black">
+      {/*  contact Section */}
+      <section className="relative  bg-black">
         <div className="w-full max-w-[1280px] mx-auto md:px-8 pb-16">
           <div className="grid grid-cols-1 md:grid-cols-2  items-end gap-40 md:gap-8">
             {/* Left Column - Image */}
@@ -250,19 +282,18 @@ export default function Contact() {
 
             {/* Right Column - Content */}
             <div className="space-y-8 px-8 md:px-0">
-        
               <p className="text-base md:text-xl text-white  max-w-[570px] md:leading-relaxed md:text-justify">
-              At Roya E-commerce, we strive to create a future where
+                At Roya E-commerce, we strive to create a future where
                 technology not only makes lives easier but also creatively and
                 innovatively transforms the world into a better place.
               </p>
               <button
                 onClick={() => {
                   document
-                    .getElementById("products")
+                    .getElementById("contact-form")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="  bg-white text-black px-6 py-4 rounded-full text-base font-medium hover:bg-white/10 transition-colors"
+                className="  bg-white text-black px-6 py-4 rounded-full text-base font-medium transition-colors"
               >
                 {t("hero.cta")}
               </button>

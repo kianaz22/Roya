@@ -162,7 +162,7 @@ export default function About() {
                 <h2 className="text-2xl font-semibold text-zinc-900 mb-6">{currentContent.cta.title}</h2>
                 <p className="text-zinc-600 leading-relaxed mb-8 max-w-2xl mx-auto">{currentContent.cta.description}</p>
                 <a
-                  href="/contact"
+                  href="/careers"
                   className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:shadow-lg transition-all duration-300"
                 >
                   {currentContent.cta.button}
