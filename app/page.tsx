@@ -61,7 +61,7 @@ export default function Home() {
               .getElementById("products")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
-          className="absolute bottom-20 left-[calc(50%-640px+64px)] w-9 h-9 rounded-full border-2 border-white flex items-center justify-center animate-[bounce_1s_infinite] hover:bg-white/5 transition-colors"
+          className="absolute bottom-40 left-[calc(50%-640px+64px)] w-9 h-9 rounded-full border-2 border-white flex items-center justify-center animate-[bounce_1s_infinite] hover:bg-white/5 transition-colors"
         >
           <svg
             className="w-6 h-6 text-white/70"

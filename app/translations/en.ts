@@ -185,7 +185,81 @@ export const en = {
       }
     },
     footer: {
-      description: "The appearance of your store is one of the most important parameters in attracting customers. Therefore, we have tried to provide several diverse and professional templates for stores. You can change your store's template at any time.",
+      description: "Join thousands of businesses that trust Kamva for their online store needs. Start your journey today!",
+      cta: "Contact Us"
+    }
+  },
+  pakat: {
+    hero: {
+      title: "Pakat, the most comprehensive Iranian email marketing service",
+      cta: "Enter the Pakat website"
+    },
+    features: {
+      description: "Pakat's email marketing service, a subsidiary of Electronic Communication Roya Company, started its activities in 2019 to address the challenges in email marketing and improve user experience. It has been trusted by both large and small businesses in the online trade space ever since."
+    },
+    grid: {
+      title1: "Pakat is the best way to communicate with customers",
+      subtitle1: "Using Pakat, you will no longer have concerns about currency price fluctuations, IP blocking in Iran, non-delivery of sent emails by users, emails going to spam folders, etc.",
+      title2: "Why email marketing?",
+      subtitle2: "One of the best channels for communicating with your users after social media is email marketing. Sending SMS can be annoying, but with email you can easily stay in touch with your users"
+    },
+    cards: {
+      campaigns: {
+        title: "Marketing automation",
+        description: "Increase campaign efficiency and audience segmentation by creating different workflows in the automation system"
+      },
+      automation: {
+        title: "Audience segmentation",
+        description: "Segment your audience based on their behavior and preferences so that you can send targeted content to them"
+      },
+      transactional: {
+        title: "Content personalization",
+        description: "Send personalized emails using information like the recipient's name to get higher efficiency"
+      },
+      analytics: {
+        title: "Email sending optimization",
+        description: "Send emails intelligently based on user behavior when opening emails to achieve maximum efficiency"
+      }
+    },
+    footer: {
+      description: "At Roya, we strive to create a future where technology not only makes lives easier but also creatively and innovatively transforms the world into a better place.",
+      cta: "Contact Us"
+    }
+  },
+  hamahang: {
+    hero: {
+      title: "Schedule without worries with Hamahang",
+      cta: "Enter the Hamahang website"
+    },
+    features: {
+      description: "Using Hamahang, you can access all scheduled appointments in your calendar and manage your time effectively."
+    },
+    grid: {
+      title1: "Connect your calendar and create a free link",
+      subtitle1: "Define your schedule with simple steps, connect Hamahang to your Google Calendar, and share the dedicated link for your programs with others.",
+      title2: "Why choose Hamahang?",
+      subtitle2: "Hamahang is an excellent choice because it can seamlessly integrate with multiple platforms like Google Calendar and Zoho while automatically checking availability."
+    },
+    cards: {
+      calendar: {
+        title: "Schedule meetings across time zones",
+        description: "Regardless of where you are in the world, easily adjust for hourly differences when scheduling meetings with clients."
+      },
+      scheduling: {
+        title: "Create breaks between sessions",
+        description: "Before or after each session, set specific times for rest to avoid performance drops due to multiple consecutive meetings."
+      },
+      notifications: {
+        title: "Integration with popular services",
+        description: "Hamahang integrates with both Google Calendar and Zoho to automatically check availability."
+      },
+      integration: {
+        title: "Maintain meeting privacy",
+        description: "Only those who receive the link from you can make reservations."
+      }
+    },
+    footer: {
+      description: "At Roya, we strive to create a future where technology not only makes lives easier but also creatively and innovatively transforms the world into a better place.",
       cta: "Contact Us"
     }
   }
