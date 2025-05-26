@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function KamvaPage() {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <Layout lightMode>
@@ -24,14 +24,14 @@ export default function KamvaPage() {
               />
             </div>
             <p className="text-4xl md:text-6xl text-black leading-16 font-normal max-w-2xl">
-              Sell online with Kamva&apos;s store builder!
+              {t("kamva.hero.title")}
             </p>
             <Link 
               href="https://kamva.ir" 
               target="_blank"
               className="bg-zinc-900 text-white px-6 py-3 rounded-full text-lg hover:bg-zinc-800 transition-all duration-300"
             >
-              Enter the Kamva website
+              {t("kamva.hero.cta")}
             </Link>
             {/* Bouncing Chevron */}
             <div onClick={() => {
@@ -61,7 +61,7 @@ export default function KamvaPage() {
                 />
               </div>
               <p className=" text-lg md:text-2xl  max-w-sm">
-                At Kamva, we have prepared all the necessary features for easy management of an online business. In Kamva&apos;s store builder, complete your products, categories, and store information and start selling your products immediately.
+                {t("kamva.features.description")}
               </p>
             </div>
             <div className="md:flex-1 relative w-full h-[300px] md:h-[500px] ">
@@ -83,10 +83,10 @@ export default function KamvaPage() {
             {/* First Slot */}
             <div className="bg-black text-white p-8 pb-32 md:p-16 md:pb-16">
               <h3 className="text-3xl md:text-[40px] font-semi-bold leading-12 md:leading-16 mb-8">
-                Sell online with Kamva&apos;s store builder!
+                {t("kamva.grid.title1")}
               </h3>
               <p className="text-white text-lg md:text-2xl max-w-sm">
-                Kamva helps you transform your internet business
+                {t("kamva.grid.subtitle1")}
               </p>
             </div>
 
@@ -113,22 +113,12 @@ export default function KamvaPage() {
             {/* Fourth Slot */}
             <div className="bg-black text-white p-8 md:p-16 md:pr-12 ">
               <h3 className="text-3xl md:text-5xl leading-12 md:leading-16 font-semi-bold mb-4">
-                Simple user interface management panel
+                {t("kamva.grid.title2")}
               </h3>
               <p className="text-white text-lg md:text-2xl max-w-sm">
-                Kamva&apos;s template editor is drag-and-drop. You can change the home page of your store or delete one of its elements.
+                {t("kamva.grid.subtitle2")}
               </p>
             </div>
-
-             {/* Fifth Slot */}
-             {/* <div className="bg-black text-white p-8 md:p-16 md:pr-12">
-              <h3 className="text-3xl md:text-5xl leading-12 md:leading-16 font-semi-bold mb-4">
-              10,000 online stores
-
-              </h3>
-              <p className="text-white text-lg md:text-2xl max-w-sm">
-              More than 10,000 people have used Kamva&apos;s store builder to launch their online stores. You can also test the store builder for free for 14 days.              </p>
-            </div> */}
           </div>
         </div>
       </div>
@@ -140,40 +130,40 @@ export default function KamvaPage() {
             {/* Card 1 */}
             <div className="bg-blue-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-2xl font-bold mb-4 text-blue-900">
-                Independent bank gateway
+                {t("kamva.cards.bankGateway.title")}
               </h3>
               <p className="text-blue-800">
-                The amount of all internet sales made on your store will be deposited into the bank account connected to the gateway
+                {t("kamva.cards.bankGateway.description")}
               </p>
             </div>
 
             {/* Card 2 */}
             <div className="bg-blue-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-2xl font-bold mb-4 text-blue-900">
-                Technical support and marketing SEO
+                {t("kamva.cards.support.title")}
               </h3>
               <p className="text-blue-800">
-                Kamva&apos;s technical department supports from zero to hundred percent; you can use free consulting services from Kamva for technical infrastructure of your store
+                {t("kamva.cards.support.description")}
               </p>
             </div>
 
             {/* Card 3 */}
             <div className="bg-blue-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-2xl font-bold mb-4 text-blue-900">
-                Connection to email marketing service
+                {t("kamva.cards.emailMarketing.title")}
               </h3>
               <p className="text-blue-800">
-                You can send promotional emails and marketing emails to your customers&apos; stores using the best method to attract customers
+                {t("kamva.cards.emailMarketing.description")}
               </p>
             </div>
 
             {/* Card 4 */}
             <div className="bg-blue-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-2xl font-bold mb-4 text-blue-900">
-                Weblog service along with the store builder
+                {t("kamva.cards.blog.title")}
               </h3>
               <p className="text-blue-800">
-                Kamva&apos;s technical department supports from zero to hundred percent; you can use free consulting services from Kamva for technical infrastructure of your store
+                {t("kamva.cards.blog.description")}
               </p>
             </div>
           </div>
@@ -194,14 +184,13 @@ export default function KamvaPage() {
             </div>
             <div className="flex-1 space-y-6 max-w-xl px-8 md:px-0">
               <p className="text-lg md:text-xl  text-white max-w-lg">
-                The appearance of your store is one of the most important parameters in attracting customers. Therefore, we have tried to provide several diverse and professional templates for stores. You can change your store&apos;s template at any time.
+                {t("kamva.footer.description")}
               </p>
               <Link 
                 href="/contact" 
                 className="inline-flex items-center gap-3 bg-white text-black px-4 py-3 rounded-full text-lg  hover:bg-zinc-100 transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
-                <span>Contact Us</span>
-                 
+                <span>{t("kamva.footer.cta")}</span>
               </Link>
             </div>
           </div>

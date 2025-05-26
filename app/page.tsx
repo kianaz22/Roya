@@ -148,7 +148,7 @@ export default function Home() {
                         onClick={() => toggleCard(0)}
                         className="bg-zinc-900 text-white px-4 md:px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
                       >
-                        <span>Read More</span>
+                        <span>{t("products.readMore")}</span>
                       </button>
                       {/* Social Media Links */}
                       <div className="flex items-center gap-3">
@@ -211,7 +211,7 @@ export default function Home() {
                         onClick={() => toggleCard(1)}
                         className="bg-zinc-900 text-white px-4 md:px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
                       >
-                        <span>Read More</span>
+                        <span>{t("products.readMore")}</span>
                       </button>
                       {/* Social Media Links */}
                       <div className="flex items-center gap-3">
@@ -274,7 +274,7 @@ export default function Home() {
                         onClick={() => toggleCard(2)}
                         className="bg-zinc-900 text-white px-4 md:px-8 py-3 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
                       >
-                        <span>Read More</span>
+                        <span>{t("products.readMore")}</span>
                       </button>
                       {/* Social Media Links */}
                       <div className="flex items-center gap-3">
@@ -411,9 +411,7 @@ export default function Home() {
             <div className="space-y-8 px-8 md:px-0">
         
               <p className="text-base md:text-xl text-white leading-relaxed max-w-[570px] text-justify">
-              At Roya E-commerce, we strive to create a future where
-                technology not only makes lives easier but also creatively and
-                innovatively transforms the world into a better place.
+                {t("hero.description")}
               </p>
               <button
                 onClick={() => {

@@ -16,9 +16,56 @@ export const en = {
     description: "At Roya E-commerce, we strive to create a future where technology not only makes lives easier but also creatively and innovatively transforms the world into a better place. We believe that technology should be accompanied by humanity.",
     cta: "Contact Us"
   },
+  contact: {
+    hero: {
+      title: "We are committed to quality and innovation at Roya E-commerce."
+    },
+    team: {
+      title: "Our Team",
+      description: "At Roya E-commerce, we are committed to quality and innovation. Our team works closely together to design and develop products that not only meet today's needs."
+    },
+    future: {
+      title: "Towards the Future",
+      description: "At Roya E-commerce, we aim to create a future where technology not only makes lives easier but also transforms the world into a better place in a creative and innovative way."
+    },
+    culture: {
+      title: "Our Culture: Collaboration and Creativity",
+      description: "In a world where technology leads, Roya fosters a sense of trust, loyalty, and collaboration in every successful business."
+    },
+    innovation: {
+      title: "Commitment to Innovation",
+      description: "Roya represents a commitment to innovation and collaboration, determined to build trust and familiarity, and reflect its values and goals."
+    },
+    form: {
+      title: "Contact Us",
+      description: "Roya E-commerce is always with you along this journey, and our support team is available to answer your questions at any time.",
+      fullName: "Full Name",
+      email: "Email",
+      message: "Write your message",
+      sendButton: "Send Message"
+    },
+    address: {
+      title: "Address",
+      street: "Enghelab Street, Balavar Alley, No. 7",
+      email: "Email: support[at]pakat.net",
+      phone: "Phone Number: 021-91015383",
+      getDirections: "Get Directions"
+    },
+    mobileMap: {
+      title: "Address",
+      street: "Enghelab Street, Balavar Alley, No. 7",
+      email: "Email: royaecommerce.engineering@gmail.com",
+      phone: "Phone Number: 021-91015383",
+      navigation: "Navigation"
+    },
+    bottomSection: {
+      description: "At Roya E-commerce, we strive to create a future where technology not only makes lives easier but also creatively and innovatively transforms the world into a better place."
+    }
+  },
   products: {
     title: "Products",
     description: "At Roya E-commerce, we are committed to quality and innovation. Our team works closely together to design and develop products that not only meet today's needs.",
+    readMore: "Read More",
     kamva: {
       title: "Kamva",
       description: "Kamva helps you transform your online business, build a professional store in 5 minutes, and experience online sales with an electronic payment gateway, even without a trust symbol.",
@@ -103,6 +150,43 @@ export const en = {
     innovationSection: {
       title: "Commitment to Innovation",
       description: "Roya E-commerce represents a commitment to innovation and collaboration, determined to build trust and familiarity, and reflect its values and goals."
+    }
+  },
+  kamva: {
+    hero: {
+      title: "Sell online with Kamva's store builder!",
+      cta: "Enter the Kamva website"
+    },
+    features: {
+      description: "At Kamva, we have prepared all the necessary features for easy management of an online business. In Kamva's store builder, complete your products, categories, and store information and start selling your products immediately."
+    },
+    grid: {
+      title1: "Sell online with Kamva's store builder!",
+      subtitle1: "Kamva helps you transform your internet business",
+      title2: "Simple user interface management panel",
+      subtitle2: "Kamva's template editor is drag-and-drop. You can change the home page of your store or delete one of its elements."
+    },
+    cards: {
+      bankGateway: {
+        title: "Independent bank gateway",
+        description: "The amount of all internet sales made on your store will be deposited into the bank account connected to the gateway"
+      },
+      support: {
+        title: "Technical support and marketing SEO",
+        description: "Kamva's technical department supports from zero to hundred percent; you can use free consulting services from Kamva for technical infrastructure of your store"
+      },
+      emailMarketing: {
+        title: "Connection to email marketing service",
+        description: "You can send promotional emails and marketing emails to your customers' stores using the best method to attract customers"
+      },
+      blog: {
+        title: "Weblog service along with the store builder",
+        description: "Kamva's technical department supports from zero to hundred percent; you can use free consulting services from Kamva for technical infrastructure of your store"
+      }
+    },
+    footer: {
+      description: "The appearance of your store is one of the most important parameters in attracting customers. Therefore, we have tried to provide several diverse and professional templates for stores. You can change your store's template at any time.",
+      cta: "Contact Us"
     }
   }
 }; 

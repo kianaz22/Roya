@@ -23,7 +23,7 @@ export default function Contact() {
             </div>
             {/* Tagline */}
             <h1 className="text-3xl md:text-5xl text-center text-white leading-tight max-w-2xl">
-              We are committed to quality and innovation at Roya E-commerce.
+              {t("contact.hero.title")}
             </h1>
             {/* Animated Down Arrow */}
             <button
@@ -65,12 +65,10 @@ export default function Contact() {
             {/* Left Column - Content */}
             <div className="space-y-4 md:space-y-8 px-8 md:px-0 py-16 md:py-0">
               <h2 className="text-3xl md:text-5xl font-semi-bold text-zinc-900">
-                Our Team
+                {t("contact.team.title")}
               </h2>
               <p className=" text-base md:text-2xl text-zinc-900  max-w-xl">
-                At Roya E-commerce, we are committed to quality and innovation.
-                Our team works closely together to design and develop products
-                that not only meet today&apos;s needs.
+                {t("contact.team.description")}
               </p>
             </div>
 
@@ -109,31 +107,26 @@ export default function Contact() {
             <div className="aspect-square bg-[url('/feature-box-bg.png')] bg-no-repeat bg-cover bg-center"></div>
             <div className="aspect-square p-8 pb-32 md:p-16 md:pb-16 flex flex-col justify-baseline gap-8 md:gap-12 bg-[#F4F4F4] text-black">
               <h1 className="text-3xl md:text-5xl font-semi-bold md:leading-19">
-                Towards the Future
+                {t("contact.future.title")}
               </h1>
               <div className="text-base md:text-2xl md:leading-9 max-w-xs">
-                At Roya E-commerce, we aim to create a future where technology
-                not only makes lives easier but also transforms the world into a
-                better place in a creative and innovative way.
+                {t("contact.future.description")}
               </div>
             </div>
             <div className="aspect-square p-8 pb-32 md:p-16 md:pb-16 flex flex-col justify-baseline gap-8 md:gap-12 text-[#004AB3] bg-[#EBF8FF]">
               <h1 className="text-3xl md:text-5xl font-semi-bold md:leading-19">
-                Our Culture: Collaboration and Creativity
+                {t("contact.culture.title")}
               </h1>
               <div className="text-base md:text-2xl md:leading-9 max-w-xs">
-                In a world where technology leads, Roya fosters a sense of
-                trust, loyalty, and collaboration in every successful business.
+                {t("contact.culture.description")}
               </div>
             </div>
             <div className="aspect-square p-8 pb-32 md:p-16 md:pb-16 flex flex-col justify-baseline gap-8 md:gap-12 text-white bg-[#000]">
               <h1 className="text-3xl md:text-5xl font-semi-bold md:leading-19">
-                Commitment to Innovation
+                {t("contact.innovation.title")}
               </h1>
               <div className="text-base md:text-2xl md:leading-9 max-w-xs">
-                Roya represents a commitment to innovation and collaboration,
-                determined to build trust and familiarity, and reflect its
-                values and goals.
+                {t("contact.innovation.description")}
               </div>
             </div>
           </div>
@@ -147,11 +140,10 @@ export default function Contact() {
             {/* Row 1: Title and Description */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start mb-16 md:mb-[6rem]">
               <h1 className="text-3xl md:text-4xl font-semi-bold text-[#004AB3]">
-                Contact Us
+                {t("contact.form.title")}
               </h1>
               <p className="text-base md:text-[1.4rem] md:leading-8 text-[#004AB3]">
-                Roya E-commerce is always with you along this journey, and our
-                support team is available to answer your questions at any time.
+                {t("contact.form.description")}
               </p>
             </div>
 
@@ -160,14 +152,14 @@ export default function Contact() {
               <div>
                 <input
                   type="text"
-                  placeholder="Full Name"
+                  placeholder={t("contact.form.fullName")}
                   className="w-full px-6 py-4 bg-white border-2 border-[#004AB3] rounded-4xl text-[#004AB3] placeholder-[#004AB3]/60 focus:outline-none focus:ring-2 focus:ring-[#004AB3]/20 transition-all duration-300"
                 />
               </div>
               <div>
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder={t("contact.form.email")}
                   className="w-full px-6 py-4 bg-white border-2 border-[#004AB3] rounded-4xl text-[#004AB3] placeholder-[#004AB3]/60 focus:outline-none focus:ring-2 focus:ring-[#004AB3]/20 transition-all duration-300"
                 />
               </div>
@@ -176,7 +168,7 @@ export default function Contact() {
             {/* Row 3: Message Textarea */}
             <div>
               <textarea
-                placeholder="Write your message"
+                placeholder={t("contact.form.message")}
                 rows={6}
                 className="w-full px-6 py-4 bg-white border-2 border-[#004AB3] rounded-lg text-[#004AB3] placeholder-[#004AB3]/60 focus:outline-none focus:ring-2 focus:ring-[#004AB3]/20 transition-all duration-300 resize-none"
               ></textarea>
@@ -191,7 +183,7 @@ export default function Contact() {
                 }}
                 className="px-8 py-4 bg-[#004AB3] text-white rounded-full text-lg font-medium hover:bg-[#004AB3]/90 transition-all duration-300"
               >
-                Send Message
+                {t("contact.form.sendButton")}
               </button>
             </div>
           </div>
@@ -217,13 +209,15 @@ export default function Contact() {
         {/* desktop map section */}
         <div className="hidden md:block md:absolute  left-[10%] top-1/2 -translate-y-1/2 bg-white p-12 rounded-2xl shadow-lg max-w-lg">
           <div className="space-y-8">
-            <h2 className="text-5xl font-semi-bold text-[#000]">Address</h2>
+            <h2 className="text-5xl font-semi-bold text-[#000]">
+              {t("contact.address.title")}
+            </h2>
             <div className="space-y-1 text-black">
               <p className="text-[24px]">
-                Enghelab Street, Balavar Alley, No. 7
+                {t("contact.address.street")}
               </p>
-              <p className="text-[24px]">Email: support[at]pakat.net</p>
-              <p className="text-[24px]">Phone Number: 021-91015383</p>
+              <p className="text-[24px]">{t("contact.address.email")}</p>
+              <p className="text-[24px]">{t("contact.address.phone")}</p>
             </div>
             <button
               onClick={() => {
@@ -245,25 +239,27 @@ export default function Contact() {
                   d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
                 />
               </svg>
-              <span className="text-[20px]">Get Directions</span>
+              <span className="text-[20px]">
+                {t("contact.address.getDirections")}
+              </span>
             </button>
           </div>
         </div>
         {/* mobile map section */}
         <div className="md:hidden absolute  left-[7%] right-[7%] top-[5%]   bg-white p-8 rounded-3xl shadow-lg max-w-lg">
           <div className="space-y-8">
-            <h2 className="text-3xl font-semi-bold text-[#000]">Address</h2>
+            <h2 className="text-3xl font-semi-bold text-[#000]">{t("contact.mobileMap.title")}</h2>
             <div className="space-y-1 text-black">
               <p className="text-[20px] ">
-                Enghelab Street, Balavar Alley, No. 7
+                {t("contact.mobileMap.street")}
               </p>
               <p className="text-[20px] ">
-                Email: royaecommerce.engineering@{"\n"}gmail.com
+                {t("contact.mobileMap.email")}
               </p>
-              <p className="text-[20px] ">Phone Number: 021-91015383</p>
+              <p className="text-[20px] ">{t("contact.mobileMap.phone")}</p>
             </div>
             <button className="flex items-center   gap-2 px-6 py-3 border-2 border-[#000] text-[#000] rounded-full   transition-all duration-300">
-              <span className="text-[20px]">Navigation</span>
+              <span className="text-[20px]">{t("contact.mobileMap.navigation")}</span>
             </button>
           </div>
         </div>
@@ -283,9 +279,7 @@ export default function Contact() {
             {/* Right Column - Content */}
             <div className="space-y-8 px-8 md:px-0">
               <p className="text-base md:text-xl text-white  max-w-[570px] md:leading-relaxed md:text-justify">
-                At Roya E-commerce, we strive to create a future where
-                technology not only makes lives easier but also creatively and
-                innovatively transforms the world into a better place.
+                {t("contact.bottomSection.description")}
               </p>
               <button
                 onClick={() => {
