@@ -102,7 +102,7 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
                   setLanguage(language === 'en' ? 'fa' : 'en');
                   setIsMobileMenuOpen(false);
                 }}
-                className="px-6 py-2 rounded-full border border-zinc-900 hover:border-zinc-600 hover:bg-zinc-100 transition-all duration-300 text-lg font-medium"
+                className="text-black px-6 py-2 rounded-full border border-zinc-900 hover:border-zinc-600 hover:bg-zinc-100 transition-all duration-300 text-lg font-bold"
               >
                 {language === 'en' ? 'فارسی' : 'English'}
               </button>

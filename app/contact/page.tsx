@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden py-32 pt-96 bg-black">
+      <section className="relative min-h-[calc(100vh-90px)] flex items-center overflow-hidden py-32 pt-96 bg-black">
         <div className="h-full w-full max-w-[1280px] mx-auto px-8 md:px-16 relative z-20 -mt-64">
           <div className="h-full flex flex-col gap-16 justify-center items-center">
             <div className="not-only:relative w-24 h-16">
@@ -53,18 +53,18 @@ export default function Contact() {
       </section>
 
       {/* our team Section */}
-      <section className="relative flex items-center overflow-hidden py-64 bg-white">
+      <section className="relative flex items-center overflow-hidden pt-64 pb-40 md:py-64 bg-white">
         <div className="absolute inset-0 max-w-[1280px] mx-auto px-8">
-          <div className="w-full h-full bg-[url('/large-white-bg-desktop.png')] bg-no-repeat bg-cover bg-center"></div>
+          <div className="w-full h-[600px] md:h-full bg-[url('/our-team-bg-mobile.png')]  md:bg-[url('/large-white-bg-desktop.png')] bg-no-repeat bg-cover bg-center"></div>
         </div>
-        <div className="h-full w-full max-w-[1280px] mx-auto px-8 md:px-48 relative z-20 -mt-64 top-[32px] ">
+        <div className="h-full w-full max-w-[1280px] mx-auto px-8 md:px-48 relative z-20 -mt-64 md:top-[32px] ">
           <div className=" h-full grid grid-cols-1 md:grid-cols-2 gap-16 items-end  mx-auto">
             {/* Left Column - Content */}
-            <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-semi-bold text-zinc-900">
+            <div className="space-y-4 md:space-y-8 px-8 md:px-0 py-16 md:py-0">
+              <h2 className="text-3xl md:text-5xl font-semi-bold text-zinc-900">
                 Our Team
               </h2>
-              <p className="text-2xl text-zinc-900  max-w-xl">
+              <p className=" text-base md:text-2xl text-zinc-900  max-w-xl">
                 At Roya E-commerce, we are committed to quality and innovation.
                 Our team works closely together to design and develop products
                 that not only meet today&apos;s needs.
@@ -104,28 +104,28 @@ export default function Contact() {
         <div className="max-w-[1280px] mx-auto px-8">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="aspect-square bg-[url('/feature-box-bg.png')] bg-no-repeat bg-cover bg-center"></div>
-            <div className="aspect-square p-16 flex flex-col justify-baseline gap-12 bg-[#F4F4F4] text-black">
-              <h1 className="text-5xl font-semi-bold leading-19">
+            <div className="aspect-square p-8 pb-32 md:p-16 md:pb-16 flex flex-col justify-baseline gap-8 md:gap-12 bg-[#F4F4F4] text-black">
+              <h1 className="text-3xl md:text-5xl font-semi-bold md:leading-19">
                 Towards the Future
               </h1>
-              <div className="text-2xl leading-9 max-w-xs">
+              <div className="text-base md:text-2xl md:leading-9 max-w-xs">
                 At Roya E-commerce, we aim to create a future where technology
                 not only makes lives easier but also transforms the world into a
                 better place in a creative and innovative way.
               </div>
             </div>
-            <div className="aspect-square p-16 flex flex-col justify-baseline gap-12 text-[#004AB3] bg-[#EBF8FF]">
-              <h1 className="text-5xl font-semi-bold leading-19">
+            <div className="aspect-square p-8 pb-32 md:p-16 md:pb-16 flex flex-col justify-baseline gap-8 md:gap-12 text-[#004AB3] bg-[#EBF8FF]">
+              <h1 className="text-3xl md:text-5xl font-semi-bold md:leading-19">
                 Our Culture: Collaboration and Creativity
               </h1>
-              <div className="text-2xl leading-9 max-w-xs">
+              <div className="text-base md:text-2xl md:leading-9 max-w-xs">
                 In a world where technology leads, Roya fosters a sense of
                 trust, loyalty, and collaboration in every successful business.
               </div>
             </div>
-            <div className="aspect-square p-16 flex flex-col justify-baseline gap-12 text-white bg-[#000]">
-              <h1 className="text-5xl font-semi-bold leading-19">Commitment to Innovation</h1>
-              <div className="text-2xl leading-9 max-w-xs">
+            <div className="aspect-square p-8 pb-32 md:p-16 md:pb-16 flex flex-col justify-baseline gap-8 md:gap-12 text-white bg-[#000]">
+              <h1 className="text-3xl md:text-5xl font-semi-bold md:leading-19">Commitment to Innovation</h1>
+              <div className="text-base md:text-2xl md:leading-9 max-w-xs">
                 Roya represents a commitment to innovation and collaboration,
                 determined to build trust and familiarity, and reflect its
                 values and goals.
@@ -136,15 +136,15 @@ export default function Contact() {
       </section>
 
       {/* contact form Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden py-32 pt-64 bg-[#EBF8FF]">
-        <div className="h-full w-full max-w-[1280px] mx-auto px-8 md:px-16 relative z-20 -mt-64">
-          <div className="space-y-16">
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-32 md:py-32 md:pt-64 bg-[#EBF8FF]">
+        <div className="h-full w-full max-w-[1280px] mx-auto px-8 md:px-16 relative z-20 -mt-56 md:-mt-64">
+          <div className="space-y-8 md:space-y-16">
             {/* Row 1: Title and Description */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-[6rem]">
-              <h1 className="text-4xl font-semi-bold text-[#004AB3]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start mb-16 md:mb-[6rem]">
+              <h1 className="text-3xl md:text-4xl font-semi-bold text-[#004AB3]">
                 Contact Us
               </h1>
-              <p className="text-[1.4rem] leading-8 text-[#004AB3]">
+              <p className="text-base md:text-[1.4rem] md:leading-8 text-[#004AB3]">
                 Roya E-commerce is always with you along this journey, and our support team is available to answer your questions at any time.
               </p>
             </div>
@@ -189,13 +189,21 @@ export default function Contact() {
       {/* Map Section */}
       <section className="w-full relative">
         <Image
-          src="/map-desktop.png"
+          src="/map-mobile.png"
           alt="Location Map"
           width={1920}
           height={1080}
-          className="w-full h-auto object-cover"
+          className="w-full h-auto object-cover md:hidden"
         />
-        <div className="absolute left-[10%] top-1/2 -translate-y-1/2 bg-white p-12 rounded-2xl shadow-lg max-w-lg">
+          <Image
+          src="/map-desktop.png"
+          alt="Location Map"
+          width={100}
+          height={100}
+          className="w-full h-auto object-cover hidden md:block"
+        />
+        {/* desktop map section */}
+        <div className="hidden md:block md:absolute  left-[10%] top-1/2 -translate-y-1/2 bg-white p-12 rounded-2xl shadow-lg max-w-lg">
           <div className="space-y-8">
             <h2 className="text-5xl font-semi-bold text-[#000]">Address</h2>
             <div className="space-y-1 text-black">
@@ -211,24 +219,39 @@ export default function Contact() {
             </button>
           </div>
         </div>
+        {/* mobile map section */}
+        <div className="md:hidden absolute  left-[7%] right-[7%] top-[5%]   bg-white p-8 rounded-3xl shadow-lg max-w-lg">
+          <div className="space-y-8">
+            <h2 className="text-3xl font-semi-bold text-[#000]">Address</h2>
+            <div className="space-y-1 text-black">
+              <p className="text-[20px] ">Enghelab Street, Balavar Alley, No. 7</p>
+              <p className="text-[20px] ">Email: royaecommerce.engineering@{"\n"}gmail.com</p>
+              <p className="text-[20px] ">Phone Number: 021-91015383</p>
+            </div>
+            <button className="flex items-center   gap-2 px-6 py-3 border-2 border-[#000] text-[#000] rounded-full   transition-all duration-300">
+              
+              <span className="text-[20px]">Navigation</span>
+            </button>
+          </div>
+        </div>
       </section>
 
 
      {/*  contact Section */}
      <section className="relative  bg-black">
-        <div className="w-full max-w-[1280px] mx-auto px-8 pb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2  items-end gap-8">
+        <div className="w-full max-w-[1280px] mx-auto md:px-8 pb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2  items-end gap-40 md:gap-8">
             {/* Left Column - Image */}
             <div
-              className={`w-full h-[400px] bg-[url('/home-contact-bg.png')] bg-no-repeat bg-contain bg-center ${
+              className={`w-full h-[300px] md:h-[400px] bg-[url('/home-contact-bg.png')] bg-no-repeat bg-contain bg-center ${
                 language === "en" ? "scale-x-[-1]" : ""
               }`}
             ></div>
 
             {/* Right Column - Content */}
-            <div className="space-y-8">
+            <div className="space-y-8 px-8 md:px-0">
         
-              <p className="text-xl text-white leading-relaxed max-w-[570px] text-justify">
+              <p className="text-base md:text-xl text-white  max-w-[570px] md:leading-relaxed md:text-justify">
               At Roya E-commerce, we strive to create a future where
                 technology not only makes lives easier but also creatively and
                 innovatively transforms the world into a better place.
@@ -239,7 +262,7 @@ export default function Contact() {
                     .getElementById("products")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="border-2 border-white text-white px-8 py-3 rounded-full text-base font-medium hover:bg-white/10 transition-colors"
+                className="  bg-white text-black px-6 py-4 rounded-full text-base font-medium hover:bg-white/10 transition-colors"
               >
                 {t("hero.cta")}
               </button>
