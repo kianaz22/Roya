@@ -38,7 +38,7 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-[1280px] mx-auto">
             <div className="flex items-center justify-between h-16">
-              <div className="flex items-center">
+              <div className="flex items-center gap-2">
                 <Link href="/" className="relative w-10 md:w-16 h-8 mr-2 md:mr-0.5">
                   <Image
                     src="/logo.svg"
@@ -61,10 +61,28 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
                   {t('nav.about')}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all group-hover:w-full"></span>
                 </Link>
-                <Link href="/contact" className={`${lightMode ? 'text-black hover:text-purple-600' : 'text-white hover:text-purple-400'} transition-colors relative group`}>
-                  {t('nav.contact')}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 transition-all group-hover:w-full"></span>
-                </Link>
+                <div className="relative group">
+                  <button className={`text-sm ${lightMode ? 'text-black hover:text-purple-600' : 'text-white hover:text-purple-400'} transition-colors relative group flex items-center gap-1`}>
+                    {t('nav.contact')}
+                    <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 transition-all group-hover:w-full"></span>
+                  </button>
+                  <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-48 rounded-xl shadow-lg bg-white/95 backdrop-blur-sm ring-1 ring-black/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top">
+                    <div className="py-2">
+                      <Link href="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-purple-600 transition-colors">
+                        {t('nav.contact')}
+                      </Link>
+                      <Link href="/news" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-purple-600 transition-colors">
+                        {t('nav.news')}
+                      </Link>
+                      <Link href="/careers" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-purple-600 transition-colors">
+                        {t('nav.careers')}
+                      </Link>
+                    </div>
+                  </div>
+                </div>
                 <button
                   onClick={() => setLanguage(language === 'en' ? 'fa' : 'en')}
                   className={`flex items-center gap-2 px-4 py-1 rounded-full border-2 ${lightMode ? 'border-zinc-900 text-black hover:border-zinc-600' : 'border-white text-white hover:border-gray-300'} transition-colors`}
@@ -123,6 +141,20 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.contact')}
+              </Link>
+              <Link 
+                href="/news" 
+                className="text-xl text-black hover:text-purple-600 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('nav.news')}
+              </Link>
+              <Link 
+                href="/careers" 
+                className="text-xl text-black hover:text-purple-600 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('nav.careers')}
               </Link>
               <button
                 onClick={() => {

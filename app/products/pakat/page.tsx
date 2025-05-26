@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useLanguage } from '../../context/LanguageContext';
-import Layout from '../../components/Layout';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useLanguage } from "../../context/LanguageContext";
+import Layout from "../../components/Layout";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function PakatPage() {
   const { language, t } = useLanguage();
@@ -26,21 +26,34 @@ export default function PakatPage() {
             <p className="text-4xl md:text-6xl text-black leading-16 font-normal max-w-2xl">
               {t("pakat.hero.title")}
             </p>
-            <Link 
-              href="https://pakat.net" 
+            <Link
+              href="https://pakat.net"
               target="_blank"
               className="bg-zinc-900 text-white px-6 py-3 rounded-full text-lg hover:bg-zinc-800 transition-all duration-300"
             >
               {t("pakat.hero.cta")}
             </Link>
             {/* Bouncing Chevron */}
-            <div onClick={() => {
+            <div
+              onClick={() => {
                 document
-                .getElementById("pakat-features")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }} className="cursor-pointer mt-12 md:mt-0 w-9 h-9 rounded-full border-2 border-zinc-400 flex items-center justify-center animate-[bounce_1s_infinite]">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  .getElementById("pakat-features")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="cursor-pointer mt-12 md:mt-0 w-9 h-9 rounded-full border-2 border-zinc-400 flex items-center justify-center animate-[bounce_1s_infinite]"
+            >
+              <svg
+                className="w-6 h-6 text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </div>
           </div>
@@ -104,7 +117,6 @@ export default function PakatPage() {
             <div className="relative h-[400px] md:h-[600px]">
               <Image
                 src="/product-feaures-2.pakat-bg.png"
-
                 alt="Pakat Features"
                 fill
                 className="object-cover"
@@ -180,15 +192,17 @@ export default function PakatPage() {
                 src="/home-contact-bg.png"
                 alt="Pakat Email Marketing"
                 fill
-                className={`object-contain ${language === 'en' ? 'scale-x-[-1]' : ''}`}
+                className={`object-contain ${
+                  language === "en" ? "scale-x-[-1]" : ""
+                }`}
               />
             </div>
             <div className="flex-1 space-y-6 max-w-xl px-8 md:px-0">
               <p className="text-lg md:text-xl text-white max-w-lg">
                 {t("pakat.footer.description")}
               </p>
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="inline-flex items-center gap-3 bg-white text-black px-4 py-3 rounded-full text-lg hover:bg-zinc-100 transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 <span>{t("pakat.footer.cta")}</span>
@@ -199,4 +213,4 @@ export default function PakatPage() {
       </div>
     </Layout>
   );
-} 
+}

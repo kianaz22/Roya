@@ -54,15 +54,17 @@ export const fa = {
       title: "آدرس",
       street: "خیابان انقلاب، کوچه بلاوار، پلاک ۷",
       email: "ایمیل: royaecommerce.engineering@gmail.com",
-      phone: "شماره تماس: ۰۲۱-۹۱۰۱۵۳۸۳",
+      phoneTitle: "شماره تماس",
+      phone: "۰۲۱۹۱۰۱۵۳۸۳",
       getDirections: "دریافت مسیر",
     },
     mobileMap: {
       title: "آدرس",
       street: "خیابان انقلاب، کوچه بلاوار، پلاک ۷",
       email: "ایمیل: royaecommerce.engineering@gmail.com",
-      phone: "شماره تماس: ۰۲۱-۹۱۰۱۵۳۸۳",
-      navigation: "مسیریابی",
+      phoneTitle: "شماره تماس",
+      phone: "۰۲۱۹۱۰۱۵۳۸۳",
+      navigation: "دریافت مسیر",
     },
     bottomSection: {
       description:

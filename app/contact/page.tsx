@@ -76,7 +76,7 @@ export default function Contact() {
             <div className="flex justify-center md:justify-end">
               <a
                 href="tel:+982191015383"
-                className="inline-flex items-center px-8 py-4 rounded-full bg-black text-white font-medium hover:shadow-lg transition-all duration-300 group"
+                className="inline-flex items-center px-8 py-4 rounded-full bg-black text-white font-medium hover:shadow-lg transition-all duration-300 group "
               >
                 <svg
                   className="w-5 h-5 mr-3"
@@ -92,7 +92,7 @@ export default function Contact() {
                   />
                 </svg>
                 <span className="group-hover:translate-x-1 transition-transform">
-                  +98 21 9101 5383
+                  {t("contact.address.phone")}
                 </span>
               </a>
             </div>
@@ -134,7 +134,10 @@ export default function Contact() {
       </section>
 
       {/* contact form Section */}
-      <section id="contact-form" className="relative min-h-screen flex items-center overflow-hidden pt-32 md:py-32 md:pt-64 bg-[#EBF8FF]">
+      <section
+        id="contact-form"
+        className="relative min-h-screen flex items-center overflow-hidden pt-32 md:py-32 md:pt-64 bg-[#EBF8FF]"
+      >
         <div className="h-full w-full max-w-[1280px] mx-auto px-8 md:px-16 relative z-20 -mt-56 md:-mt-64">
           <div className="space-y-8 md:space-y-16">
             {/* Row 1: Title and Description */}
@@ -213,11 +216,11 @@ export default function Contact() {
               {t("contact.address.title")}
             </h2>
             <div className="space-y-1 text-black">
-              <p className="text-[24px]">
-                {t("contact.address.street")}
-              </p>
+              <p className="text-[24px]">{t("contact.address.street")}</p>
               <p className="text-[24px]">{t("contact.address.email")}</p>
-              <p className="text-[24px]">{t("contact.address.phone")}</p>
+              <p className="text-[24px]">
+                {t("contact.address.phoneTitle")}: {t("contact.address.phone")}
+              </p>
             </div>
             <button
               onClick={() => {
@@ -248,18 +251,22 @@ export default function Contact() {
         {/* mobile map section */}
         <div className="md:hidden absolute  left-[7%] right-[7%] top-[5%]   bg-white p-8 rounded-3xl shadow-lg max-w-lg">
           <div className="space-y-8">
-            <h2 className="text-3xl font-semi-bold text-[#000]">{t("contact.mobileMap.title")}</h2>
+            <h2 className="text-3xl font-semi-bold text-[#000]">
+              {t("contact.mobileMap.title")}
+            </h2>
             <div className="space-y-1 text-black">
-              <p className="text-[20px] ">
-                {t("contact.mobileMap.street")}
-              </p>
+              <p className="text-[20px] ">{t("contact.mobileMap.street")}</p>
               <p className="text-[20px] break-words ">
                 {t("contact.mobileMap.email")}
               </p>
-              <p className="text-[20px] break-words ">{t("contact.mobileMap.phone")}</p>
+              <p className="text-[20px] break-words ">
+                {t("contact.mobileMap.phone")}
+              </p>
             </div>
             <button className="flex items-center   gap-2 px-6 py-3 border-2 border-[#000] text-[#000] rounded-full   transition-all duration-300">
-              <span className="text-[20px]">{t("contact.mobileMap.navigation")}</span>
+              <span className="text-[20px]">
+                {t("contact.mobileMap.navigation")}
+              </span>
             </button>
           </div>
         </div>

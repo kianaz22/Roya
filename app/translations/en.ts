@@ -18,7 +18,7 @@ export const en = {
   },
   contact: {
     hero: {
-      title: "We are committed to quality and innovation at Roya E-commerce."
+      title: "We are committed to quality and innovation at Roya"
     },
     team: {
       title: "Our Team",
@@ -48,14 +48,16 @@ export const en = {
       title: "Address",
       street: "Enghelab Street, Balavar Alley, No. 7",
       email: "Email: royaecommerce.engineering@gmail.com",
-      phone: "Phone Number: 021-91015383",
+      phoneTitle: "Phone Number",
+      phone: "021-91015383",
       getDirections: "Get Directions"
     },
     mobileMap: {
       title: "Address",
       street: "Enghelab Street, Balavar Alley, No. 7",
       email: "Email: royaecommerce.engineering@gmail.com",
-      phone: "Phone Number: 021-91015383",
+      phoneTitle: "Phone Number",
+      phone: "021-91015383",
       navigation: "Navigation"
     },
     bottomSection: {
