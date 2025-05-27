@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden py-32">
+      <section className="relative min-h-screen flex items-center overflow-hidden py-32 pt-48 md:pt-32">
         {/* Simple Background */}
         <div className="absolute inset-0 bg-black"></div>
         <div className="absolute inset-0 flex justify-center">

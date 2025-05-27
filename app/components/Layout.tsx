@@ -34,7 +34,7 @@ export default function Layout({ children, lightMode = false }: LayoutProps) {
   return (
     <div className={`min-h-screen ${lightMode ? 'bg-white text-black' : 'bg-zinc-900 text-white'} ${language === 'fa' ? 'font-[var(--font-vazirmatn)]' : ''}`} dir={language === 'fa' ? 'rtl' : 'ltr'}>
       {/* Navigation Header */}
-      <header className={`${lightMode ? 'bg-white' : 'bg-black'} py-2 md:py-4`}>
+      <header className={`${lightMode ? 'bg-white' : 'bg-black'}  md:py-4`}>
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-[1280px] mx-auto">
             <div className="flex items-center justify-between h-16">
